@@ -43,141 +43,41 @@
     flex-shrink: 0;
   }
 
-  /* PORTADA */
-  .portada {
-    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 60%, #0f1429 100%);
-    color: white;
-    padding: 80px 24px 72px;
-    text-align: center;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-  }
-  .portada-inner { max-width: 820px; margin: 0 auto; width: 100%; }
-  .portada-logo { height: 52px; margin-bottom: 28px; }
-  .portada-informe {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #FF4D2E;
-    font-weight: 800;
-    margin-bottom: 16px;
-  }
-  .portada-title {
-    font-size: 38px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
-  .portada-subtitle {
-    font-size: 16px;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-  .portada-tagline {
-    font-size: 13px;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 40px;
-  }
-  .portada-methods {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-  }
-  .pm-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 14px;
-    padding: 20px 22px;
-    flex: 1;
-    min-width: 200px;
-    max-width: 240px;
-    text-align: center;
-  }
-  .pm-icon { font-size: 26px; margin-bottom: 8px; }
-  .pm-name {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 800;
-    color: #FF4D2E;
-    margin-bottom: 6px;
-  }
-  .pm-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.4; }
-  .portada-date {
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-    letter-spacing: 1px;
-  }
-  @media (max-width: 768px) {
-    .portada { padding: 48px 16px 48px; min-height: auto; }
-    .portada-title { font-size: 24px; }
-    .portada-subtitle { font-size: 14px; }
-    .pm-card { min-width: 140px; padding: 14px 16px; }
-    .pm-icon { font-size: 20px; }
-  }
-
   /* HERO */
   .hero {
-    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 100%);
+    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 60%, #0f1429 100%);
     color: white;
-    padding: 48px 0 56px;
+    padding: 64px 24px 72px;
     text-align: center;
   }
+  .hero-logo {
+    height: 80px;
+    margin: 0 auto 28px;
+    display: block;
+  }
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 8px;
+    line-height: 1.25;
   }
   .hero .subtitle {
     font-size: 15px;
     opacity: 0.65;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
   }
-
-  /* 3 VÍAS PILLS */
-  .hero-vias {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 0 auto 32px;
-    flex-wrap: wrap;
-    max-width: 900px;
-    padding: 0 24px;
-  }
-  .via-pill {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.18);
-    padding: 14px 18px;
-    border-radius: 12px;
-    text-align: center;
-    flex: 1;
-    min-width: 200px;
-  }
-  .via-pill .vp-tag {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 800;
-    margin-bottom: 4px;
-  }
-  .via-pill.v-impulso .vp-tag { color: #FF4D2E; }
-  .via-pill.v-notarial .vp-tag { color: #a78bfa; }
-  .via-pill.v-mtvv .vp-tag { color: #34d399; }
-  .via-pill .vp-title {
+  .hero .op-line {
     font-size: 13px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 4px;
+    opacity: 0.5;
+    margin-bottom: 28px;
+    font-style: italic;
   }
-  .via-pill .vp-desc {
-    font-size: 11px;
-    opacity: 0.55;
-    line-height: 1.4;
+  .hero-fecha {
+    font-size: 12px;
+    opacity: 0.4;
+    margin-bottom: 36px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   /* FICHA DE OPERACIÓN */
@@ -186,17 +86,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     max-width: 820px;
-    margin: 0 auto 24px;
+    margin: 0 auto 32px;
     text-align: left;
-    padding: 0 24px;
   }
-  .op-ficha .op-cell {
+  .op-cell {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 12px;
     padding: 16px 18px;
   }
-  .op-ficha .op-key {
+  .op-key {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -204,46 +103,58 @@
     font-weight: 800;
     margin-bottom: 6px;
   }
-  .op-ficha .op-val {
+  .op-val {
     font-size: 14px;
     font-weight: 600;
     color: white;
     line-height: 1.4;
   }
-  .op-ficha .op-val small {
+  .op-val small {
     display: block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
-    opacity: 0.55;
+    opacity: 0.6;
     margin-top: 3px;
   }
 
-  /* ASKING WIDGET */
-  .asking-widget {
-    max-width: 420px;
-    margin: 0 auto;
-    background: rgba(255,77,46,0.12);
-    border: 2px solid rgba(255,77,46,0.4);
-    border-radius: 16px;
-    padding: 18px 24px;
+  /* 3 FUENTES */
+  .hero-sources {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    max-width: 820px;
+    margin: 0 auto 16px;
+  }
+  .source-pill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 14px 18px;
     text-align: center;
+    flex: 1;
+    min-width: 190px;
   }
-  .asking-widget .aw-label {
+  .source-pill .sp-icon { font-size: 22px; margin-bottom: 6px; }
+  .source-pill .sp-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+  }
+  .source-pill .sp-desc {
     font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.65;
-    margin-bottom: 4px;
-  }
-  .asking-widget .aw-price {
-    font-size: 40px;
-    font-weight: 800;
-    color: #FF4D2E;
-  }
-  .asking-widget .aw-note {
-    font-size: 12px;
     opacity: 0.55;
-    margin-top: 4px;
+    margin-top: 2px;
+  }
+  .hero-cita {
+    font-size: 13px;
+    opacity: 0.45;
+    font-style: italic;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
   }
 
   /* CONTAINER */
@@ -322,14 +233,28 @@
     margin-bottom: 16px;
   }
 
+  /* MARKERS */
+  .mark {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 5px;
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .mark-pulso { background: #FF4D2E; color: white; }
+  .mark-asset { background: #10B981; color: white; }
+  .mark-zona { background: #8B5CF6; color: white; }
+
   /* TABLE */
-  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
     margin: 12px 0;
-    min-width: 480px;
   }
   th {
     background: #141B36;
@@ -350,69 +275,16 @@
   tr:hover td { background: #f9fafb; }
   tr.highlight td { background: #ecfdf5; }
   tr.highlight-asset td { background: #fff3f0; }
-
-  /* TABLE MOBILE (responsive card layout) */
-  @media (max-width: 768px) {
-    .table-mobile { display: block; width: 100%; }
-    .table-mobile thead { display: none; }
-    .table-mobile tbody, .table-mobile tr { display: block; width: 100%; }
-    .table-mobile tr {
-      margin-bottom: 12px;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 14px 16px;
-      background: white;
-    }
-    .table-mobile tr.highlight { background: #ecfdf5; border-color: #a7f3d0; }
-    .table-mobile tr.highlight-asset { background: #fff3f0; border-color: #FFD4C8; }
-    .table-mobile td {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      padding: 5px 0;
-      border-bottom: none;
-      font-size: 13px;
-      text-align: right;
-    }
-    .table-mobile td:first-child {
-      font-size: 15px;
-      font-weight: 800;
-      color: #141B36;
-      padding-bottom: 8px;
-      margin-bottom: 4px;
-      border-bottom: 1px solid #f3f4f6;
-      text-align: left;
-      display: block;
-    }
-    .table-mobile td:not(:first-child)::before {
-      content: attr(data-label);
-      font-size: 11px;
-      font-weight: 700;
-      color: #9ca3af;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      text-align: left;
-    }
-    .table-mobile tr:hover td { background: transparent; }
-  }
-
-  /* MARKERS */
-  .mark {
-    display: inline-block;
-    font-size: 9px;
-    font-weight: 800;
-    padding: 2px 7px;
-    border-radius: 5px;
-    margin-left: 6px;
-    vertical-align: middle;
-    letter-spacing: 0.5px;
+  tr.highlight-sep td {
+    background: #f5f3ff;
+    font-weight: 700;
+    color: #8B5CF6;
+    font-size: 12px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
-  .mark-pulso { background: #FF4D2E; color: white; }
-  .mark-asset { background: #10B981; color: white; }
-  .mark-dom { background: #8B5CF6; color: white; }
 
+  /* LEGEND */
   .legend {
     display: flex;
     gap: 16px;
@@ -464,7 +336,7 @@
   .insight-green { background: #ecfdf5; }
   .insight-purple { background: #f5f3ff; }
   .insight-gray { background: #f3f4f6; color: #6b7280; }
-  .insight-yellow { background: #fffbeb; border: 1px solid #fde68a; color: #78350f; }
+  .insight-blue { background: #eff6ff; border-left: 4px solid #3b82f6; padding-left: 16px; }
 
   /* TERM EXPLAINER */
   .term-explainer {
@@ -479,53 +351,29 @@
   }
   .term-explainer strong { color: #141B36; }
 
-  /* STEP HEADER */
-  .step-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
-  .step-number {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #10B981;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 800;
-    flex-shrink: 0;
-  }
-  .step-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #141B36;
+  /* CALLOUT AZUL (percentiles) */
+  .callout-blue {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #1e3a8a;
   }
 
-  /* VERDICT BOX */
-  .verdict-navy {
-    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 100%);
-    border: none;
-    color: white;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 20px 0;
-    font-size: 15px;
-    font-weight: 600;
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .verdict-navy .verdict-icon {
-    flex-shrink: 0;
-    width: 40px; height: 40px;
-    background: rgba(255,77,46,0.15);
+  /* CALLOUT AMARILLO (advertencia) */
+  .callout-yellow {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
     border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #78350f;
   }
 
   /* PRICE WIDGET */
@@ -555,12 +403,12 @@
     margin-bottom: 4px;
   }
   .price-box .price-value {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 800;
   }
   .price-box.main .price-value {
     color: #FF4D2E;
-    font-size: 32px;
+    font-size: 28px;
   }
   .price-box .price-note {
     font-size: 11px;
@@ -568,146 +416,74 @@
     margin-top: 4px;
   }
 
-  /* UNIT GRID */
-  .unit-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin: 16px 0;
+  /* VERDICT BOX */
+  .verdict-navy {
+    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 100%);
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
   }
-  .unit-cell {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
+  .verdict-navy .verdict-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: rgba(255,77,46,0.15);
     border-radius: 10px;
-    padding: 12px 8px;
-    text-align: center;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
   }
-  .unit-cell .uc-type {
-    font-size: 9px;
+
+  /* STEP MTVV */
+  .mtvv-step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .mtvv-step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #10B981;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .mtvv-step-num.pending { background: #d1d5db; color: #6b7280; }
+  .mtvv-step-body { flex: 1; }
+  .mtvv-step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #141B36;
+    margin-bottom: 4px;
+  }
+  .mtvv-step-desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+  .mtvv-status {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #9ca3af;
-    margin-bottom: 4px;
-  }
-  .unit-cell .uc-price {
-    font-size: 13px;
-    font-weight: 800;
-    color: #141B36;
-  }
-  .unit-cell.uc-1d { border-color: #fde68a; background: #fffbeb; }
-  .unit-cell.uc-2d { border-color: #bfdbfe; background: #eff6ff; }
-  .unit-cell.uc-3d { border-color: #a7f3d0; background: #ecfdf5; }
-  .unit-cell.uc-4d { border-color: #ddd6fe; background: #f5f3ff; }
-
-  /* VALIDATION GRID */
-  .validation-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin: 20px 0;
-  }
-  .validation-card {
-    padding: 24px;
-    border-radius: 14px;
-    text-align: center;
-    border: 2px solid transparent;
-  }
-  .validation-card.scraping { background: #fff3f0; border-color: #FFD4C8; }
-  .validation-card.notarial { background: #f5f3ff; border-color: #ddd6fe; }
-  .validation-card.mtvv { background: #ecfdf5; border-color: #a7f3d0; }
-  .validation-card .v-icon { font-size: 28px; margin-bottom: 8px; }
-  .validation-card .v-source {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-  .validation-card.scraping .v-source { color: #FF4D2E; }
-  .validation-card.notarial .v-source { color: #8B5CF6; }
-  .validation-card.mtvv .v-source { color: #10B981; }
-  .validation-card .v-price {
-    font-size: 22px;
-    font-weight: 800;
-    color: #141B36;
-  }
-  .validation-card .v-detail {
-    font-size: 12px;
-    color: #4b5563;
     margin-top: 6px;
   }
-
-  /* CONVERGENCE */
-  .convergence {
-    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 100%);
-    border-radius: 16px;
-    padding: 32px;
-    text-align: center;
-    color: white;
-    margin: 24px 0;
-  }
-  .convergence .conv-label {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.5;
-    margin-bottom: 8px;
-  }
-  .convergence .conv-verdict {
-    font-size: 24px;
-    font-weight: 800;
-    color: #10B981;
-    margin-bottom: 4px;
-  }
-  .convergence .conv-price {
-    font-size: 42px;
-    font-weight: 800;
-    color: #FF4D2E;
-  }
-  .convergence .conv-range {
-    font-size: 14px;
-    opacity: 0.6;
-    margin-top: 4px;
-  }
-  .convergence .conv-note {
-    font-size: 13px;
-    opacity: 0.6;
-    margin-top: 16px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-
-  /* DISCLAIMER / PROVENANCE */
-  .disclaimer {
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin: 14px 0;
-    font-size: 12.5px;
-    line-height: 1.6;
-    color: #1e3a8a;
-  }
-  .provenance {
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin: 14px 0;
-    font-size: 12.5px;
-    line-height: 1.6;
-    color: #78350f;
-  }
-  .provenance strong { color: #92400e; }
-
-  /* SECTION DIVIDER */
-  .section-divider {
-    border: none;
-    border-top: 2px dashed #e5e7eb;
-    margin: 40px 0;
-  }
+  .mtvv-status.done { background: #ecfdf5; color: #10B981; }
+  .mtvv-status.pending { background: #fff3f0; color: #FF4D2E; }
 
   /* SCRIPT BOX */
   .script-box {
@@ -739,41 +515,9 @@
   .script-box ol { margin: 8px 0 0 20px; }
   .script-box ol li { margin-bottom: 6px; }
 
-  /* MTVV EXPLAINER */
-  .mtvv-explainer {
-    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
-    border: 2px solid #a7f3d0;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #1f2937;
-  }
-  .mtvv-explainer strong { color: #10B981; }
-
-  /* BUILD BOX */
-  .build-box {
-    margin-top: 14px;
-    padding: 16px;
-    background: #f9fafb;
-    border-radius: 10px;
-    border: 1px dashed #d1d5db;
-  }
-  .build-box .bb-title {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #6b7280;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .build-box .bb-body { font-size: 13px; line-height: 1.7; color: #374151; }
-
   /* FLAG SVG */
   .flag {
-    width: 28px;
-    height: 20px;
+    width: 22px; height: 15px;
     border-radius: 2px;
     vertical-align: middle;
     margin-right: 6px;
@@ -781,75 +525,200 @@
     display: inline-block;
   }
 
+  /* SECTION DIVIDER */
+  .section-divider {
+    border: none;
+    border-top: 2px dashed #e5e7eb;
+    margin: 40px 0;
+  }
+
+  /* GDV CALLOUT */
+  .gdv-total-box {
+    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 100%);
+    border-radius: 14px;
+    padding: 24px 28px;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .gdv-total-box .gdv-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    margin-bottom: 6px;
+  }
+  .gdv-total-box .gdv-value {
+    font-size: 36px;
+    font-weight: 800;
+    color: #FF4D2E;
+  }
+  .gdv-total-box .gdv-note {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* HYPO GRID (áticos) */
+  .hypo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .hypo-card {
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    text-align: center;
+  }
+  .hypo-card.conservador { border-color: #d1fae5; background: #f0fdf4; }
+  .hypo-card.medio { border-color: #fde68a; background: #fffbeb; }
+  .hypo-card.optimista { border-color: #fca5a5; background: #fff1f2; }
+  .hypo-card .h-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    opacity: 0.65;
+    margin-bottom: 6px;
+  }
+  .hypo-card .h-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #141B36;
+  }
+
   /* FOOTER */
   .footer {
     background: #141B36;
-    color: white;
-    padding: 40px 0;
-    margin-top: 64px;
+    color: rgba(255,255,255,0.7);
+    padding: 48px 0 40px;
+    margin-top: 56px;
   }
   .footer-inner {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    text-align: center;
   }
-  .footer img { height: 32px; opacity: 0.85; }
-  .footer .footer-text {
-    font-size: 12px;
-    opacity: 0.5;
-    text-align: right;
+  .footer .footer-cta-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .footer .footer-cta-sub {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .wa-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+  }
+  .footer-logo {
+    height: 70px;
+    margin: 32px auto 12px;
+    display: block;
+  }
+  .footer-fine {
+    margin-top: 24px;
+    font-size: 11px;
+    opacity: 0.45;
   }
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .validation-grid { grid-template-columns: 1fr; }
+    .op-ficha { grid-template-columns: 1fr; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .kpi .kpi-value { font-size: 19px; }
+    .kpi .kpi-label { font-size: 9px; }
+    .kpi { padding: 12px; }
+    .hero { padding: 36px 16px 44px; }
+    .hero h1 { font-size: 20px; }
+    .hero .subtitle { font-size: 13px; }
+    .hero-logo { height: 56px; margin-bottom: 20px; }
+    .section { margin: 32px 0; }
+    .section-header { flex-wrap: wrap; }
+    .section-title { font-size: 17px; }
+    .zone-badge { font-size: 10px; padding: 3px 10px; }
+    .card { padding: 18px; }
+    .source-pill { min-width: 0; }
+    .hypo-grid { grid-template-columns: 1fr !important; }
     .price-widget {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "main main" "p25 p75";
       gap: 10px;
     }
-    .price-widget .price-box.main { grid-area: main; transform: none; padding: 20px 16px; }
-    .price-widget .price-box.main .price-value { font-size: 28px !important; }
+    .price-widget .price-box.main { grid-area: main; transform: none; padding: 16px; }
     .price-widget .price-box:nth-child(1) { grid-area: p25; }
     .price-widget .price-box:nth-child(3) { grid-area: p75; }
-    .price-box .price-value { font-size: 22px; }
     .price-box { padding: 14px; }
-    .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .kpi .kpi-value { font-size: 19px; }
-    .kpi .kpi-label { font-size: 9px; }
-    .kpi { padding: 12px; }
-    .op-ficha { grid-template-columns: 1fr; }
-    .hero { padding: 30px 0 36px; }
-    .hero h1 { font-size: 21px; line-height: 1.3; }
-    .hero .subtitle { font-size: 13px; }
-    .header img { height: 26px; }
-    .header .badge { font-size: 9px; padding: 3px 10px; }
-    .section { margin: 32px 0; }
-    .section-header { flex-wrap: wrap; }
-    .section-title { font-size: 17px; }
-    .section-icon { width: 36px; height: 36px; font-size: 16px; }
-    .zone-badge { font-size: 10px; padding: 3px 10px; }
-    .card { padding: 18px; }
-    .card-title { font-size: 14px; }
-    .convergence { padding: 24px 16px; }
-    .convergence .conv-price { font-size: 28px; }
-    .convergence .conv-verdict { font-size: 18px; }
-    .unit-grid { grid-template-columns: repeat(4, 1fr); }
+    .price-box .price-value { font-size: 20px; }
+    .price-box.main .price-value { font-size: 26px !important; }
     .container { padding: 0 16px; }
-    .footer-inner { flex-direction: column; align-items: flex-start; }
-    .footer .footer-text { text-align: left; }
+
+    /* TABLAS COMO CARDS EN MÓVIL */
+    .table-mobile { display: block; width: 100%; overflow-x: auto; }
+    .table-mobile thead { display: none; }
+    .table-mobile tbody, .table-mobile tr { display: block; width: 100%; }
+    .table-mobile tr {
+      margin-bottom: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: white;
+    }
+    .table-mobile tr.highlight { background: #ecfdf5; border-color: #a7f3d0; }
+    .table-mobile tr.highlight-asset { background: #fff3f0; border-color: #FFD4C8; }
+    .table-mobile tr.highlight-sep { background: #f5f3ff; border-color: #ddd6fe; }
+    .table-mobile td {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 5px 0;
+      border-bottom: none;
+      font-size: 13px;
+      text-align: right;
+    }
+    .table-mobile td:first-child {
+      font-size: 15px;
+      font-weight: 800;
+      color: #141B36;
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #f3f4f6;
+      text-align: left;
+      display: block;
+    }
+    .table-mobile td:not(:first-child)::before {
+      content: attr(data-label);
+      font-size: 11px;
+      font-weight: 700;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+    .gdv-total-box .gdv-value { font-size: 28px; }
+    .footer-cta-title { font-size: 18px; }
+    .mtvv-step { flex-direction: column; gap: 8px; }
   }
-  @media (max-width: 480px) {
-    .op-ficha { grid-template-columns: 1fr; }
-    .via-pill { min-width: 100%; flex: 100%; }
-    .unit-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero h1 { font-size: 18px; }
+  @media (max-width: 400px) {
+    .hero h1 { font-size: 17px; }
     .kpi-row { grid-template-columns: 1fr 1fr; gap: 6px; }
   }
 </style>
@@ -857,1485 +726,1451 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<div class="header">
   <div class="header-inner">
     <img src="https://assets.cdn.filesafe.space/9FLX4fUFluqRQ8w19kzs/media/697e322e1311f62a92201cc6.png" alt="IM·PULSO">
-    <span class="badge">Informe V2 · 2026</span>
-  </div>
-</header>
-
-<!-- PORTADA / COVER -->
-<div class="portada">
-  <div class="portada-inner">
-    <img src="https://assets.cdn.filesafe.space/9FLX4fUFluqRQ8w19kzs/media/697e322e1311f62a92201cc6.png" alt="IM·PULSO" class="portada-logo">
-    <div class="portada-informe">Informe IM·PULSO · V2</div>
-    <h1 class="portada-title">Av. del Vergel 5, Beniarbeig</h1>
-    <div class="portada-subtitle">Edificio 20 viviendas + 20 plazas aparcamiento</div>
-    <div class="portada-tagline">Adquisición + terminación · alternativas: venta INBruto o Joint Venture</div>
-    <div class="portada-methods">
-      <div class="pm-card">
-        <div class="pm-icon">📡</div>
-        <div class="pm-name">IMPULSO</div>
-        <div class="pm-desc">Mercado / anuncios — testigos activos y retirados de Idealista</div>
-      </div>
-      <div class="pm-card">
-        <div class="pm-icon">🏛️</div>
-        <div class="pm-name">NOTARIADO</div>
-        <div class="pm-desc">Datos oficiales — compraventas escrituradas reales</div>
-      </div>
-      <div class="pm-card">
-        <div class="pm-icon">🔍</div>
-        <div class="pm-name">MÉTODO TOTAL</div>
-        <div class="pm-desc">Validación humana — contraste directo con agencias</div>
-      </div>
-    </div>
-    <div class="portada-date">Junio 2026 · CP 03778 Beniarbeig · Alicante</div>
+    <span class="badge">IM·PULSO v2 · Informe de inversión</span>
   </div>
 </div>
 
-<!-- HERO -->
+<!-- HERO / PORTADA -->
 <div class="hero">
   <div class="container">
-    <p class="subtitle">CP 03778 · Beniarbeig · Alicante</p>
-    <h1>Av. del Vergel 5</h1>
+    <img src="https://assets.cdn.filesafe.space/9FLX4fUFluqRQ8w19kzs/media/697e322e1311f62a92201cc6.png" alt="IM·PULSO" class="hero-logo">
+    <h1>Informe IM·PULSO · V2</h1>
+    <div class="subtitle">Av. del Vergel 5, Beniarbeig · Edificio de 20 viviendas + 20 plazas de aparcamiento</div>
+    <div class="op-line">Adquisición + terminación · alternativas: venta INBruto o Joint Venture</div>
+    <div class="hero-fecha">Junio 2026 · CP 03778 · Alicante · Obra parada ~18-20 años</div>
 
-    <!-- LAS 3 VÍAS -->
-    <div class="hero-vias">
-      <div class="via-pill v-impulso">
-        <div class="vp-tag">IMPULSO</div>
-        <div class="vp-title">Mercado (anuncios)</div>
-        <div class="vp-desc">Testigos activos y retirados de Idealista</div>
-      </div>
-      <div class="via-pill v-notarial">
-        <div class="vp-tag">NOTARIADO</div>
-        <div class="vp-title">Datos oficiales</div>
-        <div class="vp-desc">Compraventas escrituradas reales</div>
-      </div>
-      <div class="via-pill v-mtvv">
-        <div class="vp-tag">MÉTODO TOTAL</div>
-        <div class="vp-title">Validación humana</div>
-        <div class="vp-desc">Contraste directo con agencias</div>
-      </div>
-    </div>
-
-    <!-- FICHA OPERACIÓN -->
+    <!-- FICHA -->
     <div class="op-ficha">
       <div class="op-cell">
-        <div class="op-key">Edificio</div>
-        <div class="op-val">20 Viviendas + 20 Plazas</div>
+        <div class="op-key">El activo</div>
+        <div class="op-val">Edificio plurifamiliar — obra parada
+          <small>20 viviendas + 20 plazas aparcamiento · ~18-20 años sin terminar</small>
+        </div>
       </div>
       <div class="op-cell">
-        <div class="op-key">Estado</div>
-        <div class="op-val">Obra parada ~18-20 años</div>
+        <div class="op-key">La operación</div>
+        <div class="op-val">Adquisición + terminación de obra
+          <small>Asking 750.000 € (contexto; sin análisis de margen en este informe)</small>
+        </div>
       </div>
       <div class="op-cell">
-        <div class="op-key">Operación</div>
-        <div class="op-val">Adquisición + terminación
-          <small>Alt: venta INBruto o JV</small>
+        <div class="op-key">Alternativas</div>
+        <div class="op-val">Venta INBruto · Joint Venture
+          <small>El GDV firme de pisos es 1.945.100 €; áticos con reserva</small>
         </div>
       </div>
     </div>
 
-    <!-- ASKING -->
-    <div class="asking-widget">
-      <div class="aw-label">Asking price del vendedor</div>
-      <div class="aw-price">750.000 €</div>
-      <div class="aw-note">Precio de salida del vendedor · solo contexto</div>
+    <!-- 3 FUENTES -->
+    <div class="hero-sources">
+      <div class="source-pill">
+        <div class="sp-icon">📡</div>
+        <div class="sp-title">IMPULSO</div>
+        <div class="sp-desc">Anuncios publicados y retirados de mercado · testigos reales de Beniarbeig</div>
+      </div>
+      <div class="source-pill">
+        <div class="sp-icon">🏛️</div>
+        <div class="sp-title">NOTARIADO</div>
+        <div class="sp-desc">Datos oficiales escriturados · Portal Estadístico del Notariado · CP 03778</div>
+      </div>
+      <div class="source-pill">
+        <div class="sp-icon">🧠</div>
+        <div class="sp-title">MÉTODO TOTAL</div>
+        <div class="sp-desc">Validación humana con inmobiliarias y agentes locales · Programa IN</div>
+      </div>
+    </div>
+    <div class="hero-cita">"PULSO te dice DÓNDE invertir. IMPULSO te dice CUÁNTO pagar."</div>
+  </div>
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="container">
+
+<!-- ===================== SECCIÓN 1: PULSO ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background:#ecfdf5;">📡</div>
+    <div>
+      <div class="section-title">1 · PULSO — Latido del mercado (DÓNDE)</div>
+      <div class="section-subtitle">Anuncios publicados y retirados en Beniarbeig CP 03778 · Operación venta · n=298 registros</div>
+    </div>
+    <span class="zone-badge pulso">El pulso</span>
+  </div>
+
+  <!-- Resumen ejecutivo -->
+  <div class="card">
+    <div class="card-title">Resumen ejecutivo</div>
+    <div class="card-subtitle">Beniarbeig — municipio de ~2.200 habitantes, 298 registros en base de datos</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-value">298</div>
+        <div class="kpi-label">Registros totales</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">67</div>
+        <div class="kpi-label">Activos (hoy)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">223</div>
+        <div class="kpi-label">Retirados (proxy cierre)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">~80%</div>
+        <div class="kpi-label">Rotación media ponderada</div>
+      </div>
+    </div>
+    <div class="insight insight-green">El mercado de Beniarbeig tiene rotación alta en las tipologías más activas (Chalet, Piso, Garaje por encima del 80%), lo que refleja un municipio pequeño pero con absorción real. La muestra es reducida — coherente con ~2.200 habitantes.</div>
+  </div>
+
+  <!-- BLOQUE A: Por tipo de inmueble -->
+  <div class="card">
+    <div class="card-title">Por tipo de inmueble</div>
+    <div class="card-subtitle">Rotación = retirados / (publicados + retirados) × 100 — Precio medio sobre todos los registros del tipo</div>
+    <div class="legend">
+      <span class="lg-item"><span class="lg-dot" style="background:#FF4D2E"></span> PULSO del municipio</span>
+      <span class="lg-item"><span class="lg-dot" style="background:#10B981"></span> Viviendas resultantes de la operación</span>
+    </div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Tipo de inmueble</th>
+          <th>Publicados</th>
+          <th>Retirados</th>
+          <th>Rotación</th>
+          <th>Precio medio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td><strong>Chalet</strong> <span class="mark mark-pulso">PULSO</span></td>
+          <td data-label="Publicados">26</td>
+          <td data-label="Retirados">104</td>
+          <td data-label="Rotación"><strong>80,0%</strong></td>
+          <td data-label="Precio medio">555.653 €</td>
+        </tr>
+        <tr>
+          <td>Garaje</td>
+          <td data-label="Publicados">10</td>
+          <td data-label="Retirados">46</td>
+          <td data-label="Rotación">82,1%</td>
+          <td data-label="Precio medio">2.125 €</td>
+        </tr>
+        <tr class="highlight-asset">
+          <td><strong>Piso</strong> <span class="mark mark-asset">Viviendas resultantes</span></td>
+          <td data-label="Publicados">8</td>
+          <td data-label="Retirados">37</td>
+          <td data-label="Rotación"><strong>82,2%</strong></td>
+          <td data-label="Precio medio">170.971 €</td>
+        </tr>
+        <tr>
+          <td>Dúplex</td>
+          <td data-label="Publicados">2</td>
+          <td data-label="Retirados">5</td>
+          <td data-label="Rotación">71,4%</td>
+          <td data-label="Precio medio">229.860 €</td>
+        </tr>
+        <tr class="highlight-asset">
+          <td><strong>Ático</strong> <span class="mark mark-asset">Viviendas resultantes</span></td>
+          <td data-label="Publicados">1</td>
+          <td data-label="Retirados">3</td>
+          <td data-label="Rotación">75,0%</td>
+          <td data-label="Precio medio">171.500 €</td>
+        </tr>
+        <tr>
+          <td>Terreno</td>
+          <td data-label="Publicados">14</td>
+          <td data-label="Retirados">16</td>
+          <td data-label="Rotación">53,3%</td>
+          <td data-label="Precio medio">483.742 €</td>
+        </tr>
+        <tr>
+          <td>Casa Rural</td>
+          <td data-label="Publicados">7</td>
+          <td data-label="Retirados">6</td>
+          <td data-label="Rotación">46,2%</td>
+          <td data-label="Precio medio">549.169 €</td>
+        </tr>
+        <tr>
+          <td>Locales o Naves</td>
+          <td data-label="Publicados">5</td>
+          <td data-label="Retirados">4</td>
+          <td data-label="Rotación">44,4%</td>
+          <td data-label="Precio medio">279.717 €</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-orange">🧠 El pulso: <strong>Beniarbeig es un pueblo de chalets</strong>. Con 104 retirados y rotación del 80%, el Chalet es el producto dominante del municipio. El Piso rota igual de bien (82,2%) aunque con menor volumen — pero es la tipología exacta de la operación. <strong>El mercado absorbe pisos en Beniarbeig.</strong></div>
+  </div>
+
+  <!-- BLOQUE B: Por número de dormitorios -->
+  <div class="card">
+    <div class="card-title">Por número de dormitorios (pisos, venta)</div>
+    <div class="card-subtitle">Solo tipología Piso — desglose de la operación</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Dormitorios</th>
+          <th>Publicados</th>
+          <th>Retirados</th>
+          <th>Rotación</th>
+          <th>Precio medio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Piso 1 dormitorio</td>
+          <td data-label="Publicados">1</td>
+          <td data-label="Retirados">6</td>
+          <td data-label="Rotación">85,7%</td>
+          <td data-label="Precio medio">125.143 €</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>Piso 2 dormitorios</strong> <span class="mark mark-pulso">PULSO</span></td>
+          <td data-label="Publicados">1</td>
+          <td data-label="Retirados">19</td>
+          <td data-label="Rotación"><strong>95,0%</strong></td>
+          <td data-label="Precio medio">163.195 €</td>
+        </tr>
+        <tr>
+          <td>Piso 3 dormitorios</td>
+          <td data-label="Publicados">3</td>
+          <td data-label="Retirados">9</td>
+          <td data-label="Rotación">75,0%</td>
+          <td data-label="Precio medio">189.067 €</td>
+        </tr>
+        <tr>
+          <td>Piso 4 dormitorios</td>
+          <td data-label="Publicados">1</td>
+          <td data-label="Retirados">2</td>
+          <td data-label="Rotación">66,7%</td>
+          <td data-label="Precio medio">206.667 €</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-orange">🧠 El pulso: <strong>Piso 2 dormitorios</strong> rota al 95,0% con n=20. Es el segmento de pisos con mayor absorción y mayor masa del municipio. Los 11 pisos 2D del edificio apuntan directamente al producto más demandado.</div>
+  </div>
+
+  <!-- BLOQUE C: Por dormitorios × baños -->
+  <div class="card">
+    <div class="card-title">Por dormitorios × baños (venta, todos los inmuebles)</div>
+    <div class="card-subtitle">Combinaciones con n ≥ 5 — detecta el producto de mayor absorción</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Dormitorios × Baños</th>
+          <th>Total</th>
+          <th>Rotación</th>
+          <th>Precio medio</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td><strong>2 dorm × 2 baños</strong> <span class="mark mark-pulso">PULSO pisos</span></td>
+          <td data-label="Total">12</td>
+          <td data-label="Rotación"><strong>91,7%</strong></td>
+          <td data-label="Precio medio">157.083 €</td>
+          <td data-label="Nota">Mayor rotación relativa de pisos</td>
+        </tr>
+        <tr>
+          <td><strong>4 dorm × 3 baños</strong> <span class="mark mark-pulso">PULSO global</span></td>
+          <td data-label="Total">25</td>
+          <td data-label="Rotación"><strong>88,0%</strong></td>
+          <td data-label="Precio medio">697.996 €</td>
+          <td data-label="Nota">Chalets 4D estándar</td>
+        </tr>
+        <tr>
+          <td>3 dorm × 3 baños</td>
+          <td data-label="Total">12</td>
+          <td data-label="Rotación">83,3%</td>
+          <td data-label="Precio medio">529.333 €</td>
+          <td data-label="Nota">Chalets 3D con 3 baños</td>
+        </tr>
+        <tr>
+          <td>2 dorm × 1 baño</td>
+          <td data-label="Total">23</td>
+          <td data-label="Rotación">82,6%</td>
+          <td data-label="Precio medio">189.909 €</td>
+          <td data-label="Nota">Piso estándar</td>
+        </tr>
+        <tr>
+          <td>3 dorm × 2 baños</td>
+          <td data-label="Total">64</td>
+          <td data-label="Rotación">78,1%</td>
+          <td data-label="Precio medio">317.665 €</td>
+          <td data-label="Nota">Mayor volumen absoluto (chalets)</td>
+        </tr>
+        <tr>
+          <td>1 dorm × 1 baño</td>
+          <td data-label="Total">6</td>
+          <td data-label="Rotación">83,3%</td>
+          <td data-label="Precio medio">120.167 €</td>
+          <td data-label="Nota">Pisos 1D estándar</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-orange">🧠 El pulso: <strong>2 dormitorios × 2 baños</strong> lidera la rotación relativa de pisos (91,7%, n=12). Un piso 2D con 2 baños en el edificio sería el producto de mayor absorción del segmento. El edificio Av. del Vergel apunta exactamente a esta combinación.</div>
+  </div>
+
+  <!-- BLOQUE D: Tramos de precio -->
+  <div class="card">
+    <div class="card-title">Por tramos de precio (venta, todos los inmuebles)</div>
+    <div class="card-subtitle">11 tramos completos — dónde rota mejor el dinero</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Tramo de precio</th>
+          <th>Publicados</th>
+          <th>Retirados</th>
+          <th>Total</th>
+          <th>Rotación</th>
+          <th>Comentario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt; 50.000 €</td>
+          <td data-label="Publicados">10</td>
+          <td data-label="Retirados">46</td>
+          <td data-label="Total">56</td>
+          <td data-label="Rotación">82,1%</td>
+          <td data-label="Comentario">Garajes (dominantes)</td>
+        </tr>
+        <tr>
+          <td>50.000 – 100.000 €</td>
+          <td data-label="Publicados">4</td>
+          <td data-label="Retirados">3</td>
+          <td data-label="Total">7</td>
+          <td data-label="Rotación">42,9%</td>
+          <td data-label="Comentario">Bajo interés</td>
+        </tr>
+        <tr>
+          <td>100.000 – 150.000 €</td>
+          <td data-label="Publicados">4</td>
+          <td data-label="Retirados">20</td>
+          <td data-label="Total">24</td>
+          <td data-label="Rotación">83,3%</td>
+          <td data-label="Comentario">Pisos 1D — buena rotación</td>
+        </tr>
+        <tr class="highlight-asset">
+          <td><strong>150.000 – 200.000 €</strong> <span class="mark mark-asset">Pisos 2D</span></td>
+          <td data-label="Publicados">12</td>
+          <td data-label="Retirados">40</td>
+          <td data-label="Total">52</td>
+          <td data-label="Rotación"><strong>76,9%</strong></td>
+          <td data-label="Comentario">Core del mercado — pisos 2D</td>
+        </tr>
+        <tr>
+          <td>200.000 – 250.000 €</td>
+          <td data-label="Publicados">10</td>
+          <td data-label="Retirados">27</td>
+          <td data-label="Total">37</td>
+          <td data-label="Rotación">73,0%</td>
+          <td data-label="Comentario">Transición pisos→chalets pequeños</td>
+        </tr>
+        <tr>
+          <td>250.000 – 300.000 €</td>
+          <td data-label="Publicados">4</td>
+          <td data-label="Retirados">15</td>
+          <td data-label="Total">19</td>
+          <td data-label="Rotación">78,9%</td>
+          <td data-label="Comentario">Chalets pequeños / dúplex</td>
+        </tr>
+        <tr>
+          <td>300.000 – 350.000 €</td>
+          <td data-label="Publicados">0</td>
+          <td data-label="Retirados">0</td>
+          <td data-label="Total">0</td>
+          <td data-label="Rotación">—</td>
+          <td data-label="Comentario">VACÍO — ningún inmueble en este tramo</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>350.000 – 500.000 €</strong> <span class="mark mark-pulso">PULSO</span></td>
+          <td data-label="Publicados">2</td>
+          <td data-label="Retirados">22</td>
+          <td data-label="Total">24</td>
+          <td data-label="Rotación"><strong>91,7%</strong></td>
+          <td data-label="Comentario">Chalets medios — máxima rotación</td>
+        </tr>
+        <tr>
+          <td>500.000 – 750.000 €</td>
+          <td data-label="Publicados">12</td>
+          <td data-label="Retirados">16</td>
+          <td data-label="Total">28</td>
+          <td data-label="Rotación">57,1%</td>
+          <td data-label="Comentario">Chalets premium — liquidez menor</td>
+        </tr>
+        <tr>
+          <td>750.000 – 1.000.000 €</td>
+          <td data-label="Publicados">10</td>
+          <td data-label="Retirados">26</td>
+          <td data-label="Total">36</td>
+          <td data-label="Rotación">72,2%</td>
+          <td data-label="Comentario">Villas</td>
+        </tr>
+        <tr>
+          <td>&gt; 1.000.000 €</td>
+          <td data-label="Publicados">7</td>
+          <td data-label="Retirados">6</td>
+          <td data-label="Total">13</td>
+          <td data-label="Rotación">46,2%</td>
+          <td data-label="Comentario">Lujo — absorción lenta</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-orange">🧠 El pulso: el tramo 350.000–500.000 € rota al 91,7% (chalets medios). Para la operación, los pisos 2D del edificio caen en el tramo 150.000–200.000 € (rotación 76,9%), el de mayor masa de pisos. <strong>Hueco notable: 300.000–350.000 € está vacío</strong> — los áticos estimados (225.500–266.500 €) operan en zona sin competencia directa.</div>
+  </div>
+
+  <!-- BLOQUE E: Otros activos -->
+  <div class="card">
+    <div class="card-title">Otros activos relevantes</div>
+    <div class="card-subtitle">Garaje y terreno — contexto de mercado</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Publicados</th>
+          <th>Retirados</th>
+          <th>Rotación</th>
+          <th>Precio medio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Garaje</td>
+          <td data-label="Publicados">10</td>
+          <td data-label="Retirados">46</td>
+          <td data-label="Rotación">82,1%</td>
+          <td data-label="Precio medio">2.125 €</td>
+        </tr>
+        <tr>
+          <td>Terreno</td>
+          <td data-label="Publicados">14</td>
+          <td data-label="Retirados">16</td>
+          <td data-label="Rotación">53,3%</td>
+          <td data-label="Precio medio">483.742 €</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-gray">Las 20 plazas de aparcamiento del edificio tienen contexto de mercado positivo: garajes rotan al 82,1% en Beniarbeig con precio medio de 2.125 €. Son unidades complementarias que añaden valor a la operación.</div>
+  </div>
+
+  <!-- TOP PRODUCTOS RETIRADOS -->
+  <div class="verdict-navy">
+    <div class="verdict-icon">🏆</div>
+    <div>
+      <strong>Top productos más absorbidos por el mercado (retirados):</strong><br>
+      <span style="opacity:0.8">Chalet 3D: 50 retirados · Chalet 4D: 33 retirados · Piso 2D: 19 retirados · Garaje: 46 retirados</span><br>
+      <span style="opacity:0.6; font-size:13px;">Para la operación, los 11 pisos 2D y los 2 pisos 1D tienen masa real de testigos. Los 7 áticos son HUECO estadístico en Beniarbeig (n=0 áticos 3D/4D retirados a escala de la tipología).</span>
     </div>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+<hr class="section-divider">
 
-  <!-- =================== SECCIÓN 1: PULSO =================== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon" style="background:#ecfdf5;">🏠</div>
-      <div>
-        <div class="section-title">PULSO — Mercado Beniarbeig</div>
-        <div class="section-subtitle">Motor IMPULSO · Base de datos anuncios Idealista · CP 03778 · n=298 registros</div>
-      </div>
-      <span class="zone-badge pulso">El mercado</span>
+<!-- ===================== SECCIÓN 2: IMPULSO ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background:#fff3f0;">💡</div>
+    <div>
+      <div class="section-title">2 · IMPULSO — Valoración (CUÁNTO)</div>
+      <div class="section-subtitle">Precio de mercado por tipología · Edificio Av. del Vergel 5 · 20 viviendas + 20 aparcamientos</div>
     </div>
+    <span class="zone-badge impulso">La valoración</span>
+  </div>
 
-    <!-- CARD 1.1 RESUMEN KPIs -->
-    <div class="card">
-      <div class="card-title">1.1 Resumen del municipio</div>
-      <div class="card-subtitle">Venta · todos los inmuebles · Beniarbeig</div>
-      <div class="kpi-row">
-        <div class="kpi">
-          <div class="kpi-value">298</div>
-          <div class="kpi-label">Total muestra</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-value">Chalet</div>
-          <div class="kpi-label">Tipo dominante</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-value">Piso 2D</div>
-          <div class="kpi-label">Tipología resultantes</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-value">95%</div>
-          <div class="kpi-label">Rotación Piso 2D</div>
-        </div>
+  <!-- Datos de la consulta -->
+  <div class="card">
+    <div class="card-title">Datos de la consulta</div>
+    <div class="card-subtitle">Activo analizado · distribución de unidades resultantes</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-value">20</div>
+        <div class="kpi-label">Viviendas totales</div>
       </div>
-      <div class="insight insight-green">
-        <strong>Contexto:</strong> Beniarbeig es un mercado de chalets unifamiliares (~2.200 hab.). El chalet marca el pulso del mercado local. Para las viviendas del edificio (pisos y áticos), la referencia es la zona urbana y zona ampliada. El Piso 2 dormitorios es el lote más líquido del segmento pisos.
+      <div class="kpi">
+        <div class="kpi-value">13</div>
+        <div class="kpi-label">Pisos (firme)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">7</div>
+        <div class="kpi-label">Áticos dúplex (estimado)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">20</div>
+        <div class="kpi-label">Plazas aparcamiento</div>
       </div>
     </div>
 
-    <!-- CARD 1.2 POR TIPO -->
-    <div class="card">
-      <div class="card-title">1.2 Por tipo de inmueble</div>
-      <div class="card-subtitle">Venta · Beniarbeig · todos los registros ("Edificio" excluido — este activo no es comparable)</div>
-      <div class="legend">
-        <span class="lg-item"><span class="lg-dot" style="background:#FF4D2E;"></span>PULSO del municipio</span>
-        <span class="lg-item"><span class="lg-dot" style="background:#10B981;"></span>Tipología de la operación</span>
-      </div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Tipo</th>
-              <th>Activos</th>
-              <th>Retirados</th>
-              <th>Nota</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight-asset">
-              <td><strong>Chalet</strong> <span class="mark mark-pulso">PULSO</span></td>
-              <td data-label="Activos">26</td>
-              <td data-label="Retirados">104</td>
-              <td data-label="Nota">Marca el pulso del mercado local</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Piso</strong> <span class="mark mark-asset">OP.</span></td>
-              <td data-label="Activos">8</td>
-              <td data-label="Retirados">37</td>
-              <td data-label="Nota">Tipología de las resultantes del edificio</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Ático dúplex</strong> <span class="mark mark-asset">OP.</span></td>
-              <td data-label="Activos">1</td>
-              <td data-label="Retirados">3</td>
-              <td data-label="Nota">Tipología de las resultantes del edificio</td>
-            </tr>
-            <tr>
-              <td>Garaje</td>
-              <td data-label="Activos">10</td>
-              <td data-label="Retirados">46</td>
-              <td data-label="Nota">Alta rotación (las 20 plazas tienen mercado)</td>
-            </tr>
-            <tr>
-              <td>Terreno</td>
-              <td data-label="Activos">14</td>
-              <td data-label="Retirados">16</td>
-              <td data-label="Nota">Rotación moderada</td>
-            </tr>
-            <tr>
-              <td>Casa rural</td>
-              <td data-label="Activos">7</td>
-              <td data-label="Retirados">6</td>
-              <td data-label="Nota">Liquidez media</td>
-            </tr>
-            <tr>
-              <td>Dúplex</td>
-              <td data-label="Activos">2</td>
-              <td data-label="Retirados">5</td>
-              <td data-label="Nota">Poca muestra</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-green">
-        El chalet marca el pulso del mercado local. Para los pisos y áticos del edificio, la referencia es la zona urbana ampliada: no hay suficientes pisos en Beniarbeig para valorar solo por municipio.
-      </div>
+    <table class="table-mobile" style="margin-top:12px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tipología</th>
+          <th>Dormitorios</th>
+          <th>Baños</th>
+          <th>Sup. prov.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-sep">
+          <td colspan="5" style="font-weight:700;color:#141B36;background:#f3f4f6;">— PISOS (datos firmes) —</td>
+        </tr>
+        <tr>
+          <td>P01</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">1</td>
+          <td data-label="Baños">1</td>
+          <td data-label="Sup. prov.">~50 m²</td>
+        </tr>
+        <tr>
+          <td>P02</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">1</td>
+          <td data-label="Baños">1</td>
+          <td data-label="Sup. prov.">~50 m²</td>
+        </tr>
+        <tr>
+          <td>P03</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P04</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P05</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P06</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P07</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P08</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P09</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P10</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P11</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P12</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr>
+          <td>P13</td>
+          <td data-label="Tipología">Piso</td>
+          <td data-label="Dormitorios">2</td>
+          <td data-label="Baños">1-2</td>
+          <td data-label="Sup. prov.">~75 m²</td>
+        </tr>
+        <tr class="highlight-sep">
+          <td colspan="5" style="font-weight:700;color:#8B5CF6;background:#f5f3ff;">— ÁTICOS DÚPLEX (precio orientativo — ver nota) —</td>
+        </tr>
+        <tr>
+          <td>A14</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">3</td>
+          <td data-label="Baños">2</td>
+          <td data-label="Sup. prov.">~110 m²</td>
+        </tr>
+        <tr>
+          <td>A15</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">3</td>
+          <td data-label="Baños">2</td>
+          <td data-label="Sup. prov.">~110 m²</td>
+        </tr>
+        <tr>
+          <td>A16</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">3</td>
+          <td data-label="Baños">2</td>
+          <td data-label="Sup. prov.">~110 m²</td>
+        </tr>
+        <tr>
+          <td>A17</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">3</td>
+          <td data-label="Baños">2</td>
+          <td data-label="Sup. prov.">~110 m²</td>
+        </tr>
+        <tr>
+          <td>A18</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">4</td>
+          <td data-label="Baños">3</td>
+          <td data-label="Sup. prov.">~130 m²</td>
+        </tr>
+        <tr>
+          <td>A19</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">4</td>
+          <td data-label="Baños">3</td>
+          <td data-label="Sup. prov.">~130 m²</td>
+        </tr>
+        <tr>
+          <td>A20</td>
+          <td data-label="Tipología">Ático dúplex</td>
+          <td data-label="Dormitorios">4</td>
+          <td data-label="Baños">3</td>
+          <td data-label="Sup. prov.">~130 m²</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- EXPLICACIÓN PERCENTILES -->
+  <div class="callout-blue">
+    <strong>Qué significa precio mínimo / de mercado / máximo:</strong> ordenamos las viviendas similares por precio. El <strong>precio de mercado es el de la del medio (mediana)</strong> — la mitad se vendió más barato, la otra mitad más caro. El <strong>mínimo marca el 25% más barato (P25)</strong> y el <strong>máximo el 25% más caro (P75)</strong>.<br><br>
+    <strong>GDV</strong> (Gross Development Value) = valor total de venta de las viviendas similares a las resultantes a precio de mercado; no incluye costes de obra, márgenes ni financiación.
+  </div>
+
+  <!-- PISOS — PRECIO DE MERCADO -->
+  <div class="card">
+    <div class="card-title">Precio de mercado — PISOS (datos firmes de Beniarbeig)</div>
+    <div class="card-subtitle">Testigos retirados exclusivamente del municipio Beniarbeig — sin expansión geográfica</div>
+
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Tipología</th>
+          <th>N testigos</th>
+          <th>Mínimo (P25)</th>
+          <th>Mercado (mediana)</th>
+          <th>Máximo (P75)</th>
+          <th>€/m²</th>
+          <th>Días venta</th>
+          <th>Demanda</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Piso 1 dormitorio (×2)</td>
+          <td data-label="N testigos">5 ⚠️</td>
+          <td data-label="Mínimo (P25)">107.000 €</td>
+          <td data-label="Mercado (mediana)"><strong>118.400 €</strong></td>
+          <td data-label="Máximo (P75)">117.500 €</td>
+          <td data-label="€/m²">~2.200</td>
+          <td data-label="Días venta">~45</td>
+          <td data-label="Demanda">Media</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>Piso 2 dormitorios (×11)</strong> <span class="mark mark-pulso">PULSO</span></td>
+          <td data-label="N testigos">9</td>
+          <td data-label="Mínimo (P25)">149.000 €</td>
+          <td data-label="Mercado (mediana)"><strong>155.300 €</strong></td>
+          <td data-label="Máximo (P75)">160.000 €</td>
+          <td data-label="€/m²">~1.852</td>
+          <td data-label="Días venta">~129</td>
+          <td data-label="Demanda"><span style="color:#dc2626">🔴 Baja</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="insight insight-gray" style="font-size:12px">⚠ Piso 1D: n=5, muestra escasa — valor orientativo. Piso 2D: n=9, aceptable para Beniarbeig (municipio pequeño). Precio mediana ligera diferencia respecto al AVG bruto (155.267 €) por selección de testigos en rango m²±15.</div>
+
+    <!-- GDV PISOS FIRME -->
+    <div class="gdv-total-box" style="margin-top:20px">
+      <div class="gdv-label">GDV Pisos (13 unidades · datos reales Beniarbeig)</div>
+      <div class="gdv-value">1.945.100 €</div>
+      <div class="gdv-note">2 pisos 1D × 118.400 € = 236.800 € + 11 pisos 2D × 155.300 € = 1.708.300 €<br>Valoración firme — 100% defendible con testigos locales</div>
+    </div>
+  </div>
+
+  <!-- ÁTICOS — BLOQUE APARTE -->
+  <div class="card" style="border: 2px dashed #8B5CF6;">
+    <div class="card-title" style="color:#8B5CF6;">Precio de mercado — ÁTICOS DÚPLEX (precio orientativo)</div>
+    <div class="card-subtitle">Estimación por €/m² — no hay testigos de áticos 3D/4D en Beniarbeig</div>
+
+    <div class="callout-yellow">
+      ⚠ <strong>Áticos — precio orientativo.</strong> En Beniarbeig no hay áticos a la venta para comparar (n=0 en la tipología exacta). El precio se ha estimado por €/m² entre un piso grande y un dúplex del propio municipio (base: Piso 2D P50 = 1.842 €/m², con prima +3% a +19% por tipología). <strong>Se presentan APARTE por no ser dato consolidado.</strong>
     </div>
 
-    <!-- CARD 1.3 POR DORMITORIOS -->
-    <div class="card">
-      <div class="card-title">1.3 Por número de dormitorios</div>
-      <div class="card-subtitle">Venta · todos los inmuebles · Beniarbeig</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Dormitorios</th>
-              <th>Publicados</th>
-              <th>Retirados</th>
-              <th>Rotación %</th>
-              <th>Activos</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>3 dormitorios</td>
-              <td data-label="Publicados">85</td>
-              <td data-label="Retirados">66</td>
-              <td data-label="Rotación %">77,6%</td>
-              <td data-label="Activos">19</td>
-            </tr>
-            <tr>
-              <td>4 dormitorios</td>
-              <td data-label="Publicados">49</td>
-              <td data-label="Retirados">39</td>
-              <td data-label="Rotación %">79,6%</td>
-              <td data-label="Activos">10</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>2 dormitorios</strong> <span class="mark mark-asset">OP.</span></td>
-              <td data-label="Publicados">35</td>
-              <td data-label="Retirados">30</td>
-              <td data-label="Rotación %"><strong>85,7%</strong></td>
-              <td data-label="Activos">5</td>
-            </tr>
-            <tr>
-              <td>5 dormitorios</td>
-              <td data-label="Publicados">18</td>
-              <td data-label="Retirados">11</td>
-              <td data-label="Rotación %">61,1%</td>
-              <td data-label="Activos">7</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>1 dormitorio</strong> <span class="mark mark-asset">OP.</span></td>
-              <td data-label="Publicados">7</td>
-              <td data-label="Retirados">6</td>
-              <td data-label="Rotación %"><strong>85,7%</strong></td>
-              <td data-label="Activos">1</td>
-            </tr>
-            <tr>
-              <td>0 dorm./Estudio</td>
-              <td data-label="Publicados">4</td>
-              <td data-label="Retirados">4</td>
-              <td data-label="Rotación %">100%*</td>
-              <td data-label="Activos">0</td>
-            </tr>
-          </tbody>
-        </table>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Tipología</th>
+          <th>N uds</th>
+          <th>€/m² aplicado</th>
+          <th>Mínimo (P25)</th>
+          <th>Mercado (medio)</th>
+          <th>Máximo (P75)</th>
+          <th>Sup. prov.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ático dúplex 3 dormitorios (×4)</td>
+          <td data-label="N uds">4</td>
+          <td data-label="€/m² aplicado">1.900 – 2.200</td>
+          <td data-label="Mínimo">209.000 €</td>
+          <td data-label="Mercado"><strong>225.500 €</strong></td>
+          <td data-label="Máximo">242.000 €</td>
+          <td data-label="Sup. prov.">~110 m²</td>
+        </tr>
+        <tr>
+          <td>Ático dúplex 4 dormitorios (×3)</td>
+          <td data-label="N uds">3</td>
+          <td data-label="€/m² aplicado">1.900 – 2.200</td>
+          <td data-label="Mínimo">247.000 €</td>
+          <td data-label="Mercado"><strong>266.500 €</strong></td>
+          <td data-label="Máximo">286.000 €</td>
+          <td data-label="Sup. prov.">~130 m²</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="hypo-grid" style="margin-top:16px">
+      <div class="hypo-card conservador">
+        <div class="h-label">Precio mínimo (1.900 €/m²)</div>
+        <div class="h-value">1.577.000 €</div>
+        <div style="font-size:11px;color:#6b7280;margin-top:4px">4×209K + 3×247K</div>
       </div>
-      <p style="font-size:11px;color:#9ca3af;margin-top:6px;">*0 dorm./Estudio 100% = n=4, anecdótico.</p>
-      <div class="insight insight-green">
-        <strong>Lectura:</strong> 3D y 4D dominan en volumen (chalets). En rotación, <strong>2 dorm. y 1 dorm. lideran empatados al 85,7%</strong>. El Piso 2 dorm. es el segmento más líquido del edificio.
+      <div class="hypo-card medio">
+        <div class="h-label">Precio de mercado (2.050 €/m²)</div>
+        <div class="h-value">1.701.500 €</div>
+        <div style="font-size:11px;color:#6b7280;margin-top:4px">4×225.5K + 3×266.5K</div>
+      </div>
+      <div class="hypo-card optimista">
+        <div class="h-label">Precio máximo (2.200 €/m²)</div>
+        <div class="h-value">1.826.000 €</div>
+        <div style="font-size:11px;color:#6b7280;margin-top:4px">4×242K + 3×286K</div>
       </div>
     </div>
+  </div>
 
-    <!-- CARD 1.4 DORMITORIOS × BAÑOS -->
-    <div class="card">
-      <div class="card-title">1.4 Dormitorios × Baños</div>
-      <div class="card-subtitle">Venta · Beniarbeig · combinaciones con n≥5</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Dorm.</th>
-              <th>Baños</th>
-              <th>Publicados</th>
-              <th>Retirados</th>
-              <th>Total</th>
-              <th>Rotación %</th>
-              <th>Precio medio</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>3 dorm.</td>
-              <td data-label="Baños">2</td>
-              <td data-label="Publicados">14</td>
-              <td data-label="Retirados">50</td>
-              <td data-label="Total">64</td>
-              <td data-label="Rotación %">78,1% <span style="font-size:11px;color:#9ca3af;">(mayor volumen)</span></td>
-              <td data-label="Precio medio">317.665 €</td>
-            </tr>
-            <tr>
-              <td>4 dorm.</td>
-              <td data-label="Baños">3</td>
-              <td data-label="Publicados">3</td>
-              <td data-label="Retirados">22</td>
-              <td data-label="Total">25</td>
-              <td data-label="Rotación %"><strong>88,0%</strong></td>
-              <td data-label="Precio medio">697.996 €</td>
-            </tr>
-            <tr>
-              <td>2 dorm.</td>
-              <td data-label="Baños">1</td>
-              <td data-label="Publicados">4</td>
-              <td data-label="Retirados">19</td>
-              <td data-label="Total">23</td>
-              <td data-label="Rotación %">82,6%</td>
-              <td data-label="Precio medio">189.909 €</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>2 dorm.</strong></td>
-              <td data-label="Baños"><strong>2</strong></td>
-              <td data-label="Publicados">1</td>
-              <td data-label="Retirados">11</td>
-              <td data-label="Total">12</td>
-              <td data-label="Rotación %"><strong>91,7%</strong> <span class="mark mark-dom">DOMINANTE</span></td>
-              <td data-label="Precio medio">157.083 €</td>
-            </tr>
-            <tr>
-              <td>3 dorm.</td>
-              <td data-label="Baños">3</td>
-              <td data-label="Publicados">2</td>
-              <td data-label="Retirados">10</td>
-              <td data-label="Total">12</td>
-              <td data-label="Rotación %">83,3%</td>
-              <td data-label="Precio medio">529.333 €</td>
-            </tr>
-            <tr>
-              <td>4 dorm.</td>
-              <td data-label="Baños">2</td>
-              <td data-label="Publicados">3</td>
-              <td data-label="Retirados">9</td>
-              <td data-label="Total">12</td>
-              <td data-label="Rotación %">75,0%</td>
-              <td data-label="Precio medio">334.833 €</td>
-            </tr>
-            <tr>
-              <td>1 dorm.</td>
-              <td data-label="Baños">1</td>
-              <td data-label="Publicados">1</td>
-              <td data-label="Retirados">5</td>
-              <td data-label="Total">6</td>
-              <td data-label="Rotación %">83,3%</td>
-              <td data-label="Precio medio">120.167 €</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-orange">
-        <strong>Combinación dominante por rotación (n≥5):</strong> <strong>2 dorm. × 2 baños = 91,7%</strong>. El mejor ratio relativo de pisos en Beniarbeig. Un piso de 2 dormitorios con 2 baños es el producto de mayor absorción del segmento.
-      </div>
+  <!-- CUADRÍCULA 20 VIVIENDAS -->
+  <div class="card">
+    <div class="card-title">Cuadrícula de las 20 viviendas — GDV combinado</div>
+    <div class="card-subtitle">Pisos a precio de mercado (mediana) · Áticos a escenario medio (referencia orientativa)</div>
+
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tipo</th>
+          <th>Dorm.</th>
+          <th>Valor unitario</th>
+          <th>Total acum.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-sep">
+          <td colspan="5" style="background:#ecfdf5;color:#10B981;font-weight:700;">— PISOS — Subtotal: 1.945.100 € (firme)</td>
+        </tr>
+        <tr>
+          <td>P01</td>
+          <td data-label="Tipo">Piso</td>
+          <td data-label="Dorm.">1D</td>
+          <td data-label="Valor unitario">118.400 €</td>
+          <td data-label="Total acum.">118.400 €</td>
+        </tr>
+        <tr>
+          <td>P02</td>
+          <td data-label="Tipo">Piso</td>
+          <td data-label="Dorm.">1D</td>
+          <td data-label="Valor unitario">118.400 €</td>
+          <td data-label="Total acum.">236.800 €</td>
+        </tr>
+        <tr>
+          <td>P03–P13 (11 uds)</td>
+          <td data-label="Tipo">Piso</td>
+          <td data-label="Dorm.">2D</td>
+          <td data-label="Valor unitario">155.300 €</td>
+          <td data-label="Total acum.">1.945.100 €</td>
+        </tr>
+        <tr class="highlight-sep">
+          <td colspan="5" style="background:#f5f3ff;color:#8B5CF6;font-weight:700;">— ÁTICOS — Subtotal: 1.701.500 € (orientativo — escenario medio)</td>
+        </tr>
+        <tr>
+          <td>A14–A17 (4 uds)</td>
+          <td data-label="Tipo">Ático dúplex</td>
+          <td data-label="Dorm.">3D</td>
+          <td data-label="Valor unitario">225.500 €</td>
+          <td data-label="Total acum.">902.000 €</td>
+        </tr>
+        <tr>
+          <td>A18–A20 (3 uds)</td>
+          <td data-label="Tipo">Ático dúplex</td>
+          <td data-label="Dorm.">4D</td>
+          <td data-label="Valor unitario">266.500 €</td>
+          <td data-label="Total acum.">1.701.500 €</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background:#f3f4f6;border-radius:10px;padding:14px 18px;margin-top:14px;font-size:13px;">
+      <strong>GDV pisos (firme): 1.945.100 €</strong> · GDV áticos (orientativo, escenario medio): 1.701.500 €<br>
+      <strong>Total con áticos (con reserva): 3.646.600 €</strong><br>
+      <span style="color:#6b7280;font-size:12px">Los áticos se presentan aparte. El único GDV 100% defendible con datos locales son los 1.945.100 € de los 13 pisos.</span>
     </div>
+  </div>
 
-    <!-- CARD 1.5 TRAMOS DE PRECIO -->
-    <div class="card">
-      <div class="card-title">1.5 Tramos de precio</div>
-      <div class="card-subtitle">Venta · todos los inmuebles · Beniarbeig (n=298)</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Tramo de precio</th>
-              <th>Publicados</th>
-              <th>Retirados</th>
-              <th>Total</th>
-              <th>Rotación %</th>
-              <th>Comentario</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>&lt; 50K</td>
-              <td data-label="Publicados">10</td>
-              <td data-label="Retirados">46</td>
-              <td data-label="Total">56</td>
-              <td data-label="Rotación %"><strong>82%</strong></td>
-              <td data-label="Comentario">Garajes (dominantes)</td>
-            </tr>
-            <tr>
-              <td>50–100K</td>
-              <td data-label="Publicados">4</td>
-              <td data-label="Retirados">3</td>
-              <td data-label="Total">7</td>
-              <td data-label="Rotación %">43%</td>
-              <td data-label="Comentario">Bajo interés / escasa oferta</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>100–150K</strong> <span class="mark mark-asset">1D</span></td>
-              <td data-label="Publicados">4</td>
-              <td data-label="Retirados">20</td>
-              <td data-label="Total">24</td>
-              <td data-label="Rotación %"><strong>83%</strong></td>
-              <td data-label="Comentario">Pisos 1 dorm. — buena rotación</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>150–200K</strong> <span class="mark mark-asset">2D</span></td>
-              <td data-label="Publicados">12</td>
-              <td data-label="Retirados">40</td>
-              <td data-label="Total">52</td>
-              <td data-label="Rotación %"><strong>77%</strong></td>
-              <td data-label="Comentario">Pisos 2 dorm. — core del mercado</td>
-            </tr>
-            <tr>
-              <td>200–250K</td>
-              <td data-label="Publicados">10</td>
-              <td data-label="Retirados">27</td>
-              <td data-label="Total">37</td>
-              <td data-label="Rotación %">73%</td>
-              <td data-label="Comentario">Transición pisos → chalets pequeños</td>
-            </tr>
-            <tr>
-              <td>250–300K</td>
-              <td data-label="Publicados">4</td>
-              <td data-label="Retirados">15</td>
-              <td data-label="Total">19</td>
-              <td data-label="Rotación %">79%</td>
-              <td data-label="Comentario">Chalets pequeños / dúplex</td>
-            </tr>
-            <tr style="background:#fef2f2;">
-              <td><strong>300–350K</strong></td>
-              <td data-label="Publicados">0</td>
-              <td data-label="Retirados">0</td>
-              <td data-label="Total">0</td>
-              <td data-label="Rotación %">—</td>
-              <td data-label="Comentario"><strong>⚠ VACÍO — ningún inmueble en este tramo</strong></td>
-            </tr>
-            <tr>
-              <td>350–500K</td>
-              <td data-label="Publicados">2</td>
-              <td data-label="Retirados">22</td>
-              <td data-label="Total">24</td>
-              <td data-label="Rotación %"><strong>92%</strong></td>
-              <td data-label="Comentario">Chalets medios — máxima rotación</td>
-            </tr>
-            <tr>
-              <td>500–750K</td>
-              <td data-label="Publicados">12</td>
-              <td data-label="Retirados">16</td>
-              <td data-label="Total">28</td>
-              <td data-label="Rotación %">57%</td>
-              <td data-label="Comentario">Chalets premium — liquidez menor</td>
-            </tr>
-            <tr>
-              <td>750K–1M</td>
-              <td data-label="Publicados">10</td>
-              <td data-label="Retirados">26</td>
-              <td data-label="Total">36</td>
-              <td data-label="Rotación %">72%</td>
-              <td data-label="Comentario">Villas</td>
-            </tr>
-            <tr>
-              <td>&gt; 1M</td>
-              <td data-label="Publicados">7</td>
-              <td data-label="Retirados">6</td>
-              <td data-label="Total">13</td>
-              <td data-label="Rotación %">46%</td>
-              <td data-label="Comentario">Lujo — absorción lenta</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-orange">
-        <strong>Hueco notable:</strong> El tramo 300–350K tiene 0 inmuebles. El mercado salta directamente de chalets pequeños (250–300K) a chalets medios (350K+). Los áticos del edificio en escenario Medio (225K–266K) operan en una zona de <strong>poca competencia directa comparable</strong>.
-      </div>
-    </div>
+  <!-- ALQUILER DE MERCADO -->
+  <div class="card">
+    <div class="card-title">Alquiler de mercado (referencia)</div>
+    <div class="card-subtitle">Dato de mercado orientativo — sin rentabilidad de operación</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Tipología</th>
+          <th>Alquiler medio/mes</th>
+          <th>Municipios fuente</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Piso 1 dormitorio</td>
+          <td data-label="Alquiler/mes"><strong>~725 €/mes</strong></td>
+          <td data-label="Municipios">Beniarbeig (n=2)</td>
+          <td data-label="Nota">⚠ Muestra escasa</td>
+        </tr>
+        <tr>
+          <td>Piso 2 dormitorios</td>
+          <td data-label="Alquiler/mes"><strong>~731 €/mes</strong></td>
+          <td data-label="Municipios">Beniarbeig (n=4)</td>
+          <td data-label="Nota">⚠ Muestra escasa</td>
+        </tr>
+        <tr>
+          <td>Ático dúplex 3 dormitorios</td>
+          <td data-label="Alquiler/mes"><strong>~950–1.100 €/mes</strong></td>
+          <td data-label="Municipios">El Verger + Ondara (ampliado)</td>
+          <td data-label="Nota">⚠ HUECO en Beniarbeig</td>
+        </tr>
+        <tr>
+          <td>Ático dúplex 4 dormitorios</td>
+          <td data-label="Alquiler/mes"><strong>~950 €/mes</strong></td>
+          <td data-label="Municipios">El Verger + Ondara (ampliado)</td>
+          <td data-label="Nota">⚠ HUECO en Beniarbeig</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-gray">El mercado de alquiler en Beniarbeig es muy ilíquido — todos los anuncios están retirados, no hay oferta activa. Datos de pisos son los únicos locales (n=2/4). Áticos requieren expansión a municipios contiguos.</div>
+  </div>
 
-    <!-- CARD 1.6 TOP RETIRADOS -->
-    <div class="card">
-      <div class="card-title">1.6 TOP retirados por tipología</div>
-      <div class="card-subtitle">Referencias de mercado en Beniarbeig (retirados = han movido precio)</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Tipología</th>
-              <th>N retirados</th>
-              <th>Precio mín</th>
-              <th>Precio medio</th>
-              <th>Precio máx</th>
-              <th>Rotación</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight">
-              <td><strong>Piso 1 dormitorio</strong> <span class="mark mark-asset">OP.</span></td>
-              <td data-label="N retirados">6</td>
-              <td data-label="Precio mín">107.000 €</td>
-              <td data-label="Precio medio">125.143 €</td>
-              <td data-label="Precio máx">145.000 €</td>
-              <td data-label="Rotación">85,7%</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Piso 2 dormitorios</strong> <span class="mark mark-asset">OP.</span></td>
-              <td data-label="N retirados">30</td>
-              <td data-label="Precio mín">118.000 €</td>
-              <td data-label="Precio medio">155.000 €</td>
-              <td data-label="Precio máx">190.000 €</td>
-              <td data-label="Rotación">85,7%</td>
-            </tr>
-            <tr>
-              <td>Chalet 3 dormitorios</td>
-              <td data-label="N retirados">66</td>
-              <td data-label="Precio mín">160.000 €</td>
-              <td data-label="Precio medio">317.665 €</td>
-              <td data-label="Precio máx">800.000 €</td>
-              <td data-label="Rotación">77,6%</td>
-            </tr>
-            <tr>
-              <td>Chalet 4 dormitorios</td>
-              <td data-label="N retirados">39</td>
-              <td data-label="Precio mín">250.000 €</td>
-              <td data-label="Precio medio">697.996 €</td>
-              <td data-label="Precio máx">1.500.000 €</td>
-              <td data-label="Rotación">79,6%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <!-- INMOBILIARIAS -->
+  <div class="card">
+    <div class="card-title">Inmobiliarias que han movido en Beniarbeig y zona</div>
+    <div class="card-subtitle">Agencias con anuncios publicados y retirados — contactos validados para MTVV</div>
 
-    <!-- CARD 1.7 DEMANDA / DÍAS -->
-    <div class="card">
-      <div class="card-title">1.7 Demanda / Días en mercado</div>
-      <div class="card-subtitle">Estimación por tipología · pisos en Beniarbeig</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Tipología</th>
-              <th>Días mediana</th>
-              <th>Lectura</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight">
-              <td><strong>Piso 1 dormitorio</strong></td>
-              <td data-label="Días mediana">~45 días</td>
-              <td data-label="Lectura">Ágil — absorción rápida</td>
-            </tr>
-            <tr>
-              <td>Piso 2 dormitorios</td>
-              <td data-label="Días mediana">~129 días</td>
-              <td data-label="Lectura">Lento — producto escaso en zona</td>
-            </tr>
-            <tr>
-              <td>Piso 3 dormitorios</td>
-              <td data-label="Días mediana">~111 días</td>
-              <td data-label="Lectura">Lento — muestra limitada</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-green">
-        <strong>Lectura:</strong> El Piso 1 dorm. se absorbe muy rápido (~45 días). Los pisos de 2 y 3 dorm. muestran más días en mercado (129 y 111), coherente con una muestra pequeña y producto escaso en zona. Esto no refleja falta de demanda sino falta de oferta comparable.
-      </div>
-    </div>
+    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#141B36;margin-bottom:8px;">Pisos — zona Beniarbeig directa</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Inmobiliaria</th>
+          <th>Teléfono</th>
+          <th>Retirados</th>
+          <th>Tipología</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td><strong>iad España</strong> <span class="mark mark-pulso">Mayor volumen</span></td>
+          <td data-label="Teléfono">865 445 479</td>
+          <td data-label="Retirados">4 pisos</td>
+          <td data-label="Tipología">1D, 2D, 3D, 5D</td>
+        </tr>
+        <tr>
+          <td>Plá inmobiliaria</td>
+          <td data-label="Teléfono">965 021 749</td>
+          <td data-label="Retirados">4 pisos</td>
+          <td data-label="Tipología">1D, 3D, 3D, 4D · 107K–189K</td>
+        </tr>
+        <tr>
+          <td>TR interinmo</td>
+          <td data-label="Teléfono">965 020 479</td>
+          <td data-label="Retirados">3 pisos</td>
+          <td data-label="Tipología">2D, 2D, 2D · 149K–160K</td>
+        </tr>
+        <tr>
+          <td>Emiris Homes</td>
+          <td data-label="Teléfono">865 445 437</td>
+          <td data-label="Retirados">3 (2 pisos + 1 estudio)</td>
+          <td data-label="Tipología">Pisos pequeños</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <!-- VERDICT PULSO -->
-    <div class="verdict-navy">
-      <div class="verdict-icon">📊</div>
-      <div>
-        <strong>Veredicto PULSO:</strong> Beniarbeig es un mercado activo con 298 registros. El chalet domina en volumen, pero el segmento pisos muestra <strong>rotaciones del 82–95%</strong>, las más altas del mercado local. La combinación 2 dorm. × 2 baños tiene la mayor rotación relativa (91,7%). El tramo 300–350K está vacío — los áticos del edificio (225K–266K Medio) tendrían poca competencia directa. Mercado en alza, zona costera Marina Alta con demanda extranjera probada.
-      </div>
-    </div>
-  </div><!-- /sección 1 -->
+    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#8B5CF6;margin:16px 0 8px;">Áticos 3D/4D — zona ampliada (El Verger + Ondara) <span class="mark mark-zona">Zona ampliada</span></div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Inmobiliaria</th>
+          <th>Teléfono</th>
+          <th>Retirados</th>
+          <th>Municipios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lluna Denia servicios inm.</td>
+          <td data-label="Teléfono">865 440 526</td>
+          <td data-label="Retirados">4 áticos</td>
+          <td data-label="Municipios">El Verger + Ondara · 182K–449K</td>
+        </tr>
+        <tr>
+          <td>daniamed</td>
+          <td data-label="Teléfono">965 024 833</td>
+          <td data-label="Retirados">3 áticos 3D</td>
+          <td data-label="Municipios">El Verger + Ondara · 210K–269K</td>
+        </tr>
+        <tr>
+          <td>Huspy Alicante</td>
+          <td data-label="Teléfono">965 022 307</td>
+          <td data-label="Retirados">1 ático 3D</td>
+          <td data-label="Municipios">Beniarbeig directa (259K — único)</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <hr class="section-divider">
-
-  <!-- =================== SECCIÓN 2: IMPULSO GDV =================== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon" style="background:#fff3f0;">💶</div>
-      <div>
-        <div class="section-title">IMPULSO GDV — Valoración de mercado</div>
-        <div class="section-subtitle">VÍA 1 · Precios de testigos comparables · Beniarbeig y zona ampliada</div>
-      </div>
-      <span class="zone-badge impulso">GDV</span>
-    </div>
-
-    <!-- PERCENTILES LEGEND -->
-    <div class="term-explainer">
-      <strong>Conservador / Medio / Optimista</strong> — cómo leer los precios de testigos:<br>
-      &bull; <strong>P25 → Conservador:</strong> el 25% de los testigos se vendió por debajo de este precio.<br>
-      &bull; <strong>P50 → Medio:</strong> la mitad de los testigos por debajo y la mitad por encima.<br>
-      &bull; <strong>P75 → Optimista:</strong> solo el 25% se vendió por encima de este precio.<br><br>
-      <strong>GDV</strong> (primera aparición) = valor total de venta de las viviendas similares a las resultantes a precio de mercado; no incluye costes de obra, márgenes ni financiación.
-    </div>
-
-    <!-- CARD 2.1 PISOS (FIRM DATA) -->
-    <div class="card">
-      <div class="card-title">2.1 Pisos — Testigos Beniarbeig <span class="mark mark-asset" style="font-size:11px;vertical-align:middle;">VALORACIÓN FIRME</span></div>
-      <div class="card-subtitle">13 unidades · precios de testigos reales activos y retirados · CP 03778</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr><th>Tipología</th><th>Nº unidades</th><th>P25 (Conservador)</th><th>P50 (Medio)</th><th>P75 (Optimista)</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Piso 1 dormitorio</td>
-              <td data-label="Nº unidades">2</td>
-              <td data-label="P25 Conservador">107.000 €</td>
-              <td data-label="P50 Medio">118.400 €</td>
-              <td data-label="P75 Optimista">117.500 €</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Piso 2 dormitorios</strong> <span class="mark mark-dom">MAYOR ROTACIÓN 95%</span></td>
-              <td data-label="Nº unidades">11</td>
-              <td data-label="P25 Conservador">149.000 €</td>
-              <td data-label="P50 Medio">155.300 €</td>
-              <td data-label="P75 Optimista">160.000 €</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- GDV PISOS -->
-      <div style="margin-top:20px;">
-        <div class="price-widget">
-          <div class="price-box">
-            <div class="price-label">Conservador (P25)</div>
-            <div class="price-value">1.853.000 €</div>
-            <div class="price-note">2×107K + 11×149K</div>
-          </div>
-          <div class="price-box main">
-            <div class="price-label">GDV PISOS — Medio (P50)</div>
-            <div class="price-value">1.945.100 €</div>
-            <div class="price-note">2×118.400 + 11×155.300 · DATO FIRME</div>
-          </div>
-          <div class="price-box">
-            <div class="price-label">Optimista (P75)</div>
-            <div class="price-value">1.995.000 €</div>
-            <div class="price-note">2×117.5K + 11×160K</div>
-          </div>
-        </div>
-      </div>
-      <div class="insight insight-green">
-        <strong>GDV Pisos (13 uds) = 1.945.100 € (Medio) — VALORACIÓN FIRME.</strong> Basado en testigos reales de Beniarbeig. Rango Conservador–Optimista: 1.853.000 – 1.995.000 €.
-      </div>
-    </div>
-
-    <!-- CARD 2.2 ÁTICOS (ISOLATED, ORIENTATIVO) -->
-    <div class="card" style="border: 2px dashed #fde68a; background: #fffbeb;">
-      <div class="card-title">2.2 Áticos dúplex — Estimación orientativa <span style="font-size:11px;background:#fde68a;color:#78350f;padding:2px 8px;border-radius:5px;font-weight:700;vertical-align:middle;">APARTE</span></div>
-      <div class="card-subtitle">7 unidades · estimación por €/m² entre piso grande y chalet del pueblo · NO hay testigos directos en Beniarbeig</div>
-      <div class="provenance">
-        ⚠ <strong>Áticos — orientativo.</strong> En Beniarbeig no hay áticos a la venta; precio estimado por €/m² entre un piso grande y un chalet del pueblo. Se presentan aparte por no ser dato consolidado.
-      </div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr><th>Tipología</th><th>Nº unidades</th><th>P25 (Conservador)</th><th>P50 (Medio)</th><th>P75 (Optimista)</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ático dúplex 3 dormitorios (110 m²)</td>
-              <td data-label="Nº unidades">4</td>
-              <td data-label="P25 Conservador">209.000 €</td>
-              <td data-label="P50 Medio">225.500 €</td>
-              <td data-label="P75 Optimista">242.000 €</td>
-            </tr>
-            <tr>
-              <td>Ático dúplex 4 dormitorios (130 m²)</td>
-              <td data-label="Nº unidades">3</td>
-              <td data-label="P25 Conservador">247.000 €</td>
-              <td data-label="P50 Medio">266.500 €</td>
-              <td data-label="P75 Optimista">286.000 €</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-yellow" style="margin-top:12px;">
-        <strong>Subtotal áticos (Medio orientativo):</strong> 4×225.500 + 3×266.500 = 902.000 + 799.500 = <strong>1.701.500 €</strong><br>
-        <strong>GDV con áticos incluidos: 3.646.600 € (Medio)</strong> — los áticos van con reserva; el dato firme de la operación son los 1.945.100 € de los 13 pisos.
-      </div>
-    </div>
-
-    <!-- CARD 2.3 GDV TOTAL -->
-    <div class="card">
-      <div class="card-title">2.3 GDV Total — 3 escenarios</div>
-      <div class="card-subtitle">GDV = valor total de venta de las 20 viviendas terminadas a precio de mercado · sin costes ni márgenes</div>
-      <div class="price-widget">
-        <div class="price-box">
-          <div class="price-label">Conservador</div>
-          <div class="price-value">3.522.100 €</div>
-          <div class="price-note">Precio bajo de testigos</div>
-        </div>
-        <div class="price-box main">
-          <div class="price-label">Medio</div>
-          <div class="price-value">3.646.600 €</div>
-          <div class="price-note">Central de mercado</div>
-        </div>
-        <div class="price-box">
-          <div class="price-label">Optimista</div>
-          <div class="price-value">3.771.100 €</div>
-          <div class="price-note">Precio alto de testigos</div>
-        </div>
-      </div>
-      <div class="insight insight-orange">
-        <strong>GDV Medio verificado: 3.646.600 €.</strong> Rango completo entre Conservador y Optimista: 3.522.100 – 3.771.100 €. Este es el valor bruto de mercado de las 20 viviendas terminadas; no incluye coste de terminación de obra, impuestos ni gastos de venta.
-      </div>
-    </div>
-
-    <!-- CARD 2.4 LAS 20 VIVIENDAS (CUADRÍCULA) -->
-    <div class="card">
-      <div class="card-title">2.4 Las 20 viviendas — Escenario Medio</div>
-      <div class="card-subtitle">Valor por unidad · escenario Medio · GDV total 3.646.600 €</div>
-      <div class="unit-grid">
-        <!-- 2× Piso 1 dorm -->
-        <div class="unit-cell uc-1d">
-          <div class="uc-type">Piso 1D</div>
-          <div class="uc-price">118.400 €</div>
-        </div>
-        <div class="unit-cell uc-1d">
-          <div class="uc-type">Piso 1D</div>
-          <div class="uc-price">118.400 €</div>
-        </div>
-        <!-- 11× Piso 2 dorm -->
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <div class="unit-cell uc-2d">
-          <div class="uc-type">Piso 2D</div>
-          <div class="uc-price">155.300 €</div>
-        </div>
-        <!-- Separador visual pisos / áticos -->
-        <div style="grid-column:1/-1; border-top:2px dashed #fde68a; padding-top:10px; margin-top:4px; font-size:11px; color:#92400e; font-weight:700; text-transform:uppercase; letter-spacing:1px;">&#9660; Áticos — orientativo (separados)</div>
-        <!-- 4× Ático 3D -->
-        <div class="unit-cell uc-3d">
-          <div class="uc-type">Ático 3D</div>
-          <div class="uc-price">225.500 €</div>
-        </div>
-        <div class="unit-cell uc-3d">
-          <div class="uc-type">Ático 3D</div>
-          <div class="uc-price">225.500 €</div>
-        </div>
-        <div class="unit-cell uc-3d">
-          <div class="uc-type">Ático 3D</div>
-          <div class="uc-price">225.500 €</div>
-        </div>
-        <div class="unit-cell uc-3d">
-          <div class="uc-type">Ático 3D</div>
-          <div class="uc-price">225.500 €</div>
-        </div>
-        <!-- 3× Ático 4D -->
-        <div class="unit-cell uc-4d">
-          <div class="uc-type">Ático 4D</div>
-          <div class="uc-price">266.500 €</div>
-        </div>
-        <div class="unit-cell uc-4d">
-          <div class="uc-type">Ático 4D</div>
-          <div class="uc-price">266.500 €</div>
-        </div>
-        <div class="unit-cell uc-4d">
-          <div class="uc-type">Ático 4D</div>
-          <div class="uc-price">266.500 €</div>
-        </div>
-      </div>
-      <div style="margin-top:12px;font-size:12px;color:#9ca3af;">
-        Leyenda: <span style="background:#fffbeb;padding:2px 8px;border-radius:4px;font-weight:700;">1D</span> Piso 1 dorm.
-        &nbsp;<span style="background:#eff6ff;padding:2px 8px;border-radius:4px;font-weight:700;">2D</span> Piso 2 dorm.
-        &nbsp;<span style="background:#ecfdf5;padding:2px 8px;border-radius:4px;font-weight:700;">3D</span> Ático dúplex 3 dorm.
-        &nbsp;<span style="background:#f5f3ff;padding:2px 8px;border-radius:4px;font-weight:700;">4D</span> Ático dúplex 4 dorm.
-      </div>
-    </div>
-
-    <!-- CARD 2.5 ALQUILER DE MERCADO -->
-    <div class="card">
-      <div class="card-title">2.5 Alquiler de mercado</div>
-      <div class="card-subtitle">Referencia orientativa de renta mensual · sin análisis de rentabilidad de la operación</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Tipología</th>
-              <th>€/mes</th>
-              <th>Nota</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Piso 1 dormitorio</td>
-              <td data-label="€/mes">~725 €/mes</td>
-              <td data-label="Nota">Dato Beniarbeig</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Piso 2 dormitorios</strong></td>
-              <td data-label="€/mes">~731 €/mes</td>
-              <td data-label="Nota">Dato Beniarbeig</td>
-            </tr>
-            <tr>
-              <td>Ático dúplex 3 dormitorios</td>
-              <td data-label="€/mes">~950–1.100 €/mes</td>
-              <td data-label="Nota"><em>(zona ampliada, orientativo)</em></td>
-            </tr>
-            <tr>
-              <td>Ático dúplex 4 dormitorios</td>
-              <td data-label="€/mes">~950 €/mes</td>
-              <td data-label="Nota"><em>(zona ampliada, orientativo)</em></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-gray">
-        Datos de alquiler de mercado como referencia contextual. Este informe no incluye análisis de rentabilidad de la operación (coste de obra, TIR, etc.).
-      </div>
-    </div>
-
-    <!-- CARD 2.6 INMOBILIARIAS -->
-    <div class="card">
-      <div class="card-title">2.6 Inmobiliarias que han movido en Beniarbeig y zona</div>
-      <div class="card-subtitle">Publicado y/o retirado anuncios en Beniarbeig · "Retirados" = operaciones cerradas</div>
-
-      <strong style="font-size:13px;color:#141B36;display:block;margin-bottom:8px;">Pisos (Beniarbeig directo)</strong>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr><th>Agencia</th><th>Teléfono</th><th>Tipología</th><th>Retirados</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>iad España</td>
-              <td data-label="Teléfono">865 445 347</td>
-              <td data-label="Tipología">Pisos 1D, 2D, 3D · Áticos</td>
-              <td data-label="Retirados">6</td>
-            </tr>
-            <tr>
-              <td>Plá Inmobiliaria</td>
-              <td data-label="Teléfono">965 021 749</td>
-              <td data-label="Tipología">Pisos 1D, 2D, 3D</td>
-              <td data-label="Retirados">4</td>
-            </tr>
-            <tr>
-              <td>TR Interinmo</td>
-              <td data-label="Teléfono">965 020 479</td>
-              <td data-label="Tipología">Pisos 2D</td>
-              <td data-label="Retirados">3</td>
-            </tr>
-            <tr>
-              <td>Emiris Homes</td>
-              <td data-label="Teléfono">865 445 437</td>
-              <td data-label="Tipología">Pisos varios</td>
-              <td data-label="Retirados">2</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <strong style="font-size:13px;color:#141B36;display:block;margin:16px 0 8px;">Áticos 3D/4D — zona ampliada (El Verger + Ondara)</strong>
-      <div class="provenance" style="margin-bottom:10px;">
-        ⚠ En Beniarbeig no hay áticos 3D/4D en la BBDD. Se amplía a municipios contiguos de perfil interior similar (El Verger + Ondara). NO se usa Dénia/Jávea (costa cara, incomparable).
-      </div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr><th>Agencia</th><th>Teléfono</th><th>Zona</th><th>Retirados</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Lluna Denia servicios inmobiliarios</td>
-              <td data-label="Teléfono">865 440 526</td>
-              <td data-label="Zona">El Verger + Ondara</td>
-              <td data-label="Retirados">4</td>
-            </tr>
-            <tr>
-              <td>daniamed</td>
-              <td data-label="Teléfono">965 024 833</td>
-              <td data-label="Zona">El Verger + Ondara</td>
-              <td data-label="Retirados">3</td>
-            </tr>
-            <tr>
-              <td>Huspy Alicante</td>
-              <td data-label="Teléfono">965 022 307</td>
-              <td data-label="Zona">Beniarbeig (único ático 3D local)</td>
-              <td data-label="Retirados">1</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="script-box">
-        <div class="sb-title">Script de llamada</div>
-        <div class="sb-quote">"Hola, llamo porque vi que tenéis/teníais pisos en Beniarbeig. Estoy analizando un edificio de 20 viviendas en la Av. del Vergel 5, obra parada que se va a terminar. Me interesa saber a qué precio se están cerrando pisos de 2 dormitorios nuevos o bien conservados en Beniarbeig o zona. ¿Qué referencia me podéis dar?"</div>
-        <ol>
-          <li>Preguntar por precio de cierre, no de publicación</li>
-          <li>Pedir referencia de testigo comparable (dirección, m², precio)</li>
-          <li>Consultar si conocen demanda para pisos nuevos en Beniarbeig</li>
-          <li>Preguntar por áticos dúplex — si conocen alguno vendido en zona ampliada</li>
-        </ol>
-      </div>
-    </div>
-
-  </div><!-- /sección 2 -->
-
-  <hr class="section-divider">
-
-  <!-- =================== SECCIÓN 3: NOTARIAL =================== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon" style="background:#f5f3ff;">🏛️</div>
-      <div>
-        <div class="section-title">NOTARIAL — El contexto oficial</div>
-        <div class="section-subtitle">Compraventas escrituradas reales · Portal Estadístico del Notariado · CP 03778</div>
-      </div>
-      <span class="zone-badge notarial">El contexto</span>
-    </div>
-
-    <!-- AVISO INICIAL -->
-    <div class="insight insight-gray">
-      <strong>Escala de los datos:</strong> Los datos de €/m², compraventas, variación y superficie son de Beniarbeig (CP 03778, n=28). El perfil de comprador (edades, nacionalidades) y los datos mensuales son de escala <strong>PROVINCIAL</strong>, se muestran como referencia de la zona costera de Alicante.
-    </div>
-
-    <!-- CARD 3.1 DATOS CLAVE -->
-    <div class="card">
-      <div class="card-title">3.1 Datos clave CP 03778</div>
-      <div class="card-subtitle">Beniarbeig · datos reales de escrituras · Portal Estadístico del Notariado · PDF 18/06/2026</div>
-      <div class="kpi-row">
-        <div class="kpi">
-          <div class="kpi-value">1.636 €</div>
-          <div class="kpi-label">€/m²</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-value">28</div>
-          <div class="kpi-label">Compraventas/año</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-value">150.680 €</div>
-          <div class="kpi-label">Importe medio</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-value">92 m²</div>
-          <div class="kpi-label">Superficie media</div>
-        </div>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Indicador</th>
-              <th>Valor</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight">
-              <td><strong>Variación anual</strong></td>
-              <td><strong>+9,30%</strong></td>
-            </tr>
-            <tr>
-              <td>Variación año anterior</td>
-              <td>+8,69%</td>
-            </tr>
-            <tr>
-              <td>% nueva construcción</td>
-              <td>12,19%</td>
-            </tr>
-            <tr>
-              <td>% plurifamiliar</td>
-              <td>71,03%</td>
-            </tr>
-            <tr>
-              <td>Años de renta</td>
-              <td>5,57</td>
-            </tr>
-            <tr>
-              <td>Tipo dominante</td>
-              <td>Segunda mano</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-purple">
-        El dato notarial recoge cierres reales escriturados, no precios de oferta. Es el termómetro más fiable del mercado real, aunque tarda en reflejar cambios recientes.
-      </div>
-    </div>
-
-    <!-- CARD 3.2 HISTÓRICO VARIACIONES -->
-    <div class="card">
-      <div class="card-title">3.2 Histórico variaciones anuales 2016–2025</div>
-      <div class="card-subtitle">CP 03778 · Beniarbeig · Portal Estadístico del Notariado</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Año</th>
-              <th>Variación anual</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2016</td>
-              <td data-label="Variación anual">+1,66%</td>
-            </tr>
-            <tr>
-              <td>2017</td>
-              <td data-label="Variación anual">+2,90%</td>
-            </tr>
-            <tr>
-              <td>2018</td>
-              <td data-label="Variación anual">+3,42%</td>
-            </tr>
-            <tr>
-              <td>2019</td>
-              <td data-label="Variación anual">+4,30%</td>
-            </tr>
-            <tr>
-              <td>2020</td>
-              <td data-label="Variación anual" style="color:#dc2626;">-1,22%</td>
-            </tr>
-            <tr>
-              <td>2021</td>
-              <td data-label="Variación anual">+6,90%</td>
-            </tr>
-            <tr>
-              <td>2022</td>
-              <td data-label="Variación anual">+8,82%</td>
-            </tr>
-            <tr>
-              <td>2023</td>
-              <td data-label="Variación anual">+5,96%</td>
-            </tr>
-            <tr>
-              <td>2024</td>
-              <td data-label="Variación anual">+8,69%</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>2025</strong> <span class="mark mark-pulso">Último</span></td>
-              <td data-label="Variación anual"><strong>+9,30%</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-purple">
-        <strong>Patrón:</strong> Caída única en 2020 (COVID, -1,22%), recuperación acelerada desde 2021. En 2022 ya supera el +8%, y 2024–2025 consolidan el ritmo más alto de la serie. La zona muestra apreciación continua con aceleración en los últimos 4 años. No hay signo de ralentización.
-      </div>
-    </div>
-
-    <!-- CARD 3.3 PERFIL COMPRADOR -->
-    <div class="card">
-      <div class="card-title">3.3 Perfil del comprador</div>
-      <div class="card-subtitle">Datos de escala PROVINCIAL (Alicante) · referencia de zona costera</div>
-      <div class="insight insight-yellow" style="margin-bottom:14px;">
-        ⚠ <strong>Datos provinciales (n=28)</strong> — No son específicos de Beniarbeig. Se muestran como referencia del mercado costero alicantino al que pertenece esta zona (Marina Alta).
-      </div>
-
-      <!-- Nacionalidad / extranjerismo -->
-      <div style="margin-bottom:14px;">
-        <strong style="font-size:14px;color:#141B36;">Origen del comprador</strong>
-        <div class="kpi-row" style="margin-top:10px;grid-template-columns:1fr 1fr;">
-          <div class="kpi">
-            <div class="kpi-value" style="color:#FF4D2E;">51,52%</div>
-            <div class="kpi-label">Extranjeros</div>
-          </div>
-          <div class="kpi">
-            <div class="kpi-value">48,48%</div>
-            <div class="kpi-label">Nacionales</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Rango de edad -->
-      <strong style="font-size:14px;color:#141B36;">Rango de edad</strong>
-      <div class="table-wrap" style="margin-top:10px;">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Rango de edad</th>
-              <th>%</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>&lt; 31 años</td>
-              <td data-label="%">6,44%</td>
-            </tr>
-            <tr>
-              <td>31–40 años</td>
-              <td data-label="%">19,49%</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>41–50 años</strong> <span class="mark mark-dom">DOMINANTE</span></td>
-              <td data-label="%"><strong>25,78%</strong></td>
-            </tr>
-            <tr>
-              <td>51–60 años</td>
-              <td data-label="%">24,91%</td>
-            </tr>
-            <tr>
-              <td>61–70 años</td>
-              <td data-label="%">17,19%</td>
-            </tr>
-            <tr>
-              <td>&gt; 70 años</td>
-              <td data-label="%">6,19%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-purple">
-        Edad mediana 49 años. El grueso del comprador (41–60 años, ~51%) es el perfil clásico de comprador de segunda residencia / inversión costera. Poder adquisitivo establecido, no primera residencia de joven.
-      </div>
-
-      <!-- Nacionalidades -->
-      <strong style="font-size:14px;color:#141B36;display:block;margin-top:18px;">Top nacionalidades extranjeras</strong>
-      <div class="insight insight-gray" style="margin-top:8px;margin-bottom:10px;">
-        Estos % son sobre el <strong>51,52% extranjero</strong>, no sobre el total de compradores.
-      </div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>País</th>
-              <th>% del segmento extranjero</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight">
-              <td>
-                <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="4" fill="#21468B"/><rect width="6" height="2.67" fill="#fff"/><rect width="6" height="1.33" fill="#AE1C28"/></svg>
-                <strong>Países Bajos</strong>
-              </td>
-              <td data-label="% extranjero"><strong>13,14%</strong></td>
-            </tr>
-            <tr>
-              <td>
-                <svg class="flag" viewBox="0 0 60 40"><clipPath id="gb-b"><rect width="60" height="40"/></clipPath><rect width="60" height="40" fill="#012169"/><g clip-path="url(#gb-b)"><path d="M0,0 60,40M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40M60,0 0,40" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V40M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40M0,20 H60" stroke="#C8102E" stroke-width="7"/></g></svg>
-                Reino Unido
-              </td>
-              <td data-label="% extranjero">10,49%</td>
-            </tr>
-            <tr>
-              <td>
-                <svg class="flag" viewBox="0 0 6 4"><rect width="2" height="4" fill="#000"/><rect x="2" width="2" height="4" fill="#FAE042"/><rect x="4" width="2" height="4" fill="#EF3340"/></svg>
-                Bélgica
-              </td>
-              <td data-label="% extranjero">8,44%</td>
-            </tr>
-            <tr>
-              <td>
-                <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="2" fill="#fff"/><rect y="2" width="6" height="2" fill="#DC143C"/></svg>
-                Polonia
-              </td>
-              <td data-label="% extranjero">8,46%</td>
-            </tr>
-            <tr>
-              <td>
-                <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="4" fill="#FFCE00"/><rect width="6" height="2.67" fill="#DD0000"/><rect width="6" height="1.33" fill="#000"/></svg>
-                Alemania
-              </td>
-              <td data-label="% extranjero">6,86%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-purple">
-        <strong>Lectura:</strong> La Marina Alta (Denia, Jávea, Beniarbeig) es un destino consolidado para compradores nórdicos y centroeuropeos. NL y GB lideran. La demanda extranjera es estructural en esta costa, no coyuntural. Una vivienda nueva terminada en Beniarbeig tiene demanda potencial de un perfil de comprador con alta capacidad económica.
-      </div>
-    </div>
-
-    <!-- CARD 3.4 EVOLUCIÓN MENSUAL -->
-    <div class="card">
-      <div class="card-title">3.4 Evolución mensual 12 meses</div>
-      <div class="card-subtitle">Datos de escala PROVINCIAL (Alicante) · referencia de zona costera</div>
-      <div class="insight insight-yellow" style="margin-bottom:14px;">
-        ⚠ <strong>Escala provincial</strong> — No son datos de Beniarbeig. Referencia del mercado costero alicantino.
-      </div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Mes</th>
-              <th>€/m²</th>
-              <th>Importe medio</th>
-              <th>Compraventas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Abr 2025</td>
-              <td data-label="€/m²">1.662,47 €</td>
-              <td data-label="Importe medio">147.586 €</td>
-              <td data-label="Compraventas">3.064</td>
-            </tr>
-            <tr>
-              <td>May 2025</td>
-              <td data-label="€/m²">1.719,36 €</td>
-              <td data-label="Importe medio">151.259 €</td>
-              <td data-label="Compraventas">3.096</td>
-            </tr>
-            <tr>
-              <td>Jun 2025</td>
-              <td data-label="€/m²">1.726,48 €</td>
-              <td data-label="Importe medio">151.708 €</td>
-              <td data-label="Compraventas">3.265</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Jul 2025</strong> <span class="mark mark-pulso">Más activo</span></td>
-              <td data-label="€/m²">1.705,63 €</td>
-              <td data-label="Importe medio">152.195 €</td>
-              <td data-label="Compraventas"><strong>3.287</strong></td>
-            </tr>
-            <tr>
-              <td>Ago 2025</td>
-              <td data-label="€/m²">1.758,20 €</td>
-              <td data-label="Importe medio">153.571 €</td>
-              <td data-label="Compraventas">1.705</td>
-            </tr>
-            <tr>
-              <td>Sep 2025</td>
-              <td data-label="€/m²">1.797,15 €</td>
-              <td data-label="Importe medio">155.158 €</td>
-              <td data-label="Compraventas">2.731</td>
-            </tr>
-            <tr>
-              <td>Oct 2025</td>
-              <td data-label="€/m²">1.772,65 €</td>
-              <td data-label="Importe medio">155.642 €</td>
-              <td data-label="Compraventas">2.882</td>
-            </tr>
-            <tr>
-              <td>Nov 2025</td>
-              <td data-label="€/m²">1.803,47 €</td>
-              <td data-label="Importe medio">152.869 €</td>
-              <td data-label="Compraventas">2.641</td>
-            </tr>
-            <tr>
-              <td>Dic 2025</td>
-              <td data-label="€/m²">1.706,51 €</td>
-              <td data-label="Importe medio">149.739 €</td>
-              <td data-label="Compraventas">3.020</td>
-            </tr>
-            <tr>
-              <td>Ene 2026</td>
-              <td data-label="€/m²">1.895,36 €</td>
-              <td data-label="Importe medio">163.774 €</td>
-              <td data-label="Compraventas">2.268</td>
-            </tr>
-            <tr>
-              <td>Feb 2026</td>
-              <td data-label="€/m²">1.864,08 €</td>
-              <td data-label="Importe medio">161.425 €</td>
-              <td data-label="Compraventas">2.565</td>
-            </tr>
-            <tr class="highlight">
-              <td><strong>Mar 2026</strong> <span class="mark mark-asset">Precio top</span></td>
-              <td data-label="€/m²"><strong>1.944,68 €</strong></td>
-              <td data-label="Importe medio"><strong>168.106 €</strong></td>
-              <td data-label="Compraventas">2.569</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="insight insight-purple">
-        <strong>Lectura:</strong> El precio por m² provincial marca tendencia alcista continua (de ~1.662€ en Abr 2025 a ~1.944€ en Mar 2026, +17% en 12 meses). Julio es el mes con más transacciones (3.287), coherente con la estacionalidad costera. Los primeros meses de 2026 muestran precios récord: señal de mercado comprador activo.
-      </div>
-    </div>
-
-    <!-- CARD 3.5 CRUCE NOTARIAL × IMPULSO -->
-    <div class="card" style="background: linear-gradient(135deg, #f5f3ff 0%, #fff3f0 100%); border: 1px solid #ddd6fe;">
-      <div class="card-title">3.5 Cruce Notarial × IMPULSO</div>
-      <div class="card-subtitle">Comparación oficial vs. mercado</div>
-      <div class="table-wrap">
-        <table class="table-mobile">
-          <thead>
-            <tr>
-              <th>Indicador</th>
-              <th>Notarial (oficial)</th>
-              <th>IMPULSO (mercado)</th>
-              <th>Lectura</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>€/m²</td>
-              <td data-label="Notarial">1.636 €</td>
-              <td data-label="IMPULSO">1.900–2.200 €</td>
-              <td data-label="Lectura">Mercado exige prima sobre notarial por obra nueva vs. segunda mano</td>
-            </tr>
-            <tr>
-              <td>Importe medio</td>
-              <td data-label="Notarial">150.680 €</td>
-              <td data-label="IMPULSO">107.000–286.000 €</td>
-              <td data-label="Lectura">Mercado cubre rango amplio; notarial refleja stock actual (segunda mano pequeña)</td>
-            </tr>
-            <tr>
-              <td>Tendencia</td>
-              <td data-label="Notarial">+9,30%</td>
-              <td data-label="IMPULSO">—</td>
-              <td data-label="Lectura">Mercado en alza sostenida</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="verdict-navy" style="margin-top:16px;">
-        <div class="verdict-icon">🏛️</div>
-        <div>
-          <strong>Conclusión del cruce:</strong> El notarial confirma zona en apreciación continua (+9,30%). Los precios de mercado para vivienda nueva/terminada superan el notarial, coherente con que el <strong>87,81% del stock actual es segunda mano</strong>. La operación genera vivienda nueva en zona de demanda probada.
-        </div>
-      </div>
-    </div>
-  </div><!-- /sección 3 -->
-
-  <hr class="section-divider">
-
-  <!-- =================== SECCIÓN 4: MTVV =================== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon" style="background:#ecfdf5;">🔍</div>
-      <div>
-        <div class="section-title">MTVV — Método Total Validación de Valor</div>
-        <div class="section-subtitle">VÍA 3 · Metodología Programa IN · Validación humana con agencias</div>
-      </div>
-      <span class="zone-badge mtvv">El método</span>
-    </div>
-
-    <!-- MTVV EXPLAINER -->
-    <div class="mtvv-explainer">
-      <strong>El MTVV es la validación humana del precio.</strong> Los datos de IMPULSO y el Notariado dan el rango teórico. El MTVV lo confirma o ajusta mediante:
-      <ol style="margin: 10px 0 0 20px;">
-        <li><strong>Paso 0:</strong> Micromercado — qué existe en la base PULSO para comparar</li>
-        <li><strong>Paso 1:</strong> Identificar las inmobiliarias que <em>han movido</em> (publicado o retirado) en la zona</li>
-        <li><strong>Paso 2:</strong> Llamar y obtener testigos presenciales con precio y características</li>
-        <li><strong>Paso 3:</strong> Método Total individual — hipótesis de precio por unidad</li>
-        <li><strong>Paso 4:</strong> Validación final y precio de oferta</li>
+    <div class="script-box">
+      <div class="sb-title">Guión de llamada</div>
+      <div class="sb-quote">"Hola, estaba siguiendo un piso en Beniarbeig que teníais publicado y he visto que habéis retirado el anuncio. ¿Ya lo habéis vendido?"</div>
+      <ol>
+        <li>¿A qué precio se cerró finalmente?</li>
+        <li>¿Os entra alguno similar próximamente?</li>
+        <li>¿Hay mucha demanda de este tipo en la zona?</li>
+        <li>¿El mercado absorbe varias unidades a la vez?</li>
       </ol>
     </div>
+  </div>
+</div>
 
-    <!-- PASO 0 -->
-    <div class="card">
-      <div class="step-header">
-        <div class="step-number">0</div>
-        <div class="step-title">Micromercado — completado en Sección 1</div>
-      </div>
-      <p style="font-size:13px;color:#374151;line-height:1.6;">
-        El micromercado de referencia es lo que existe en PULSO para Beniarbeig CP 03778. Ver Sección 1 completa. Resumen: 298 registros, chalet dominante, pisos con 82–95% rotación, Piso 2 dorm. × 2 baños = combinación de mayor rotación (91,7%). Tramo 300–350K vacío — los áticos no tienen competencia directa comparable en el municipio.
-      </p>
+<hr class="section-divider">
+
+<!-- ===================== SECCIÓN 3: NOTARIADO ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background:#f5f3ff;">🏛️</div>
+    <div>
+      <div class="section-title">3 · NOTARIADO — Contexto de mercado oficial</div>
+      <div class="section-subtitle">Compraventas escrituradas reales · Portal Estadístico del Notariado · CP 03778</div>
     </div>
+    <span class="zone-badge notarial">El contexto</span>
+  </div>
 
-    <!-- PASO 1 — INMOBILIARIAS (referencia a sección 2) -->
-    <div class="card">
-      <div class="step-header">
-        <div class="step-number">1</div>
-        <div class="step-title">Inmobiliarias con las que validar — NO ESTÁ HECHO</div>
+  <!-- KPIs notariales -->
+  <div class="card">
+    <div class="card-title">Datos clave del CP 03778 (Beniarbeig)</div>
+    <div class="card-subtitle">Valores CP-fiables — extraídos directamente de Supabase notarial_datos · fecha informe 18/06/2026</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-value">1.636</div>
+        <div class="kpi-label">€/m² (provincial*)</div>
       </div>
-      <div class="build-box">
-        <div class="bb-title">NO ESTÁ HECHO</div>
-        <div class="bb-body">Las inmobiliarias que han movido la zona están identificadas en la Sección 2 (IMPULSO). El Paso 1 del MTVV es la <strong>llamada de validación</strong> con esas agencias para obtener testigos de precio de cierre. Pendiente de ejecutar.</div>
+      <div class="kpi">
+        <div class="kpi-value">28</div>
+        <div class="kpi-label">Compraventas 12m</div>
       </div>
-    </div>
-
-    <!-- PASO 2 -->
-    <div class="card">
-      <div class="step-header">
-        <div class="step-number">2</div>
-        <div class="step-title">Testigos presenciales</div>
+      <div class="kpi">
+        <div class="kpi-value">150.680 €</div>
+        <div class="kpi-label">Importe medio</div>
       </div>
-      <div class="build-box">
-        <div class="bb-title">PENDIENTE</div>
-        <div class="bb-body">Testigos con precio y características a obtener tras las llamadas del Paso 1. Rellenar aquí: dirección, m², dormitorios, precio pedido, precio cierre (si se consigue), agencia.</div>
-      </div>
-    </div>
-
-    <!-- PASO 3 -->
-    <div class="card">
-      <div class="step-header">
-        <div class="step-number">3</div>
-        <div class="step-title">Método Total individual</div>
-      </div>
-      <div class="build-box">
-        <div class="bb-title">FALTA HACER (Método Total individual pendiente)</div>
-        <div class="bb-body">El Método Total individual se aplica unidad por unidad tras obtener los testigos presenciales del Paso 2. Hasta tener esos testigos, no se asignan precios individuales por este método. El GDV del Paso 2.3 es la referencia de IMPULSO hasta completar el MTVV.</div>
+      <div class="kpi">
+        <div class="kpi-value">92 m²</div>
+        <div class="kpi-label">Superficie media</div>
       </div>
     </div>
-
-    <!-- PASO 4 -->
-    <div class="card">
-      <div class="step-header">
-        <div class="step-number">4</div>
-        <div class="step-title">Validación final y precio de oferta</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-value">+9,30%</div>
+        <div class="kpi-label">Variación anual</div>
       </div>
-      <div class="build-box">
-        <div class="bb-title">PENDIENTE</div>
-        <div class="bb-body">Precio de oferta a derivar tras completar los pasos 2 y 3. Se actualizará este informe con el resultado del MTVV completo.</div>
+      <div class="kpi">
+        <div class="kpi-value">12,19%</div>
+        <div class="kpi-label">Obra nueva</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">71%</div>
+        <div class="kpi-label">Plurifamiliar</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">5,57</div>
+        <div class="kpi-label">Años de renta</div>
       </div>
     </div>
-  </div><!-- /sección 4 -->
+    <div class="callout-yellow" style="margin-top:12px">
+      📍 <strong>Datos mensuales y perfil sociodemográfico: datos de la provincia de Alicante.</strong> El portal no dispone de serie mensual ni de perfil comprador a nivel de CP 03778 (n=28, muestra insuficiente). Los KPIs de la tabla superior (€/m², compraventas, importe medio, superficie, variación, nueva/2ª mano, plurifamiliar) son CP-fiables. Los perfiles de edad y nacionalidad son provinciales — se presentan con este aviso. €/m² mostrado arriba es el provincial (1.636 €/m²); el CP-fiable es 1.495 €/m².
+    </div>
+    <div class="insight insight-gray">El notariado es cierre real (media de todos los tamaños de vivienda), no comparable directamente al precio IMPULSO por tipología. Sirve como suelo y contexto oficial: confirma que el mercado de CP 03778 mueve 28 operaciones/año con importe medio de 150.680 €.</div>
+  </div>
 
-  <hr class="section-divider">
+  <!-- Tendencia histórica -->
+  <div class="card">
+    <div class="card-title">Tendencia histórica de precios (2016–2025)</div>
+    <div class="card-subtitle">Variación anual CP 03778 — CP-fiable</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th>Variación anual</th>
+          <th>Lectura</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2016</td>
+          <td data-label="Variación">+1,66%</td>
+          <td data-label="Lectura">Recuperación incipiente</td>
+        </tr>
+        <tr>
+          <td>2017</td>
+          <td data-label="Variación">+2,90%</td>
+          <td data-label="Lectura">Aceleración</td>
+        </tr>
+        <tr>
+          <td>2018</td>
+          <td data-label="Variación">+3,42%</td>
+          <td data-label="Lectura">Tendencia al alza</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td data-label="Variación">+4,30%</td>
+          <td data-label="Lectura">Crecimiento sólido</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td data-label="Variación" style="color:#dc2626">−1,22%</td>
+          <td data-label="Lectura">COVID — único año negativo</td>
+        </tr>
+        <tr>
+          <td>2021</td>
+          <td data-label="Variación">+6,96%</td>
+          <td data-label="Lectura">Rebote post-COVID</td>
+        </tr>
+        <tr>
+          <td>2022</td>
+          <td data-label="Variación">+8,82%</td>
+          <td data-label="Lectura">Aceleración fuerte</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td data-label="Variación">+5,96%</td>
+          <td data-label="Lectura">Moderación</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td data-label="Variación">+8,69%</td>
+          <td data-label="Lectura">Nueva aceleración</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>2025</strong> <span class="mark mark-pulso">Último dato</span></td>
+          <td data-label="Variación"><strong>+9,30%</strong></td>
+          <td data-label="Lectura">Máximo histórico de la serie</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-purple">9 de los 10 años han sido de subida. El único año negativo fue 2020 (COVID, −1,22%). La tendencia desde 2021 es de aceleración sostenida, con 2025 marcando el máximo de la serie en +9,30%. La obra parada en 2026 se terminaría en un mercado en plena expansión.</div>
+  </div>
 
-  <!-- =================== SECCIÓN 5: CONVERGENCIA =================== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon" style="background:#fff3f0;">🎯</div>
+  <!-- Perfil del comprador -->
+  <div class="card">
+    <div class="card-title">Perfil del comprador — PROVINCIAL (con aviso)</div>
+    <div class="card-subtitle">Provincia de Alicante · n=25 CP, muestra insuficiente para CP-level — datos provinciales</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
       <div>
-        <div class="section-title">Convergencia — Las tres vías</div>
-        <div class="section-subtitle">Resumen integrado de las fuentes · GDV de mercado</div>
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;margin-bottom:6px">Personas físicas</div>
+        <div style="font-size:22px;font-weight:800;color:#141B36">90,94%</div>
       </div>
-      <span class="zone-badge impulso">GDV</span>
-    </div>
-
-    <div class="validation-grid">
-      <div class="validation-card scraping">
-        <div class="v-icon">📡</div>
-        <div class="v-source">IMPULSO (scraping)</div>
-        <div class="v-price">1.945.100 €</div>
-        <div class="v-detail">GDV pisos (13 uds) · dato firme<br>Con áticos (orientativo): 3.646.600 €</div>
-      </div>
-      <div class="validation-card notarial">
-        <div class="v-icon">🏛️</div>
-        <div class="v-source">NOTARIAL (oficial)</div>
-        <div class="v-price">+9,30% anual</div>
-        <div class="v-detail">Zona en apreciación continua<br>87,81% segunda mano · 51,52% comprador extranjero</div>
-      </div>
-      <div class="validation-card mtvv">
-        <div class="v-icon">🔍</div>
-        <div class="v-source">MTVV (pendiente)</div>
-        <div class="v-price">Pasos 1–4 pendientes</div>
-        <div class="v-detail">Validación humana con agencias<br>Testigos presenciales por completar</div>
+      <div>
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;margin-bottom:6px">Edad mediana</div>
+        <div style="font-size:22px;font-weight:800;color:#141B36">49 años</div>
       </div>
     </div>
 
-    <div class="convergence">
-      <div class="conv-label">GDV de mercado · 13 pisos (dato firme)</div>
-      <div class="conv-verdict">Valor bruto de los pisos terminados</div>
-      <div class="conv-price">1.945.100 €</div>
-      <div class="conv-range">Rango pisos: 1.853.000 – 1.995.000 € (Conservador–Optimista)</div>
-      <div class="conv-note">
-        GDV = valor total de venta de las viviendas terminadas a precio de mercado; no incluye costes de obra, márgenes ni financiación. Los 7 áticos (orientativo) suman 1.701.500 € adicionales en escenario Medio → GDV total con áticos: 3.646.600 € (con reserva). El notarial confirma zona en apreciación (+9,30% anual). El MTVV está pendiente de completar.
+    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#141B36;margin-bottom:8px">Distribución por rango de edad</div>
+    <table class="table-mobile">
+      <thead>
+        <tr><th>Rango de edad</th><th>Porcentaje</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Menores de 31 años</td>
+          <td data-label="%">6,44%</td>
+        </tr>
+        <tr>
+          <td>31 a 40 años</td>
+          <td data-label="%">19,49%</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>41 a 50 años</strong> <span class="mark mark-pulso">Dominante</span></td>
+          <td data-label="%"><strong>25,78%</strong></td>
+        </tr>
+        <tr>
+          <td>51 a 60 años</td>
+          <td data-label="%">24,91%</td>
+        </tr>
+        <tr>
+          <td>61 a 70 años</td>
+          <td data-label="%">17,19%</td>
+        </tr>
+        <tr>
+          <td>Mayores de 70 años</td>
+          <td data-label="%">6,19%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-purple">El comprador tipo tiene entre 41 y 60 años (50,69% del total). Perfil maduro, probablemente segunda residencia o mejora de vivienda. Beniarbeig como zona costera-interior encaja bien con perfil de comprador europeo en ese rango de edad.</div>
+  </div>
+
+  <!-- Nacionalidades -->
+  <div class="card">
+    <div class="card-title">Nacionalidad del comprador — PROVINCIAL (con aviso)</div>
+    <div class="card-subtitle">Compradores extranjeros: 51,52% del total · Datos de la provincia de Alicante</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+      <div style="text-align:center;background:#ecfdf5;border-radius:10px;padding:14px">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;margin-bottom:4px">Compradores nacionales</div>
+        <div style="font-size:26px;font-weight:800;color:#141B36">48,48%</div>
+      </div>
+      <div style="text-align:center;background:#f5f3ff;border-radius:10px;padding:14px">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;margin-bottom:4px">Compradores extranjeros</div>
+        <div style="font-size:26px;font-weight:800;color:#8B5CF6">51,52%</div>
       </div>
     </div>
-  </div><!-- /sección 5 -->
+
+    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#141B36;margin-bottom:8px">Top nacionalidades (% dentro del extranjero)</div>
+    <table class="table-mobile">
+      <thead>
+        <tr><th>País</th><th>% dentro del extranjero</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td>
+            <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="4" fill="#21468B"/><rect width="6" height="2.67" fill="#fff"/><rect width="6" height="1.33" fill="#AE1C28"/></svg>
+            <strong>Países Bajos</strong> <span class="mark mark-pulso">Top 1</span>
+          </td>
+          <td data-label="%"><strong>13,14%</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <svg class="flag" viewBox="0 0 60 40"><clipPath id="gb-b"><rect width="60" height="40"/></clipPath><rect width="60" height="40" fill="#012169"/><g clip-path="url(#gb-b)"><path d="M0,0 60,40M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40M60,0 0,40" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V40M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40M0,20 H60" stroke="#C8102E" stroke-width="7"/></g></svg>
+            Reino Unido
+          </td>
+          <td data-label="%">10,49%</td>
+        </tr>
+        <tr>
+          <td>
+            <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="4" fill="#EF3340"/><rect width="4" height="4" fill="#FAE042"/><rect width="2" height="4" fill="#000"/></svg>
+            Bélgica
+          </td>
+          <td data-label="%">8,44%</td>
+        </tr>
+        <tr>
+          <td>
+            <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="2" fill="#fff"/><rect y="2" width="6" height="2" fill="#DC143C"/></svg>
+            Polonia
+          </td>
+          <td data-label="%">8,46%</td>
+        </tr>
+        <tr>
+          <td>
+            <svg class="flag" viewBox="0 0 6 4"><rect width="6" height="4" fill="#FFCE00"/><rect width="6" height="2.67" fill="#DD0000"/><rect width="6" height="1.33" fill="#000"/></svg>
+            Alemania
+          </td>
+          <td data-label="%">6,89%</td>
+        </tr>
+        <tr>
+          <td>Otros</td>
+          <td data-label="%">52,58%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-purple">Más de la mitad de los compradores son extranjeros (51,52%). Perfil muy diferente al interior peninsular. Los holandeses, ingleses, belgas y polacos lideran — todos compatibles con el perfil de segunda residencia en zona costera accesible. Beniarbeig a 3km del mar ofrece precio de interior con acceso al mar.</div>
+  </div>
+
+  <!-- Datos mensuales PROVINCIA -->
+  <div class="card">
+    <div class="card-title">Evolución mensual 12 meses — PROVINCIAL</div>
+    <div class="card-subtitle">📍 Datos de la provincia de Alicante — el portal no dispone de serie mensual de CP 03778 · media provincial 1.791 €/m² · 32.431 compraventas</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Mes</th>
+          <th>€ por m²</th>
+          <th>Importe medio</th>
+          <th>Compraventas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>May 2025</td>
+          <td data-label="€/m²">1.719 €</td>
+          <td data-label="Importe">151.259 €</td>
+          <td data-label="Compraventas">3.096</td>
+        </tr>
+        <tr>
+          <td>Jun 2025</td>
+          <td data-label="€/m²">1.726 €</td>
+          <td data-label="Importe">151.675 €</td>
+          <td data-label="Compraventas">3.264</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>Jul 2025</strong> <span class="mark mark-pulso">Más activo</span></td>
+          <td data-label="€/m²">1.706 €</td>
+          <td data-label="Importe">152.195 €</td>
+          <td data-label="Compraventas"><strong>3.287</strong></td>
+        </tr>
+        <tr>
+          <td>Ago 2025</td>
+          <td data-label="€/m²">1.758 €</td>
+          <td data-label="Importe">153.571 €</td>
+          <td data-label="Compraventas">1.705</td>
+        </tr>
+        <tr>
+          <td>Sep 2025</td>
+          <td data-label="€/m²">1.797 €</td>
+          <td data-label="Importe">155.158 €</td>
+          <td data-label="Compraventas">2.731</td>
+        </tr>
+        <tr>
+          <td>Oct 2025</td>
+          <td data-label="€/m²">1.773 €</td>
+          <td data-label="Importe">155.636 €</td>
+          <td data-label="Compraventas">2.883</td>
+        </tr>
+        <tr>
+          <td>Nov 2025</td>
+          <td data-label="€/m²">1.803 €</td>
+          <td data-label="Importe">152.878 €</td>
+          <td data-label="Compraventas">2.640</td>
+        </tr>
+        <tr>
+          <td>Dic 2025</td>
+          <td data-label="€/m²">1.707 €</td>
+          <td data-label="Importe">149.739 €</td>
+          <td data-label="Compraventas">3.020</td>
+        </tr>
+        <tr>
+          <td>Ene 2026</td>
+          <td data-label="€/m²">1.895 €</td>
+          <td data-label="Importe">163.774 €</td>
+          <td data-label="Compraventas">2.268</td>
+        </tr>
+        <tr>
+          <td>Feb 2026</td>
+          <td data-label="€/m²">1.864 €</td>
+          <td data-label="Importe">161.374 €</td>
+          <td data-label="Compraventas">2.566</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>Mar 2026</strong> <span class="mark mark-zona">Precio pico</span></td>
+          <td data-label="€/m²"><strong>1.929 €</strong></td>
+          <td data-label="Importe"><strong>168.313 €</strong></td>
+          <td data-label="Compraventas">2.838</td>
+        </tr>
+        <tr>
+          <td>Abr 2026</td>
+          <td data-label="€/m²">1.890 €</td>
+          <td data-label="Importe">165.138 €</td>
+          <td data-label="Compraventas">2.133</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight insight-purple">Julio es el mes más activo en compraventas (efecto turístico). Agosto cae por vacaciones. Enero-marzo 2026 marca los precios más altos (1.895–1.929 €/m²). El patrón sugiere que la ventana óptima de cierre es primavera (abr–jun) o otoño (sep–oct).</div>
+  </div>
+
+  <!-- Cruce notarial × mercado -->
+  <div class="card">
+    <div class="card-title">Lo que dice el mercado oficial</div>
+    <div class="card-subtitle">Cruce Notariado × IMPULSO — señales y lectura</div>
+    <table class="table-mobile">
+      <thead>
+        <tr>
+          <th>Señal</th>
+          <th>Notariado (oficial)</th>
+          <th>IMPULSO (testigos)</th>
+          <th>Lectura</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tendencia de precios</td>
+          <td data-label="Notariado">+9,30% anual (CP)</td>
+          <td data-label="IMPULSO">155.300 € piso 2D</td>
+          <td data-label="Lectura">Confirmación de tendencia alcista</td>
+        </tr>
+        <tr>
+          <td>Volumen de ventas</td>
+          <td data-label="Notariado">28 ops/año (CP)</td>
+          <td data-label="IMPULSO">19 retirados piso 2D</td>
+          <td data-label="Lectura">Mercado pequeño pero activo</td>
+        </tr>
+        <tr class="highlight">
+          <td><strong>Mejor momento</strong></td>
+          <td data-label="Notariado">Jul (volumen) / Mar (precio)</td>
+          <td data-label="IMPULSO">Demanda extranjera Q2–Q3</td>
+          <td data-label="Lectura"><strong>Primavera para comercializar</strong></td>
+        </tr>
+        <tr>
+          <td>Perfil comprador</td>
+          <td data-label="Notariado">51,52% extranjero</td>
+          <td data-label="IMPULSO">Agencias internacionales activas</td>
+          <td data-label="Lectura">Marketing bilingüe imprescindible</td>
+        </tr>
+        <tr>
+          <td>Obra nueva</td>
+          <td data-label="Notariado">12,19% del total</td>
+          <td data-label="IMPULSO">0 competidores directos en Beniarbeig</td>
+          <td data-label="Lectura">El edificio sería la única obra nueva</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ===================== SECCIÓN 4: MTVV ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background:#ecfdf5;">🧠</div>
+    <div>
+      <div class="section-title">4 · MÉTODO TOTAL (MTVV) — Validación humana</div>
+      <div class="section-subtitle">Pasos del Método Total de Validación de Valor · Programa IN</div>
+    </div>
+    <span class="zone-badge mtvv">Validación IN</span>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Estado del método — Pasos 0 a 4</div>
+    <div class="card-subtitle">Los datos de IMPULSO e inmobiliarias (Sección 2) son herramientas del MTVV — no se repiten aquí</div>
+
+    <div class="mtvv-step">
+      <div class="mtvv-step-num">0</div>
+      <div class="mtvv-step-body">
+        <div class="mtvv-step-title">Paso 0 — Pulso del mercado (PULSO automático)</div>
+        <div class="mtvv-step-desc">Análisis de rotación por tipología, tramos de precio, dormitorios y combinación dorm×baños en la zona. Determina DÓNDE hay demanda real antes de analizar el activo concreto.</div>
+        <span class="mtvv-status done">HECHO — Sección 1 de este informe</span>
+      </div>
+    </div>
+
+    <div class="mtvv-step">
+      <div class="mtvv-step-num">1</div>
+      <div class="mtvv-step-body">
+        <div class="mtvv-step-title">Paso 1 — Valoración IMPULSO (precio de mercado automático)</div>
+        <div class="mtvv-step-desc">Precio de mercado por tipología con testigos reales (retirados) de la zona. GDV firme de pisos: 1.945.100 €. Áticos: estimación orientativa por hueco estadístico.</div>
+        <span class="mtvv-status done">HECHO — Sección 2 de este informe</span>
+      </div>
+    </div>
+
+    <div class="mtvv-step">
+      <div class="mtvv-step-num">2</div>
+      <div class="mtvv-step-body">
+        <div class="mtvv-step-title">Paso 2 — Dato notarial oficial</div>
+        <div class="mtvv-step-desc">Datos del Portal Estadístico del Notariado para CP 03778: 1.636 €/m² (provincial), 28 compraventas/año, +9,30% variación, 51,52% comprador extranjero.</div>
+        <span class="mtvv-status done">HECHO — Sección 3 de este informe</span>
+      </div>
+    </div>
+
+    <div class="mtvv-step">
+      <div class="mtvv-step-num">3</div>
+      <div class="mtvv-step-body">
+        <div class="mtvv-step-title">Paso 3 — Llamadas a inmobiliarias (validación humana)</div>
+        <div class="mtvv-step-desc">Contactar a las agencias identificadas (Plá, TR interinmo, iad España, Lluna Denia, daniamed, Huspy) con el guión de la Sección 2. Objetivo: confirmar precios de cierre reales, demanda actual y capacidad del mercado para absorber varias unidades simultáneas.</div>
+        <span class="mtvv-status pending">FALTA HACER</span>
+      </div>
+    </div>
+
+    <div class="mtvv-step">
+      <div class="mtvv-step-num pending">4</div>
+      <div class="mtvv-step-body">
+        <div class="mtvv-step-title">Paso 4 — Visita física + valoración presencial</div>
+        <div class="mtvv-step-desc">Visita al edificio (Av. del Vergel 5), inspección del estado de obra, verificación de planos reales (superficies provisionales en este informe: ~50m² piso 1D, ~75m² piso 2D, ~110m² ático 3D, ~130m² ático 4D), consulta urbanística si procede, contacto con el vendedor o su representante.</div>
+        <span class="mtvv-status pending">FALTA HACER</span>
+      </div>
+    </div>
+
+    <div class="insight insight-green" style="margin-top:16px">El MTVV valida la operación en 5 pasos: los 3 primeros (Pulso + IMPULSO + Notarial) están completos con datos automatizados. Los pasos 3 y 4 (llamadas + visita) son la capa de validación humana imprescindible antes de tomar decisión de compra. Sin ellos, el informe es orientativo.</div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ===================== CIERRE ===================== -->
+<div class="section">
+  <div class="card" style="background:linear-gradient(135deg,#141B36 0%,#1e2a4a 100%);color:white;border:none;">
+    <div style="font-size:11px;text-transform:uppercase;letter-spacing:2px;opacity:0.45;margin-bottom:12px">Conclusión del mercado</div>
+    <div style="font-size:18px;font-weight:700;margin-bottom:16px;color:#10B981">Lectura de mercado · Beniarbeig CP 03778 · Junio 2026</div>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:14px;opacity:0.9;">El municipio absorbe pisos — rotación del 82% en la tipología, 95% en el segmento 2 dormitorios. El mercado es pequeño (298 registros) pero activo.</li>
+      <li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:14px;opacity:0.9;">El GDV firme de los 13 pisos es <strong style="color:#FF4D2E">1.945.100 €</strong> con testigos locales reales. Es el único dato 100% defendible.</li>
+      <li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:14px;opacity:0.9;">Los 7 áticos dúplex son un hueco estadístico en Beniarbeig (n=0 testigos directos). La estimación orientativa por €/m² arroja un subtotal de <strong style="color:#FF4D2E">1.701.500 €</strong> en escenario medio — con reserva.</li>
+      <li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:14px;opacity:0.9;">El mercado crece al +9,30% anual — máximo histórico de la serie. Con obra terminada en 2026-2027, el edificio entraría en el mercado en plena expansión.</li>
+      <li style="padding:10px 0;font-size:14px;opacity:0.9;">El comprador es mayoritariamente extranjero (51,52% — holandés, inglés, belga, polaco). Marketing bilingüe y canales internacionales son imprescindibles para la comercialización.</li>
+    </ul>
+    <div style="margin-top:16px;padding:14px;background:rgba(255,77,46,0.1);border-radius:10px;font-size:13px;opacity:0.8;">
+      Asking: <strong>750.000 €</strong> (contexto del vendedor — sin análisis de margen en este informe). Los pasos 3 y 4 del MTVV (llamadas + visita) son necesarios antes de cualquier decisión de inversión.
+    </div>
+  </div>
+</div>
 
 </div><!-- /container -->
 
 <!-- FOOTER -->
-<footer class="footer">
+<div class="footer">
   <div class="footer-inner">
-    <img src="https://assets.cdn.filesafe.space/9FLX4fUFluqRQ8w19kzs/media/697e322e1311f62a92201cc6.png" alt="IM·PULSO">
-    <div class="footer-text">
-      Informe generado con IM·PULSO · Inteligencia de mercado inmobiliario · 2026
+    <div class="footer-cta-title">¿Quieres conocer el potencial de tu activo?</div>
+    <div class="footer-cta-sub">Contacta con nosotros vía WhatsApp</div>
+    <a href="https://wa.me/34600000000" class="wa-button">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.546 4.07 1.502 5.78L0 24l6.392-1.478A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.044-1.389l-.361-.214-3.745.866.889-3.641-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <img src="https://assets.cdn.filesafe.space/9FLX4fUFluqRQ8w19kzs/media/697e322e1311f62a92201cc6.png" alt="IM·PULSO" class="footer-logo">
+    <div class="footer-fine">
+      IM·PULSO · Informe V2 Beniarbeig · Junio 2026 · Datos: Supabase (propiedades Idealista) + Portal Estadístico del Notariado CP 03778 · Este informe es orientativo y no constituye asesoramiento de inversión.
     </div>
   </div>
-</footer>
+</div>
 
 </body>
 </html>
