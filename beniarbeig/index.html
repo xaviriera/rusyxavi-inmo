@@ -1,0 +1,1464 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Edificio Beniarbeig — Dossier interno · RUS&amp;XAVI - INMO PROJECTS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-primary:#141B36;
+  --bg-deep:#0B0E17;
+  --accent:#FF4D2E;
+  --accent-hover:#e8391a;
+  --accent-glow:rgba(255,77,46,0.35);
+  --accent-subtle:rgba(255,77,46,0.15);
+  --text-primary:#FFFFFF;
+  --text-secondary:#9CA3AF;
+  --text-muted:#8B92A0;
+  --border-subtle:rgba(255,255,255,0.06);
+  --border-light:rgba(255,255,255,0.08);
+  --card-bg:linear-gradient(135deg,#1a2340,#141B36);
+  --card-radius:12px;
+  --card-radius-lg:16px;
+  --card-shadow:0 4px 24px rgba(0,0,0,0.4);
+  --btn-radius:6px;
+  --success:#10B981;
+  --danger:#EF4444;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  font-family:'Manrope',system-ui,-apple-system,sans-serif;
+  background:var(--bg-primary);
+  color:var(--text-secondary);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1{font-weight:800;font-size:clamp(2rem,5vw,3.3rem);color:var(--text-primary)}
+h2{font-weight:700;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--text-primary)}
+h3,h4{font-weight:700;color:var(--text-primary)}
+strong,b{font-weight:700;color:var(--text-primary)}
+a{color:var(--text-secondary);text-decoration:none;transition:color .15s}
+a:hover{color:var(--accent)}
+p{margin-bottom:.9rem}
+p:last-child{margin-bottom:0}
+
+/* ─── CONFIDENTIAL BANNER ─── */
+.conf-bar{
+  position:fixed;top:0;left:0;right:0;z-index:70;
+  background:var(--bg-deep);
+  color:var(--text-secondary);
+  font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;
+  text-align:center;padding:.38rem 1rem;font-weight:600;
+}
+
+/* ─── NAV ─── */
+nav.sticky{
+  position:fixed;top:28px;left:0;right:0;z-index:60;
+  background:rgba(20,27,54,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border-subtle);
+  max-width:100vw;overflow:hidden;
+}
+nav.sticky .nav-inner{
+  max-width:1120px;margin:0 auto;padding:.6rem 1.5rem;
+  display:flex;align-items:center;gap:1.2rem;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  -ms-overflow-style:none;scrollbar-width:none;
+}
+nav.sticky .nav-inner::-webkit-scrollbar{display:none}
+.logo-slot{height:36px;width:auto;display:flex;align-items:center;flex-shrink:0}
+.nav-brand{font-weight:800;font-size:.88rem;color:var(--text-primary);white-space:nowrap;letter-spacing:-.01em;flex-shrink:0}
+.nav-brand span{color:var(--accent)}
+nav.sticky a{font-size:.78rem;color:var(--text-secondary);text-decoration:none;white-space:nowrap;font-weight:500;transition:color .15s;padding:.2rem 0}
+nav.sticky a:hover{color:var(--accent)}
+.nav-sep{color:var(--border-light);font-size:.7rem;flex-shrink:0}
+.nav-home{margin-left:auto;color:var(--accent)!important;font-weight:600!important;flex-shrink:0}
+
+/* ─── LAYOUT ─── */
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+section.sec{padding:4rem 0;border-bottom:1px solid var(--border-subtle)}
+section.sec:last-of-type{border-bottom:none}
+
+.sec-label{font-size:.69rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.75rem}
+h2.sec-h{font-weight:800;font-size:clamp(1.45rem,3.2vw,2rem);color:var(--text-primary);line-height:1.12;letter-spacing:-.02em;margin-bottom:.5rem}
+.sec-sub{color:var(--text-secondary);font-size:1rem;max-width:68ch;margin-bottom:2rem}
+h3.sub-h{font-weight:700;font-size:1.08rem;color:var(--text-primary);margin:2rem 0 .75rem;letter-spacing:-.01em}
+
+/* ─── HERO ─── */
+.hero{
+  padding:8rem 0 0;
+  background:linear-gradient(135deg,#141B36 0%,#1e2a4a 100%);
+  position:relative;overflow:hidden;color:white;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end;position:relative;z-index:1}
+.hero-text{padding-bottom:3.5rem}
+.hero-eyebrow{font-size:.69rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1.2rem}
+.hero h1{font-weight:800;font-size:clamp(2.2rem,5vw,3.4rem);color:var(--text-primary);line-height:1.06;letter-spacing:-.025em;margin-bottom:1rem}
+.hero-addr{color:var(--text-muted);font-size:.95rem;font-weight:500;margin-bottom:1.6rem;display:flex;align-items:center;gap:.5rem}
+.hero-desc{color:var(--text-secondary);font-size:1.05rem;line-height:1.6;max-width:52ch;margin-bottom:2rem}
+.hero-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
+.pill{background:rgba(255,255,255,.1);color:var(--text-secondary);font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.15);letter-spacing:.01em}
+.hero-photo{position:relative;border-radius:var(--card-radius) var(--card-radius) 0 0;overflow:hidden;box-shadow:0 -8px 40px rgba(0,0,0,.25);background:#0B0E17;aspect-ratio:4/3;align-self:end}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.hero-photo-caption{position:absolute;bottom:0;left:0;right:0;padding:.65rem 1rem;background:linear-gradient(transparent,rgba(11,14,23,.85));color:var(--text-muted);font-size:.73rem}
+
+/* ─── KPI CARDS ─── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+.kpi{
+  background:var(--card-bg);border:1px solid var(--border-subtle);
+  border-radius:var(--card-radius);padding:1.3rem 1.4rem;
+  box-shadow:var(--card-shadow);
+}
+.kpi-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);margin-bottom:.4rem}
+.kpi-val{font-weight:800;font-size:1.5rem;color:var(--text-primary);letter-spacing:-.02em;line-height:1.1}
+.kpi-val.ref-cat{
+  font-size:.92rem;
+  letter-spacing:.01em;
+  word-break:break-all;
+  overflow-wrap:anywhere;
+  line-height:1.35;
+}
+.kpi-note{font-size:.8rem;color:var(--text-secondary);margin-top:.3rem}
+
+/* KPI composición — homogénea */
+.kpi-comp-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;margin-bottom:2rem;
+}
+.kpi-comp{
+  background:var(--card-bg);border:1px solid var(--border-subtle);
+  border-radius:var(--card-radius);padding:1.2rem 1.3rem;
+  box-shadow:var(--card-shadow);
+  border-top:3px solid var(--border-light);
+}
+.kpi-comp.accent-top{border-top-color:var(--accent)}
+.kpi-comp.warn-top{border-top-color:#eab308}
+.kpi-comp.ok-top{border-top-color:#10B981}
+.kpi-comp.neutral-top{border-top-color:rgba(255,255,255,0.2)}
+.kpi-comp .kpi-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);margin-bottom:.4rem}
+.kpi-comp .kpi-val{font-weight:800;font-size:1.35rem;color:var(--text-primary);letter-spacing:-.02em;line-height:1.1}
+.kpi-comp .kpi-note{font-size:.8rem;color:var(--text-secondary);margin-top:.3rem}
+
+/* ─── LIGHTBOX GALERÍA ─── */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:.9rem;
+  margin:1.5rem 0;
+}
+.gallery-item{
+  position:relative;overflow:hidden;border-radius:var(--card-radius);
+  box-shadow:var(--card-shadow);background:#0B0E17;
+  cursor:pointer;aspect-ratio:4/3;
+  border:1px solid var(--border-subtle);
+  transition:transform .15s, box-shadow .15s;
+}
+.gallery-item:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.55)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .15s}
+.gallery-item:hover img{opacity:1}
+.gallery-item .gallery-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:.55rem .8rem;
+  background:linear-gradient(transparent,rgba(11,14,23,.88));
+  color:var(--text-muted);font-size:.72rem;line-height:1.4;
+}
+.gallery-item .gallery-cap.danger-cap{
+  background:linear-gradient(transparent,rgba(255,77,46,.25));
+  color:#FF4D2E;font-weight:600;
+}
+.gallery-badge{
+  position:absolute;top:.55rem;right:.55rem;
+  background:rgba(255,77,46,.85);color:white;
+  font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:.2rem .5rem;border-radius:999px;
+}
+
+/* Lightbox overlay */
+.lb-overlay{
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(11,14,23,.97);
+  flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem 1rem;
+}
+.lb-overlay.open{display:flex}
+.lb-overlay img{
+  max-width:90vw;max-height:78vh;
+  object-fit:contain;border-radius:8px;
+  box-shadow:0 8px 64px rgba(0,0,0,.7);
+}
+.lb-caption{
+  margin-top:1rem;color:var(--text-secondary);font-size:.88rem;
+  text-align:center;max-width:56ch;line-height:1.5;
+}
+.lb-close{
+  position:absolute;top:1.2rem;right:1.5rem;
+  background:none;border:none;color:var(--text-muted);
+  font-size:2rem;cursor:pointer;line-height:1;
+  transition:color .15s;
+}
+.lb-close:hover{color:var(--accent)}
+.lb-nav{
+  display:flex;gap:1rem;margin-top:1.2rem;
+}
+.lb-btn{
+  background:rgba(255,255,255,0.1);border:1px solid var(--border-light);
+  color:var(--text-secondary);padding:.45rem 1.2rem;border-radius:6px;
+  cursor:pointer;font-size:.84rem;font-weight:600;transition:background .15s,color .15s;
+}
+.lb-btn:hover{background:var(--accent);color:white;border-color:var(--accent)}
+
+/* ─── FOTO CON PIE ─── */
+.photo-block{position:relative;overflow:hidden;border-radius:var(--card-radius);box-shadow:var(--card-shadow);background:#0B0E17}
+.photo-block img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-caption{
+  padding:.5rem .9rem;
+  background:rgba(11,14,23,.72);
+  color:var(--text-muted);font-size:.73rem;line-height:1.4;
+  border-top:1px solid var(--border-subtle);
+}
+
+/* ─── ÁREA CARDS ─── */
+.pata-card{
+  background:linear-gradient(135deg,#1a2340,#141B36);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--card-radius-lg);
+  padding:2rem 2.2rem;
+  box-shadow:var(--card-shadow);
+  border-top:4px solid var(--border-subtle);
+  margin-bottom:2rem;
+}
+.pata-card.danger{border-top-color:#FF4D2E}
+.pata-card.warn{border-top-color:#eab308}
+.pata-card.info{border-top-color:rgba(255,255,255,0.25)}
+
+.pata-header{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1.2rem}
+.pata-icon{font-size:1.7rem;flex-shrink:0;line-height:1}
+.pata-title{font-weight:800;font-size:1.12rem;color:var(--text-primary);line-height:1.2}
+.pata-status{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .65rem;border-radius:999px;margin-top:.3rem;display:inline-block}
+.status-ok{background:rgba(16,185,129,0.15);color:#10B981;border:1px solid #10B981}
+.status-warn{background:rgba(234,179,8,0.15);color:#eab308;border:1px solid #eab308}
+.status-danger{background:rgba(255,77,46,0.15);color:#FF4D2E;border:1px solid #FF4D2E}
+
+/* Acciones dentro de pata */
+.acciones-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.7rem;margin-top:1rem}
+.accion-item{
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:.7rem;align-items:start;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border-subtle);border-radius:8px;
+  padding:.85rem 1rem;
+}
+.accion-dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--border-light);margin-top:.55rem;flex-shrink:0}
+.accion-dot.d{background:#FF4D2E}
+.accion-dot.w{background:#eab308}
+.accion-dot.g{background:#10B981}
+.accion-body{color:var(--text-secondary);font-size:.87rem;line-height:1.5}
+.accion-body strong{color:var(--text-primary);font-weight:700}
+.accion-price{
+  font-size:.75rem;font-weight:700;color:var(--text-muted);white-space:nowrap;
+  padding:.2rem .55rem;border-radius:6px;background:rgba(255,255,255,0.06);
+  align-self:flex-start;margin-top:.2rem;border:1px solid var(--border-subtle);
+  min-width:70px;text-align:center;
+}
+
+/* ─── SEMÁFORO RESUMEN ─── */
+.semaforo-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1rem;margin-bottom:2rem;
+}
+.semaforo-item{
+  background:var(--card-bg);border:1px solid var(--border-subtle);
+  border-radius:var(--card-radius);padding:1.1rem 1.2rem;
+  box-shadow:var(--card-shadow);border-top:3px solid var(--border-subtle);
+  text-align:center;
+}
+.semaforo-item.danger{border-top-color:#FF4D2E}
+.semaforo-item.warn{border-top-color:#eab308}
+.semaforo-item.ok{border-top-color:#10B981}
+.semaforo-label{font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:.5rem}
+.semaforo-estado{font-size:.78rem;font-weight:700;margin-bottom:.3rem}
+.semaforo-estado.d{color:#FF4D2E}
+.semaforo-estado.w{color:#eab308}
+.semaforo-estado.g{color:#10B981}
+.semaforo-desc{font-size:.77rem;color:var(--text-muted);line-height:1.4}
+
+/* ─── TABLA VIVIENDAS ─── */
+.table-wrap{overflow-x:auto;max-width:100%;margin:.5rem 0 1.5rem;border-radius:var(--card-radius);box-shadow:var(--card-shadow);border:1px solid var(--border-light);-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;background:transparent;font-size:.86rem}
+thead tr{background:#0B0E17;color:var(--text-primary)}
+thead th{padding:.8rem 1rem;text-align:left;font-weight:700;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border-light);transition:background .1s}
+tbody tr:hover{background:rgba(255,255,255,0.03)}
+tbody tr:last-child{border-bottom:none}
+tbody tr.total-row{background:rgba(255,255,255,0.05);font-weight:600;border-top:2px solid var(--accent)}
+tbody tr.total-row td{color:var(--text-primary);font-weight:700;font-size:.82rem}
+tbody td{padding:.72rem 1rem;color:var(--text-secondary)}
+tbody td:first-child{font-weight:600;color:var(--text-primary);white-space:nowrap}
+tbody td.pend{color:var(--text-muted);font-style:italic;font-size:.82rem}
+tbody td.sec-data{color:var(--text-muted);font-size:.8rem}
+.badge-tipo{display:inline-block;padding:.15rem .55rem;border-radius:999px;font-size:.72rem;font-weight:600;background:rgba(255,255,255,0.1);color:var(--text-primary);border:1px solid var(--border-light);white-space:nowrap}
+.badge-tipo.atico{background:rgba(255,77,46,0.15);color:#FF4D2E;border:1px solid #FF4D2E}
+
+/* TIPOLOGÍA CUADRÍCULA */
+.tipo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.9rem;margin:1rem 0 1.5rem}
+.tipo-card{
+  background:var(--card-bg);border:1px solid var(--border-subtle);
+  border-radius:var(--card-radius);padding:1.3rem 1.4rem;
+  box-shadow:var(--card-shadow);
+}
+.tipo-card.tipo-atico{border-top:3px solid var(--accent)}
+.tipo-card.tipo-std{border-top:3px solid rgba(255,255,255,0.2)}
+.tipo-card.tipo-total{border-top:3px solid #10B981;background:rgba(16,185,129,0.05)}
+.tipo-label{font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);margin-bottom:.4rem}
+.tipo-val{font-weight:800;font-size:1.7rem;color:var(--text-primary);letter-spacing:-.02em;line-height:1.1;margin-bottom:.25rem}
+.tipo-desc{font-size:.82rem;color:var(--text-secondary)}
+
+/* ─── PASOS PROX ─── */
+.steps-group{margin-bottom:1.5rem}
+.steps-group-label{font-size:.69rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);font-weight:700;margin-bottom:.7rem;padding:.35rem .8rem;background:rgba(255,255,255,0.04);border-radius:6px;display:inline-block}
+.steps-grid{display:flex;flex-direction:column;gap:.75rem}
+.step{display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;align-items:start;background:var(--card-bg);border:1px solid var(--border-subtle);border-radius:var(--card-radius);padding:1.1rem 1.2rem;box-shadow:var(--card-shadow)}
+.step-num{width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(255,255,255,0.1);color:var(--text-primary);border:1px solid var(--border-light);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem;flex-shrink:0}
+.step-body h4{font-weight:700;font-size:.9rem;color:var(--text-primary);margin-bottom:.3rem}
+.step-body p{font-size:.86rem;color:var(--text-secondary);margin:0}
+.step.free .step-num{background:rgba(16,185,129,0.2);color:#10B981;border:1px solid #10B981}
+.step.low .step-num{background:rgba(234,179,8,0.2);color:#eab308;border:1px solid #eab308}
+.step.later .step-num{background:rgba(255,255,255,0.06);color:var(--text-muted);border:1px solid var(--border-subtle)}
+
+/* ─── NOTAS APARTE ─── */
+.notas-card{
+  background:rgba(255,255,255,0.025);
+  border:1px solid var(--border-subtle);
+  border-left:3px solid var(--border-light);
+  border-radius:0 var(--card-radius) var(--card-radius) 0;
+  padding:1.2rem 1.4rem;
+  margin:.75rem 0;
+}
+.notas-label{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--text-muted);margin-bottom:.5rem}
+.notas-card p{font-size:.84rem;color:var(--text-muted);line-height:1.55}
+.notas-card strong{color:var(--text-secondary)}
+
+/* ─── ALERT BOXES ─── */
+.alert{border-radius:8px;padding:1rem 1.2rem;margin:1.25rem 0;font-size:.88rem;line-height:1.55;border-left:4px solid transparent}
+.alert-warn{background:rgba(234,179,8,0.1);border-left-color:#eab308;color:var(--text-secondary)}
+.alert-danger{background:rgba(255,77,46,0.1);border-left-color:#FF4D2E;color:var(--text-secondary)}
+.alert-info{background:rgba(255,255,255,0.05);border-left-color:rgba(255,255,255,0.3);color:var(--text-secondary)}
+.alert-ok{background:rgba(16,185,129,0.08);border-left-color:#10B981;color:var(--text-secondary)}
+.alert strong{font-weight:700;color:var(--text-primary)}
+
+/* ─── RISK BADGE inline ─── */
+.risk{display:inline-flex;align-items:center;gap:.3rem;font-size:.72rem;font-weight:700;padding:.12rem .5rem;border-radius:999px;vertical-align:middle;letter-spacing:.05em}
+.risk-r{background:rgba(255,77,46,0.15);color:#FF4D2E;border:1px solid #FF4D2E}
+.risk-y{background:rgba(234,179,8,0.15);color:#eab308;border:1px solid #eab308}
+.risk-g{background:rgba(16,185,129,0.15);color:#10B981;border:1px solid #10B981}
+
+/* ─── HUECO ESTUDIO MERCADO ─── */
+.estudio-hueco{
+  border:2px dashed var(--border-light);
+  border-radius:var(--card-radius);
+  padding:2.5rem 2rem;
+  text-align:center;
+  background:rgba(255,255,255,0.015);
+  margin:1.5rem 0;
+}
+.estudio-hueco .hueco-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);margin-bottom:.7rem}
+.estudio-hueco .hueco-title{font-weight:800;font-size:1.15rem;color:var(--text-primary);margin-bottom:.5rem}
+.estudio-hueco .hueco-sub{color:var(--text-muted);font-size:.88rem}
+
+/* ─── FOOTER ─── */
+footer{border-top:1px solid var(--border-subtle);padding:2.5rem 0 3rem;margin-top:1rem}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-weight:800;font-size:.88rem;color:var(--text-primary)}
+.footer-meta{font-size:.78rem;color:var(--text-muted)}
+
+/* ─── PRINT ─── */
+@media print{
+  .conf-bar,nav.sticky,.lb-overlay{display:none!important}
+  body{padding-top:0!important;background:white!important;color:#141B36!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero{background:#141B36!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero h1,.hero-eyebrow,.hero-desc,.hero-addr{color:white!important}
+  section.sec{page-break-inside:avoid;padding:2rem 0;border-bottom:1px solid #e2e5ea}
+  .semaforo-grid{grid-template-columns:repeat(2,1fr)!important}
+  .kpi-grid,.kpi-comp-grid,.tipo-grid{grid-template-columns:repeat(2,1fr)!important}
+  .kpi,.kpi-comp,.pata-card,.step,.tipo-card{background:white!important;border:1px solid #e2e5ea!important;box-shadow:none!important}
+  .kpi-val,.kpi-comp .kpi-val,.pata-title,.step-body h4,.tipo-val{color:#141B36!important}
+  .kpi-note,.kpi-comp .kpi-note,.accion-body,.step-body p,.tipo-desc{color:#344054!important}
+  .sec-label{color:#FF4D2E!important}
+  h2.sec-h,h3.sub-h{color:#141B36!important}
+  .sec-sub{color:#344054!important}
+  table{background:white!important}
+  thead tr{background:#141B36!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  tbody tr:hover{background:transparent!important}
+  tbody td{color:#344054!important}
+  tbody td:first-child{color:#141B36!important}
+  .table-wrap{border:1px solid #e2e5ea!important}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)!important}
+  footer{border-top:1px solid #e2e5ea!important}
+  .footer-brand{color:#141B36!important}
+  .footer-meta{color:#344054!important}
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .kpi-comp-grid{grid-template-columns:repeat(2,1fr)}
+  .semaforo-grid{grid-template-columns:repeat(2,1fr)}
+  .tipo-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-photo{border-radius:var(--card-radius);aspect-ratio:16/9;align-self:auto}
+  .hero{padding:6rem 0 0}
+  .hero-text{padding-bottom:2rem}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .step{grid-template-columns:2rem 1fr}
+  nav.sticky .nav-inner{gap:.8rem}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .accion-item{grid-template-columns:auto 1fr;gap:.6rem}
+  .accion-price{grid-column:1/-1;text-align:left;white-space:normal;min-width:unset}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  tbody td{word-break:break-word;overflow-wrap:anywhere}
+  thead th{white-space:normal;word-break:break-word}
+}
+@media(max-width:480px){
+  .kpi-grid{grid-template-columns:1fr}
+  .kpi-comp-grid{grid-template-columns:1fr}
+  .semaforo-grid{grid-template-columns:1fr}
+  .tipo-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.9rem}
+  /* Responsive móvil 360-414px — word-break y tablas */
+  .kpi-val{word-break:break-word;overflow-wrap:anywhere}
+  .kpi-val.ref-cat{font-size:.78rem;word-break:break-all;overflow-wrap:anywhere}
+  .badge-tipo,.badge-tipo.atico{white-space:normal;word-break:break-word;font-size:.67rem}
+  .pill{word-break:break-word;font-size:.73rem}
+  .pata-status{word-break:break-word;white-space:normal}
+  .accion-price{font-size:.7rem;word-break:break-word;white-space:normal}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{font-size:.76rem}
+  thead th{font-size:.64rem;padding:.55rem .6rem;white-space:normal;word-break:break-word}
+  tbody td{padding:.55rem .6rem;word-break:break-word;overflow-wrap:anywhere}
+  .accion-item{grid-template-columns:auto 1fr;gap:.5rem}
+  .accion-price{grid-column:1/-1}
+  .notas-card p{font-size:.8rem;word-break:break-word}
+  .step{grid-template-columns:1.8rem 1fr;gap:.7rem}
+  .step-num{width:1.8rem;height:1.8rem;font-size:.78rem}
+  .alert{font-size:.82rem;word-break:break-word}
+  .steps-group-label{font-size:.63rem;word-break:break-word}
+  .risk{font-size:.66rem}
+}
+</style>
+</head>
+<body>
+
+<!-- CONFIDENTIAL -->
+<div class="conf-bar">Borrador interno · Confidencial — uso exclusivo Rus y Xavi</div>
+
+<!-- NAV -->
+<nav class="sticky">
+  <div class="nav-inner">
+    <div class="logo-slot"></div>
+    <span class="nav-brand">RUS&amp;XAVI - INMO PROJECTS · Edificio <span>Beniarbeig</span></span>
+    <span class="nav-sep">|</span>
+    <a href="#radiografia">Radiografía</a>
+    <a href="#viviendas">Viviendas</a>
+    <a href="#juridica">Jurídica</a>
+    <a href="#urbanistica">Urbanística</a>
+    <a href="#tecnica">Técnica</a>
+    <a href="#economica">Económica</a>
+    <a href="#pasos">Próximos pasos</a>
+    <a href="#notas">Notas</a>
+    <a href="../index.html" class="nav-home">← Índice</a>
+  </div>
+</nav>
+
+<!-- LIGHTBOX OVERLAY -->
+<div class="lb-overlay" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lb-close" aria-label="Cerrar">&times;</button>
+  <img id="lb-img" src="" alt="">
+  <p class="lb-caption" id="lb-caption"></p>
+  <div class="lb-nav">
+    <button class="lb-btn" id="lb-prev">&#8592; Anterior</button>
+    <button class="lb-btn" id="lb-next">Siguiente &#8594;</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Operación propia · Rus y Xavi · Estudio de viabilidad · Edificio TIPO 4 (no terminado)</div>
+        <h1>Edificio Beniarbeig</h1>
+        <div class="hero-addr">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.485-2.015-4.5-4.5-4.5Zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#8B92A0"/></svg>
+          C/ Sant Roc 22 esq. Av. del Vergel · Beniarbeig (Alicante) · CP 03778
+        </div>
+        <p class="hero-desc">Edificio de 20 viviendas y 20 plazas de garaje. Estructura y cerramiento ejecutados, obra parada ~18-20 años. Promotor original quebrado (Vallelitoral, extinguido 2022). Licencia 2068/2023 concedida dic. 2023: autoriza legalización y terminación de la obra.</p>
+        <div class="hero-pills">
+          <span class="pill">20 viviendas</span>
+          <span class="pill">20 plazas garaje</span>
+          <span class="pill">S-1 + S-2 + PB + P1 + P2 + Bajocubierta</span>
+          <span class="pill">~2.374 m² construidos</span>
+          <span class="pill">Marina Alta · Alicante</span>
+          <span class="pill">Edificio TIPO 4</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/01-fachada.jpg" alt="Fachada exterior — Edificio Beniarbeig, estado actual 2026">
+        <div class="hero-photo-caption">Fachada principal · Cara vista sin revestir · Estructura completa · 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 1 — RADIOGRAFÍA
+══════════════════════════════════════════════ -->
+<section class="sec" id="radiografia">
+  <div class="wrap">
+    <div class="sec-label">Sección 1 · Qué tenemos</div>
+    <h2 class="sec-h">Radiografía del activo</h2>
+    <p class="sec-sub">Datos verificados en documentación disponible. <strong>DATO</strong> = verificado · <strong>PENDIENTE</strong> = a solicitar.</p>
+
+    <!-- KPIs globales -->
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Referencia catastral</div>
+        <div class="kpi-val ref-cat">0416215YH6001N0001SU</div>
+        <div class="kpi-note">DATO — catastro + resolución licencia</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Parcela</div>
+        <div class="kpi-val">~517 m²</div>
+        <div class="kpi-note">Catastro: 517 m² · Encargo: 506,87 m²</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Viviendas</div>
+        <div class="kpi-val">20</div>
+        <div class="kpi-note">DATO — proyecto + licencia</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Plazas garaje</div>
+        <div class="kpi-val">20</div>
+        <div class="kpi-note">DATO — sótanos S-1 y S-2 · 622,23 m² · Acceso por montacoches (Memoria p.28) — verificar estado in situ</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">m² viviendas (est.)</div>
+        <div class="kpi-val">~1.750</div>
+        <div class="kpi-note">Estimación — superficies por unidad pendientes</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">m² totales constr.</div>
+        <div class="kpi-val">~2.374</div>
+        <div class="kpi-note">Viviendas + garaje · DATO proyecto</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Año del proyecto</div>
+        <div class="kpi-val">2006</div>
+        <div class="kpi-note">Pre-CTE completo (DB-HR, DB-HE, DB-SUA)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Obra parada (est.)</div>
+        <div class="kpi-val">~18-20 años</div>
+        <div class="kpi-note">Desde la quiebra · Edificio TIPO 4</div>
+      </div>
+    </div>
+
+    <!-- Composición por planta -->
+    <h3 class="sub-h">Composición por planta (DATO)</h3>
+    <div class="kpi-comp-grid">
+      <div class="kpi-comp warn-top">
+        <div class="kpi-label">Sótano S-1 y S-2</div>
+        <div class="kpi-val">Garaje</div>
+        <div class="kpi-note">622,23 m² bajo rasante · 2 niveles (S-1 y S-2) · 20 plazas · Acceso por montacoches (no rampa) (verificar in situ: montacoches vs rampa) · Humedades en paredes — verificar origen in situ</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Planta Baja</div>
+        <div class="kpi-val">6 viv.</div>
+        <div class="kpi-note">4 × 2 dorm. + 2 × 1 dorm. · ~450 m²</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Planta 1ª</div>
+        <div class="kpi-val">7 viv.</div>
+        <div class="kpi-note">7 × 2 dormitorios</div>
+      </div>
+      <div class="kpi-comp accent-top">
+        <div class="kpi-label">P2 + Bajocubierta (dúplex)</div>
+        <div class="kpi-val">7 dúplex</div>
+        <div class="kpi-note">3 × ático 4 dorm. + 4 × ático 3 dorm.</div>
+      </div>
+    </div>
+
+    <!-- Historia -->
+    <h3 class="sub-h">Historia del activo</h3>
+    <p><strong>VALLELITORAL ESP SL</strong> (promotora original, B-53972212) obtuvo la Licencia de Obras Mayor LOM 24/2006 (fuente a verificar) y ejecutó la estructura hasta el cerramiento. Con la crisis de 2007-2008 dejó de operar; concurso de acreedores en 2009, liquidación en 2010, <strong>extinción definitiva por insuficiencia de masa el 28/03/2022</strong> (BORME). El edificio quedó parado en bruto.</p>
+    <p>En 2023, un nuevo promotor (Campos Inmobiliaria SL / rep. Gabriel Marroig Ibarra, arquitecto Marina Alta) obtuvo la <strong>Resolución de Alcaldía 2023-0622 (exp. 2068/2023, concedida 20/12/2023)</strong>: licencia de legalización y proyecto básico y de ejecución del edificio de 20 viviendas y garaje. La licencia autoriza tanto la legalización de lo ya construido como la terminación de la obra.</p>
+
+    <!-- GALERÍA DE FOTOS CON LIGHTBOX -->
+    <h3 class="sub-h">Galería de fotos — estado actual 2026</h3>
+    <p style="font-size:.86rem;color:var(--text-muted);margin-bottom:.5rem">Clic en cualquier foto para ampliar. 7 fotos disponibles, todas del estado real del inmueble.</p>
+
+    <div class="gallery-grid" id="gallery">
+      <div class="gallery-item" data-idx="0" tabindex="0" role="button" aria-label="Ver foto 1">
+        <img src="assets/01-fachada.jpg" alt="Foto 1 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+      <div class="gallery-item" data-idx="1" tabindex="0" role="button" aria-label="Ver foto 2">
+        <img src="assets/02-interior-bruto.jpg" alt="Foto 2 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+      <div class="gallery-item" data-idx="2" tabindex="0" role="button" aria-label="Ver foto 3">
+        <img src="assets/03-humedades-paredes.jpg" alt="Foto 3 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+      <div class="gallery-item" data-idx="3" tabindex="0" role="button" aria-label="Ver foto 4">
+        <img src="assets/04-interior-puerta.jpg" alt="Foto 4 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+      <div class="gallery-item" data-idx="4" tabindex="0" role="button" aria-label="Ver foto 5">
+        <img src="assets/05-sotano-boveda.jpg" alt="Foto 5 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+      <div class="gallery-item" data-idx="5" tabindex="0" role="button" aria-label="Ver foto 6">
+        <img src="assets/06-estructura-chimenea.jpg" alt="Foto 6 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+      <div class="gallery-item" data-idx="6" tabindex="0" role="button" aria-label="Ver foto 7">
+        <img src="assets/07-interior-corredor.jpg" alt="Foto 7 — Edificio Beniarbeig 2026" loading="lazy">
+      </div>
+    </div>
+
+    <div class="alert alert-warn" style="margin-top:.75rem">
+      <strong>Fotos del estado actual aportadas por la propiedad.</strong> En alguna se aprecia posible humedad; el estado y la identificación de los espacios están SIN confirmar → pendiente visita in situ con arquitecto y nuevas fotos. La foto del espacio abovedado inferior podría corresponder al hueco de montacoches u otro espacio — a revisar in situ.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 2 — LISTADO DE VIVIENDAS
+══════════════════════════════════════════════ -->
+<section class="sec" id="viviendas">
+  <div class="wrap">
+    <div class="sec-label">Sección 2 · Listado de unidades</div>
+    <h2 class="sec-h">Listado de viviendas — 20 unidades</h2>
+    <p class="sec-sub">Tipologías confirmadas en planos y documentación de proyecto. Baños y m² útiles pendientes de extracción del cuadro de superficies.</p>
+
+    <!-- Cuadrícula de tipologías -->
+    <div class="tipo-grid">
+      <div class="tipo-card tipo-std">
+        <div class="tipo-label">1 dormitorio</div>
+        <div class="tipo-val">2 <span style="font-size:1rem;color:var(--text-muted)">uds.</span></div>
+        <div class="tipo-desc">Planta baja (PB-05, PB-06)</div>
+      </div>
+      <div class="tipo-card tipo-std">
+        <div class="tipo-label">2 dormitorios</div>
+        <div class="tipo-val">11 <span style="font-size:1rem;color:var(--text-muted)">uds.</span></div>
+        <div class="tipo-desc">PB: 4 uds. · P1: 7 uds.</div>
+      </div>
+      <div class="tipo-card tipo-atico">
+        <div class="tipo-label">Ático dúplex · 3 dorm.</div>
+        <div class="tipo-val">4 <span style="font-size:1rem;color:var(--text-muted)">uds.</span></div>
+        <div class="tipo-desc">P2+Bajocubierta · P2-BC-04 a 07</div>
+      </div>
+      <div class="tipo-card tipo-atico">
+        <div class="tipo-label">Ático dúplex · 4 dorm.</div>
+        <div class="tipo-val">3 <span style="font-size:1rem;color:var(--text-muted)">uds.</span></div>
+        <div class="tipo-desc">P2+Bajocubierta · P2-BC-01 a 03</div>
+      </div>
+      <div class="tipo-card tipo-total">
+        <div class="tipo-label">Total viviendas</div>
+        <div class="tipo-val">20 <span style="font-size:1rem;color:var(--text-muted)">uds.</span></div>
+        <div class="tipo-desc">+ 20 plazas garaje (sótano ~622 m²)</div>
+      </div>
+    </div>
+
+    <div class="alert alert-info">
+      <strong>Baños y m² útiles — pendientes:</strong> el proyecto de 2006 no incluye cuadro de superficies útiles por vivienda en las páginas disponibles. Se completan solicitando el proyecto de arquitectura con cuadro de superficies (ver Área Económica — dato crítico para MTVV y valoración).
+    </div>
+
+    <!-- Tabla detalle por unidad -->
+    <h3 class="sub-h">Detalle por unidad</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Planta</th>
+            <th>Tipología</th>
+            <th>Dorm.</th>
+            <th>Baños</th>
+            <th>m² útil</th>
+            <th>Garaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>PB-01</td><td>Planta baja</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>PB-02</td><td>Planta baja</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>PB-03</td><td>Planta baja</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>PB-04</td><td>Planta baja</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>PB-05</td><td>Planta baja</td><td><span class="badge-tipo">Apt. 1 dorm.</span></td><td>1</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>PB-06</td><td>Planta baja</td><td><span class="badge-tipo">Apt. 1 dorm.</span></td><td>1</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-01</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-02</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-03</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-04</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-05</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-06</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P1-07</td><td>Planta 1ª</td><td><span class="badge-tipo">Apt. 2 dorm.</span></td><td>2</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-01</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 4 dorm.</span></td><td>4</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-02</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 4 dorm.</span></td><td>4</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-03</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 4 dorm.</span></td><td>4</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-04</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 3 dorm.</span></td><td>3</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-05</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 3 dorm.</span></td><td>3</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-06</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 3 dorm.</span></td><td>3</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr><td>P2-BC-07</td><td>P2 + Bajocubierta</td><td><span class="badge-tipo atico">Ático dúplex 3 dorm.</span></td><td>3</td><td class="pend">pendiente</td><td class="pend">pendiente</td><td>1 plaza</td></tr>
+          <tr class="total-row">
+            <td colspan="2">TOTALES</td>
+            <td>1 dorm: 2 · 2 dorm: 11 · Ático 3D: 4 · Ático 4D: 3</td>
+            <td>—</td>
+            <td class="pend">pendiente</td>
+            <td>~1.750 m² (est.)</td>
+            <td><strong>20 plazas</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 3 — PATA JURÍDICA / REGISTRAL
+══════════════════════════════════════════════ -->
+<section class="sec" id="juridica">
+  <div class="wrap">
+    <div class="sec-label">Sección 3 · Área Jurídica / Registral</div>
+    <h2 class="sec-h">Área Jurídica / Registral</h2>
+    <p class="sec-sub">Titular incierto, cargas desconocidas, obra nueva sin declarar. Esta área bloquea la operación antes de gastar un euro en técnicos.</p>
+
+    <div class="pata-card danger">
+      <div class="pata-header">
+        <div class="pata-icon">⚖️</div>
+        <div>
+          <div class="pata-title">Jurídico / Registral</div>
+          <span class="pata-status status-danger">Problema — verificar antes de todo</span>
+        </div>
+      </div>
+
+      <h3 class="sub-h" style="margin-top:0">Hallazgos</h3>
+      <ul class="acciones-list">
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Titular incierto — riesgo nº1 jurídico:</strong> el NIF B-78365392 que figura en el expediente municipal corresponde, según registros públicos, a una sociedad de Madrid ajena al activo. El promotor original (Vallelitoral) está extinguido desde 2022. El titular registral real es desconocido hasta que se solicite la nota simple. Sin esto no hay operación.</div>
+          <span class="accion-price">Riesgo ALTO</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Cargas heredadas del concurso:</strong> alto riesgo de hipoteca promotor, embargos y anotaciones concursales de Vallelitoral. Pueden sobrevivir a la compra si no se cancelan antes de escriturar.</div>
+          <span class="accion-price">Riesgo ALTO</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Obra nueva NO declarada ni División Horizontal:</strong> el catastro refleja solo edificación de 1920 (231 m²). El edificio de 20 viviendas no está dado de alta registralmente. Sin DON (Declaración de Obra Nueva) + DH (División Horizontal — escritura que constituye cada vivienda como finca registral independiente) no hay individualización de unidades ni venta separada.</div>
+          <span class="accion-price">Riesgo ALTO</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>IBI y tasas — hipoteca legal tácita:</strong> deuda de hasta 4 años de IBI (Impuesto de Bienes Inmuebles) puede recaer sobre el comprador (art. 64 TRLRHL) aunque no esté inscrita en el Registro. Un edificio parado 18-20 años tiene alta probabilidad de acumular esta deuda.</div>
+          <span class="accion-price">Riesgo MEDIO</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>OCT (Organismo de Control Técnico) + Seguro Decenal — INEVITABLES:</strong> edificio TIPO 4, LOE plena. La vía de declaración por antigüedad (art. 28.4 TRLSRU) NO aplica: la prescripción urbanística no corre hasta la terminación total de la obra. Bloquea la escritura de obra nueva (DON — Declaración de Obra Nueva) y la venta sin decenal. Coste total estimado: 32-80k.</div>
+          <span class="accion-price">32-80k inevitables</span>
+        </li>
+      </ul>
+
+      <h3 class="sub-h">Acciones · Responsable/Dónde · Precio estimado <span style="font-size:.75rem;font-weight:400;color:var(--text-muted)">(precios estimados de mercado, a confirmar siempre)</span></h3>
+      <ul class="acciones-list">
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Nota simple registral — Registro de la Propiedad de Pedreguer</strong> · Carrer Alcalde Jeremías Andrés, 2, Pedreguer · Tel. 966 456 611 · Online en registradores.org · Revela titular real, cargas, descripción registral. Primera acción obligatoria.</div>
+          <span class="accion-price">9,02 € + IVA online</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Certificado de deuda cero del IBI</strong> · Recaudación Municipal de Beniarbeig o Servicio Provincial de Recaudación de la Diputación de Alicante · Pedir también los 4 últimos recibos pagados.</div>
+          <span class="accion-price">Gratuito</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Confirmar titular y NIF exactos</strong> · Resolver contradicción Campos Inmobiliaria SL / B-78365392 · ¿Banco, fondo, o promotor activo? · Cruzar con la nota simple del Registro de Pedreguer.</div>
+          <span class="accion-price">Gratuito</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Due diligence concursal — Registro Público Concursal</strong> · <a href="https://www.publicidadconcursal.es" target="_blank" rel="noopener">publicidadconcursal.es</a> · Consultar el histórico concursal de Vallelitoral ESP SL (B-53972212): adjudicaciones del inmueble tras el concurso, posibles cargas subsistentes, transmisiones en sede concursal. Permite trazar la cadena de titularidad desde la liquidación (extinción 28/03/2022) hasta el vendedor actual. <em>Esta es una acción de due diligence propia — no va dirigida al Ayuntamiento.</em></div>
+          <span class="accion-price">Gratuito</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Pre-consulta OCT + pre-cotización seguro decenal</strong> · Bureau Veritas, Gloval, OCA Global · MUSAAT (aseguradora especializada) · Verificar si aceptan auditar edificio parado desde 2006. Hacer tras confirmar viabilidad urbanística.</div>
+          <span class="accion-price">Consulta gratuita; OCT 15-30k + decenal 7,5-22,5k</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 4 — PATA ADMINISTRATIVA / URBANÍSTICA
+══════════════════════════════════════════════ -->
+<section class="sec" id="urbanistica">
+  <div class="wrap">
+    <div class="sec-label">Sección 4 · Área Administrativa / Urbanística</div>
+    <h2 class="sec-h">Área Administrativa / Urbanística + Catastro</h2>
+    <p class="sec-sub">El riesgo nº1 de la operación: el encaje del edificio en el plan urbanístico vigente (PGE+POP 2023). Si no encaja, la operación no sigue. La buena noticia: la licencia 2068/2023 autoriza terminar la obra.</p>
+
+    <div class="pata-card danger">
+      <div class="pata-header">
+        <div class="pata-icon">🏛️</div>
+        <div>
+          <div class="pata-title">Administrativo / Urbanístico</div>
+          <span class="pata-status status-danger">Riesgo crítico — encaje en plan + caducidad + cédula</span>
+        </div>
+      </div>
+
+      <!-- Licencia — buena noticia -->
+      <div class="alert alert-ok" style="margin-top:0">
+        <strong>Buena noticia confirmada — Licencia 2068/2023 autoriza TERMINAR:</strong> el objeto literal de la resolución de Alcaldía 2023-0622 (20/12/2023) es "Legalización y proyecto básico y de ejecución edificio de 20 viviendas y garaje". La parte dispositiva concede licencia "para la ejecución del acto" con plazos de obra activos (6 meses inicio + 15 meses ejecución). No es una mera legalización cerrada: habilita completar y concluir la obra. Esto ahorra la tramitación de una licencia nueva (estimado: 5-15k y 6-12 meses). Ver nota de fuente en Sección 7.
+      </div>
+
+      <h3 class="sub-h">Hallazgos</h3>
+      <ul class="acciones-list">
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>RIESGO Nº1 — Encaje en PGE+POP 2023:</strong> desde mayo-julio 2023 rige el PGE (Plan General Estructural, CTU 21/02/2023, BOP 11/05/2023) y el POP (Plan de Ordenación Pormenorizada, BOP 24/07/2023). La referencia a Normas Subsidiarias (NNSS 1987/1996) solo vale como contexto histórico de la licencia original de 2006; el planeamiento vigente hoy es el PGE+POP 2023. El objetivo declarado del plan es "rebajar a 2 plantas" el casco. Si la subzona asignada limita a 2 plantas, el edificio de 3+bajocubierta quedaría fuera de ordenación: sin hipoteca bancaria posible, el OCT (Organismo de Control Técnico) no emitiría el D6, comercialización convencional bloqueada. El informe del arquitecto municipal (Francisco Forgu, 26/09/2023) concluye cumplimiento del planeamiento — a confirmar con la Cédula de Garantía Urbanística. Es el filtro urbanístico previo a todo lo demás.</div>
+          <span class="accion-price">FILTRO Nº1</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Posible caducidad de la licencia 2068/2023:</strong> plazo de iniciación 6 meses desde notificación (21/12/2023 → vence ~06/2024); plazo de ejecución 15 meses (~09/2025). A junio 2026, ambos plazos vencidos. La caducidad no es automática — el Ayuntamiento debe incoar expediente formalmente. Verificar si hay expediente de caducidad iniciado.</div>
+          <span class="accion-price">Riesgo ALTO</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Condiciones suspensivas previas al inicio de obras:</strong> (1) ESS (Estudio de Seguridad y Salud — condición previa de la licencia), (2) Proyecto de Telecomunicaciones. Deben presentarse en el Ayuntamiento antes de iniciar obras. Sin ellos la licencia no es operativa.</div>
+          <span class="accion-price">A presentar</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Servicios urbanísticos pendientes:</strong> la parcela tiene "condición de solar" pero con servicios urbanísticos pendientes de completar (según informe técnico municipal). Primera ocupación bloqueada hasta resolución. ¿Se constituyó aval art. 187 TRLOTUP (normativa urbanística valenciana)?</div>
+          <span class="accion-price">A verificar</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Catastro muy desactualizado:</strong> solo constan 231 m² (edificación de 1920). El edificio de 20 viviendas no está dado de alta. Sin alta catastral, la División Horizontal y la primera ocupación quedan bloqueadas. Alta de obra nueva pendiente tras la DON registral; posibles liquidaciones retroactivas de IBI y plusvalías.</div>
+          <span class="accion-price">Tras compra</span>
+        </li>
+      </ul>
+
+      <h3 class="sub-h">Acciones · Responsable/Dónde · Precio estimado <span style="font-size:.75rem;font-weight:400;color:var(--text-muted)">(precios estimados de mercado, a confirmar siempre)</span></h3>
+      <ul class="acciones-list">
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Cédula de Garantía Urbanística (art. 246 TRLOTUP)</strong> · Ayuntament de Beniarbeig, Servei d'Urbanisme · Técnico Quike (urbanisme@beniarbeig.org · 965 766 018 · martes 11:00-13:30) · Confirma clasificación del suelo, parámetros del PGE aplicables a la parcela, si el edificio de 3 plantas está conforme o fuera de ordenación bajo el plan vigente. Es el PRIMER FILTRO de la operación. El arquitecto que conoce el edificio (vía Rus) apunta a que el encaje es probable — a confirmar por escrito con este documento.</div>
+          <span class="accion-price">50-150 €</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Obtener el expediente oficial de la licencia 2068/2023</strong> · Ayuntamiento de Beniarbeig (Quike) o solicitarlo al vendedor (Campos Inmobiliaria SL tiene el original) · Confirmar: ¿hay expediente de caducidad incoado?, ¿las condiciones suspensivas (ESS + telecomunicaciones) pueden activarse?, ¿la licencia es reactivable? — No es re-escanear un PDF: es conseguir el texto certificado del acto administrativo.</div>
+          <span class="accion-price">0 € (gestión) o 500-1.500 € (abogado urbanista)</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Lanzar correo a Quike (técnico de Urbanismo de Beniarbeig)</strong> con las consultas de esta Área · urbanisme@beniarbeig.org · 965 766 018 · martes 11:00-13:30</div>
+          <span class="accion-price">Gratuito</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Descargar PGE + POP 2023 de Beniarbeig (planos de ordenación pormenorizada)</strong> · REPLA (GVA) · mediambient.gva.es · BOP Alicante nº 141 de 24/07/2023 · Verificar subzona y parámetros exactos de la parcela.</div>
+          <span class="accion-price">Gratuito</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 5 — PATA TÉCNICA
+══════════════════════════════════════════════ -->
+<section class="sec" id="tecnica">
+  <div class="wrap">
+    <div class="sec-label">Sección 5 · Área Técnica</div>
+    <h2 class="sec-h">Área Técnica / Constructiva</h2>
+    <p class="sec-sub">El edificio está ejecutado al ~55-65% (estructura y envolvente hechos). Los riesgos son cuantificables, no descartables a priori — el método IN dice: inspecciona, cuantifica, y condiciona el GO.</p>
+
+    <div class="pata-card warn">
+      <div class="pata-header">
+        <div class="pata-icon">🏗️</div>
+        <div>
+          <div class="pata-title">Técnico / Constructivo</div>
+          <span class="pata-status status-warn">Puntos a diagnosticar — no descarte automático</span>
+        </div>
+      </div>
+
+      <!-- Nota del arquitecto — SIN VALIDAR -->
+      <div class="alert alert-info" style="margin-top:0">
+        <strong>Apunte del <strong>arquitecto MUNICIPAL del Ayuntamiento de Beniarbeig</strong> (técnico de Urbanismo) (sin validar · ver Sección 8, Nota 2):</strong> Rus fue a la <em>oficina</em> del arquitecto municipal del Ayuntamiento; este le indicó de palabra que al edificio le falta terminar, que la licencia estaría activa en principio y que no vería problema para ejecutar ni anomalías. <strong>SIN VALIDAR — pendiente de confirmar por escrito.</strong> No sustituye al informe técnico de due diligence ni a la visita in situ con un arquitecto propio.
+      </div>
+
+      <h3 class="sub-h">Hallazgos</h3>
+      <ul class="acciones-list">
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Acceso al garaje — MONTACOCHES (fuente: Memoria del Proyecto de Ejecución, pág. 28):</strong> el proyecto describe el acceso al garaje mediante montacoches, no rampa. Existe una mención cruzada a "rampa" en otra parte de la documentación → confirmar in situ (rampa vs montacoches cambia significativamente coste de construcción, mantenimiento y uso del garaje).</div>
+          <span class="accion-price">Confirmar in situ</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Humedades en paredes — verificar origen in situ:</strong> las fotos disponibles muestran manchas de humedad por capilaridad en paredes (rising damp). Ninguna foto muestra agua estancada visible en el suelo del sótano. Se debe verificar in situ si hay agua en el sótano y determinar el origen (freático alto por vega del río Girona — terreno aluvial — o filtración activa por falta de impermeabilización). El sótano (622 m²) obliga en cualquier caso a BIE + detección CO + ventilación (DB-SI &gt; 500 m²).</div>
+          <span class="accion-price">A verificar in situ</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Carbonatación y corrosión de armaduras — posible, a confirmar:</strong> ~18-20 años a la intemperie sin revestir + zona costera = condiciones de riesgo. Hierros de espera oxidados visibles. La afirmación de "armaduras en riesgo" es una hipótesis hasta que haya ensayo. Si los ensayos confirman corrosión avanzada → recálculo de coste de terminación.</div>
+          <span class="accion-price">Riesgo a ensayar</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>CTE (Código Técnico de la Edificación) — coste cuantificado, no amenaza desconocida:</strong> proyecto de 2006 calculado sin DB-HR (entró en vigor 2009). Nueva licencia exige CTE íntegro. Incremento sobre PEM estimado: +8-15%. Los principales documentos básicos afectados: DB-HR (acústica — mayor coste adicional), DB-HE (envolvente), DB-SI (garaje y zonas comunes), DB-HS (ventilación). Este coste ya está incorporado en los rangos del análisis económico — no es una sorpresa, es una partida presupuestable.</div>
+          <span class="accion-price">+8-15% sobre PEM</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Ascensor — partida de coste normal de la operación:</strong> obligatorio con más de 6 viviendas (Decreto 65/2019 GVA art. 7). Con 20 viviendas y 3 plantas, no hay excepción posible. No bloquea la operación: es una línea más del presupuesto de obra. Pedir oferta a instalador.</div>
+          <span class="accion-price">25.000-50.000 €</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>% ejecutado ~55-65%:</strong> estructura y cerramiento avanzados. Pendiente: instalaciones obsoletas normativamente (REBT 1973), ascensor solo el hueco, ICT inexistente, carpintería interior parcial, cubierta sin mantenimiento 20 años. La base está hecha; falta la capa de calidad y normativa.</div>
+          <span class="accion-price">A presupuestar</span>
+        </li>
+      </ul>
+
+      <h3 class="sub-h">Acciones · Responsable/Dónde · Precio estimado <span style="font-size:.75rem;font-weight:400;color:var(--text-muted)">(precios estimados de mercado, a confirmar siempre)</span></h3>
+      <ul class="acciones-list">
+        <li class="accion-item">
+          <span class="accion-dot d"></span>
+          <div class="accion-body"><strong>Inspección de patologías — origen humedades + estado sótano</strong> · Técnico geotécnico o aparejador · Informe con piezométrico básico. Si el agua es freático alto sin solución viable → precio de compra baja significativamente o NO GO (descarte Grado IN nº3). Este dato condiciona el precio de compra más que cualquier otro factor técnico.</div>
+          <span class="accion-price">1.500-3.000 €</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Ensayos de hormigón — carbonatación + corrosión</strong> · Laboratorio de control de calidad: fenolftaleína, esclerometría, pachómetro, potencial de corrosión · Descarte Grado IN nº1. Si hay corrosión avanzada → NO GO o recálculo de coste.</div>
+          <span class="accion-price">800-1.500 €</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Encaje CTE preliminar</strong> · Arquitecto con experiencia en rehabilitación · Hacer TRAS confirmar urbanismo con la Cédula de Garantía Urbanística. Si el plan dice 2 plantas, el CTE es irrelevante porque la operación no sigue.</div>
+          <span class="accion-price">1.000-3.000 €</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Presupuesto cerrado de 3 constructoras</strong> · Por capítulos, precio fijo (no por administración) · Sin cifra cerrada de quien va a ejecutar, el rango de coste de terminación es demasiado abierto para fijar precio de compra. Es condición de GO según el método IN (M6A).</div>
+          <span class="accion-price">0 € (conseguirlo); condición de GO</span>
+        </li>
+        <li class="accion-item">
+          <span class="accion-dot w"></span>
+          <div class="accion-body"><strong>Visitar el edificio con un arquitecto</strong> · Arquitecto propio · Antes de los presupuestos de constructoras: definir estado real y alcance de la obra. Acción previa a cualquier presupuesto de obra.</div>
+          <span class="accion-price">A acordar con arquitecto</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 6 — ÁREA ECONÓMICA
+══════════════════════════════════════════════ -->
+<section class="sec" id="economica">
+  <div class="wrap">
+    <div class="sec-label">Sección 6 · Área Económica</div>
+    <h2 class="sec-h">Área Económica</h2>
+    <p class="sec-sub">Recorrido económico: IM·PULSO aporta los precios de venta → con eso se montan las partidas y el gasto estimado. Pendiente afinar con presupuestos reales, fiscalidad y estudio de mercado.</p>
+
+    <!-- BLOQUE IM·PULSO -->
+    <div style="background:linear-gradient(135deg,#1a1420,#141B36);border:1px solid rgba(255,77,46,0.3);border-radius:var(--card-radius-lg);padding:2rem 2.2rem;margin:1.5rem 0;border-top:4px solid var(--accent);box-shadow:var(--card-shadow)">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.85rem">
+        <img src="assets/impulso-logo.png" alt="IM·PULSO" style="height:36px;width:auto;opacity:.95;flex-shrink:0">
+        <div style="font-weight:700;font-size:1rem;color:var(--text-primary)">Estudio de mercado — Beniarbeig / Marina Alta</div>
+      </div>
+      <div style="font-size:.87rem;color:var(--text-secondary);margin-bottom:1rem">Análisis de comparables reales, precios por m² por tipología, tiempo de absorción y estrategia de venta. Los precios de venta salen de este estudio — sustituyen o validan los datos del comercializador (API). <strong>Pendiente: Xavi aporta el estudio en sesión separada.</strong></div>
+      <a href="https://xaviriera.github.io/im-pulso-share/beniarbeig.html" target="_blank" rel="noopener" style="display:inline-block;background:var(--accent);color:white;font-weight:700;font-size:.87rem;padding:.55rem 1.3rem;border-radius:var(--btn-radius);text-decoration:none;transition:background .15s">Abrir estudio completo →</a>
+    </div>
+
+    <!-- BLOQUE FISCALIDAD -->
+    <div style="background:rgba(255,255,255,0.025);border:1px solid var(--border-subtle);border-radius:var(--card-radius);padding:1.5rem 1.8rem;margin:1.5rem 0">
+      <div style="font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--text-muted);margin-bottom:.4rem">Pendiente</div>
+      <div style="font-weight:700;font-size:.97rem;color:var(--text-primary);margin-bottom:.4rem">Estudio de optimización fiscal — se elaborará con los números definitivos</div>
+      <div style="font-size:.85rem;color:var(--text-secondary);margin-bottom:.8rem">Cubre: IVA vs ITP en la compra · actuar como promotor (sujeto pasivo IVA, como Crevillente) · posible financiación de obra · estructura JV y tributación del beneficio (IS 25% o IRPF).</div>
+      <a href="#" style="display:inline-block;background:rgba(255,255,255,0.07);border:1px solid var(--border-light);color:var(--text-secondary);font-weight:600;font-size:.84rem;padding:.45rem 1.1rem;border-radius:var(--btn-radius);text-decoration:none">Abrir estudio fiscal →</a>
+    </div>
+
+    <!-- DATOS DE ANÁLISIS PROPIO — MICROMERCADO + PEM + SUPERFICIES -->
+    <h3 class="sub-h" style="margin-top:2.5rem">Datos de micromercado — MTVV (análisis propio)</h3>
+    <p style="font-size:.87rem;color:var(--text-secondary);margin-bottom:1rem">Datos objetivos del micromercado obtenidos de RealState.com + Idealista + catastro. Fuente: análisis propio (06-excels.md). Distintos y complementarios al estudio IM·PULSO (precios de venta, pendiente).</p>
+
+    <!-- KPIs Micromercado -->
+    <div class="kpi-comp-grid" style="margin-bottom:1.5rem">
+      <div class="kpi-comp ok-top">
+        <div class="kpi-label">€/m² obra nueva zona</div>
+        <div class="kpi-val">2.904 €</div>
+        <div class="kpi-note">RealState · últimos 12m · Beniarbeig/entorno</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">€/m² 2ª mano zona</div>
+        <div class="kpi-val">1.494 €</div>
+        <div class="kpi-note">RealState · últimos 12m</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">€/m² barrio (Idealista)</div>
+        <div class="kpi-val">1.931 €</div>
+        <div class="kpi-note">Barrio delimitado · todos los tipos</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Variación anual precio</div>
+        <div class="kpi-val">+7,52%</div>
+        <div class="kpi-note">Tasa 12m · tendencia moderada-positiva</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Importe medio compraventa</div>
+        <div class="kpi-val">283.725 €</div>
+        <div class="kpi-note">Escala regional · últimos 12m</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Superficie media</div>
+        <div class="kpi-val">98 m²</div>
+        <div class="kpi-note">Transacciones zona · últimos 12m</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Población Beniarbeig</div>
+        <div class="kpi-val">1.983 hab.</div>
+        <div class="kpi-note">Tendencia: +2,91% últimos años</div>
+      </div>
+      <div class="kpi-comp neutral-top">
+        <div class="kpi-label">Mix comprador</div>
+        <div class="kpi-val">80 / 20%</div>
+        <div class="kpi-note">Nacional / extranjero · UK 8%, Marruecos 7,7%, Alemania 6,9%</div>
+      </div>
+    </div>
+
+    <div class="alert alert-info" style="margin-bottom:1.5rem">
+      <strong>Lectura del scatter de precios:</strong> la horquilla 1.494–2.904 €/m² refleja fragmentación clara: obra nueva terminada ≥ 2.900 €/m², segunda mano &lt; 1.800 €/m². Un edificio terminado a estrenar se sitúa en el tramo alto. La absorción local es limitada (51.417 compraventas en escala regional, mercado contraído) → hay que importar demanda comarcal e internacional. Los precios de venta definitivos los fijará el estudio IM·PULSO.
+    </div>
+
+    <!-- PEM 2006 + Superficies -->
+    <h3 class="sub-h">PEM del proyecto original (2006) y superficies</h3>
+    <div class="table-wrap" style="margin-bottom:1.5rem">
+      <table>
+        <thead>
+          <tr><th>Dato</th><th>Valor</th><th>Fuente</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>PEM total (Presupuesto de Ejecución Material, ene. 2006)</strong></td><td><strong>714.288 €</strong></td><td class="sec-data">Memoria Proyecto de Ejecución · Benito Martín Diego / BMD Arquitectos · Vallelitoral ESP SL</td></tr>
+          <tr><td>— Cap. II: Cimentación + estructura (mayor partida)</td><td>224.767 € (31,5% PEM)</td><td class="sec-data">Presupuesto capítulos</td></tr>
+          <tr><td>— Cap. IV: Albañilería</td><td>115.783 €</td><td class="sec-data"></td></tr>
+          <tr><td>— Cap. V: Solados + alicatados</td><td>112.627 €</td><td class="sec-data"></td></tr>
+          <tr><td>Parcela</td><td>506,87 m²</td><td class="sec-data">Memoria proyecto · catastro: ~517 m²</td></tr>
+          <tr><td><strong>Viviendas — superficie estimada</strong></td><td><strong>≈ 1.750 m²</strong></td><td class="sec-data">Estimación proyecto · superficies por unidad pendientes</td></tr>
+          <tr><td><strong>Garaje (sótanos S-1 + S-2)</strong></td><td><strong>622,24 m²</strong></td><td class="sec-data">Memoria proyecto</td></tr>
+          <tr><td><strong>Total construido</strong></td><td><strong>≈ 2.374 m²</strong></td><td class="sec-data">Viviendas + garaje</td></tr>
+          <tr><td>Altura línea de cornisa</td><td>9,50 m (máx. 10 m)</td><td class="sec-data">Normativa NNSS 1987 · aplicable al proyecto 2006</td></tr>
+          <tr><td>Cimentación: tensión admisible terreno</td><td>2 kp/cm²</td><td class="sec-data">Zapatas aisladas · calizas 0,60-0,90 m</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert alert-warn" style="margin-bottom:2rem">
+      <strong>Sobre el PEM 2006 (714.288 €):</strong> es el coste de ejecución del edificio completo calculado en 2006, en euros de 2006. A 2026 equivaldría a un múltiplo significativamente mayor por inflación de materiales y mano de obra (IPC construcción +40-60% en 20 años, más sobrecostes CTE y obra parada). Se usa como referencia del alcance del proyecto original — <strong>no</strong> como estimación del coste de terminación actual (eso lo fijarán los 3 presupuestos de constructoras).
+    </div>
+
+    <!-- PRESUPUESTOS — TODAS LAS PARTIDAS -->
+    <h3 class="sub-h" style="margin-top:2.5rem">Presupuestos — partidas a cotizar (todas)</h3>
+    <p style="font-size:.87rem;color:var(--text-secondary);margin-bottom:1rem">Cada partida debe tener oferta o estimación propia antes de la oferta vinculante. La tabla refleja el coste de terminar el edificio desde su estado actual.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Partida</th>
+            <th>Acción · Dónde / Quién</th>
+            <th>Precio aprox.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Obra general — terminación interior (3 constructoras)</td>
+            <td class="sec-data">Mín. 3 constructoras · Por capítulos · Precio fijo (no por administración) · Condición de GO método IN M6A</td>
+            <td>A presupuestar</td>
+          </tr>
+          <tr>
+            <td>Ascensor</td>
+            <td class="sec-data">Instalador especializado · Obligatorio &gt;6 viviendas (Decreto 65/2019 GVA) · Aparte de constructora</td>
+            <td>25.000-50.000 €</td>
+          </tr>
+          <tr>
+            <td>Parkings + montacoches (sistema de acceso garaje)</td>
+            <td class="sec-data">Oferta específica · Confirmar montacoches vs rampa in situ (Memoria PE p.28) · Aparte de constructora</td>
+            <td>A medir y cotizar</td>
+          </tr>
+          <tr>
+            <td>Escaleras + zonas comunes</td>
+            <td class="sec-data">Constructora o partida separada · Incluir DB-SI (garaje &gt;500 m²: BIE + detección CO + ventilación)</td>
+            <td>A medir</td>
+          </tr>
+          <tr>
+            <td>Instalación eléctrica — cuadro general + acometida</td>
+            <td class="sec-data">Instalador eléctrico + consulta compañía eléctrica · REBT 2002 (la instalación original es REBT 1973)</td>
+            <td>A medir</td>
+          </tr>
+          <tr>
+            <td>Fachada exterior + patio de luz</td>
+            <td class="sec-data">Constructora · Fachada ~65 €/m² (dato API sin validar) · Patio luz ~18 €/m²</td>
+            <td>A medir (ref. API)</td>
+          </tr>
+          <tr>
+            <td>Impermeabilización sótano + humedades</td>
+            <td class="sec-data">Empresas especializadas · Solo tras diagnóstico técnico (inspección patologías + piezométrico)</td>
+            <td>A determinar tras inspección</td>
+          </tr>
+          <tr>
+            <td>Honorarios arquitecto propio (Dir. obra + CFO + 1ª ocupación)</td>
+            <td class="sec-data">Arquitecto propio a contratar · Independiente del Ayuntamiento · Dirección obra + Certificado Final Obra + Licencia 1ª ocupación</td>
+            <td>A cotizar (partida presupuestable)</td>
+          </tr>
+          <tr>
+            <td>OCT (Organismo de Control Técnico) + Seguro decenal <span class="risk risk-r" style="margin-left:.3rem">INEVITABLES</span></td>
+            <td class="sec-data">Bureau Veritas / Gloval / OCA Global + MUSAAT · La vía antigüedad (art. 28.4 TRLSRU) NO aplica en obra inacabada</td>
+            <td>OCT 15-30k + decenal 7,5-22,5k = <strong>32-80k</strong></td>
+          </tr>
+          <tr>
+            <td>Honorarios técnicos (proyecto fin de obra + ESS + ICT/telecom)</td>
+            <td class="sec-data">Arquitecto + aparejador + ing. telecom</td>
+            <td>~5-7% sobre obra (~50-70k)</td>
+          </tr>
+          <tr>
+            <td>Permisos / licencias / ICIO</td>
+            <td class="sec-data">Ayuntamiento Beniarbeig (Quike) · Confirmar base imponible</td>
+            <td>~3-4% PEM</td>
+          </tr>
+          <tr>
+            <td>Impuestos de compra</td>
+            <td class="sec-data">Confirmar con fiscal: IVA 21% (recuperable) + AJD 1,5%, o ITP 10% si vendedor no transmite como empresario activo</td>
+            <td>~12k (vía IVA) vs. 75-90k (vía ITP)</td>
+          </tr>
+          <tr>
+            <td>Comercialización</td>
+            <td class="sec-data">Estimar sobre precio de venta real (no sobre precios API)</td>
+            <td>~5% ventas</td>
+          </tr>
+          <tr>
+            <td>Impuestos sobre beneficio</td>
+            <td class="sec-data">Confirmar con fiscal: IS (25%) o IRPF según estructura JV</td>
+            <td>Variable — pendiente fiscal</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2"><strong>TOTAL APROXIMADO (orientativo)</strong> — pendiente de afinar con presupuestos reales, fiscalidad e IM·PULSO</td>
+            <td><strong>~1,9-2,3M €</strong> (estimación abierta)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert alert-warn" style="margin-top:1rem">
+      <strong>Totales aproximados — aviso:</strong> los rangos de coste son orientativos hasta tener presupuestos cerrados de constructoras, estudio fiscal y estudio IM·PULSO. No operar con estos números como definitivos. Los datos de ventas salen del estudio IM·PULSO (pendiente) — ver Sección 8 para los datos orientativos del API sin validar.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 7 — PRÓXIMOS PASOS / DD DEPURADA
+══════════════════════════════════════════════ -->
+<section class="sec" id="pasos">
+  <div class="wrap">
+    <div class="sec-label">Sección 7 · Due Diligence depurada</div>
+    <h2 class="sec-h">Próximos pasos — ordenados por momento</h2>
+    <p class="sec-sub">Solo las acciones que realmente hay que hacer, en el momento correcto. Las de verde son casi gratuitas y deciden el GO/NO-GO antes de gastar un euro más.</p>
+
+    <div class="alert alert-danger">
+      <strong>Lo casi gratis que decide el GO/NO-GO (hacer hoy, antes de gastar nada más):</strong> Nota simple Pedreguer (9 €) + Certificado IBI a cero (gratis) + Cédula de Garantía Urbanística (~50-150 €) + Obtener el expediente oficial de la licencia 2068/2023 (0-500 €) + Confirmar el titular (gratis). Estas acciones resuelven el 80% de los riesgos bloqueantes.
+    </div>
+
+    <!-- AHORA -->
+    <div class="steps-group">
+      <div class="steps-group-label">AHORA — antes de ofertar · coste cero o mínimo · deciden GO/NO-GO</div>
+      <div class="steps-grid">
+        <div class="step free">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Nota simple + Certificado IBI a cero — hoy, menos de 15 € total</h4>
+            <p>Nota simple: registradores.org · Registro de Pedreguer · 9,02 € + IVA · menos de 2 horas. IBI: Recaudación Municipal Beniarbeig o Diputación Alicante, gratuito. Revelan el titular real, las cargas y el riesgo de deuda tributaria encubierta. Sin ellas no hay operación.</p>
+          </div>
+        </div>
+        <div class="step low">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Cédula de Garantía Urbanística (art. 246 TRLOTUP) — RIESGO Nº1 de la operación</h4>
+            <p>Documento del Ayuntamiento que certifica el aprovechamiento y condiciones urbanísticas de la parcela; confirma si el edificio está conforme con el plan vigente o fuera de ordenación (confirmar con Quike, técnico de Urbanismo). No llamarla "certificado de compatibilidad urbanística". Ayuntamiento de Beniarbeig, plazo ~1 mes. Confirma si el edificio de 3 plantas está conforme o fuera de ordenación bajo el PGE+POP 2023. Si está fuera de ordenación: sin hipoteca bancaria posible, OCT no emite D6, operación cerrada. Si está conforme: GO urbanístico. Es el primer filtro.</p>
+          </div>
+        </div>
+        <div class="step free">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Obtener el expediente oficial de la licencia 2068/2023 — 0-500 €</h4>
+            <p>Solicitarlo en el Ayuntamiento de Beniarbeig (Técnico Quike) o al vendedor (Campos Inmobiliaria SL tiene el original). Confirmar: ¿está viva o hay expediente de caducidad incoado?, ¿qué condicionantes impone?, ¿las condiciones suspensivas (ESS + telecomunicaciones) son activables? La licencia autoriza terminar — ese ahorro (5-15k y 6-12 meses) se confirma con el texto oficial.</p>
+          </div>
+        </div>
+        <div class="step free">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Pendiente: preparar y enviar correo a Quike con las consultas por Área — gratuito</h4>
+            <p>Quike: técnico de Urbanismo del Ayuntamiento de Beniarbeig · urbanisme@beniarbeig.org · 965 766 018 · martes 11:00-13:30. Enviar UN correo con las consultas agrupadas por Área (urbanística, técnica, licencia). Las preguntas viven en el correo, no en el cuerpo del dossier. <em>Correo en preparación — pendiente revisión de Xavi y Rus antes de enviar.</em></p>
+          </div>
+        </div>
+        <div class="step free">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>MTVV (Método Total de Valoración de Vivienda) completo — gratuito</h4>
+            <p>Realizar el MTVV COMPLETO según el Programa IN: estudio de micromercado, testigos, hipótesis y validación de precio. Localidades del entorno real: Dénia, El Verger, Els Poblets, Ondara… (Pedreguer es solo el Registro, no zona de mercado). El anuncio en Idealista es el paso 4 del método (Efecto Champagne / validación de precio). Sin precio de mercado propio, los números del API no tienen referencia.</p>
+          </div>
+        </div>
+        <div class="step free">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h4>Inspección visual del sótano — pedir acceso al vendedor</h4>
+            <p>Acceder al sótano antes de ofertar para ver in situ si hay agua estancada en el suelo. No es un ensayo técnico — es observación directa. Sin coste; condiciona si la inspección técnica de patologías es urgente o puede esperar.</p>
+          </div>
+        </div>
+        <div class="step free">
+          <div class="step-num">7</div>
+          <div class="step-body">
+            <h4>Confirmar vía IVA — 68-76k en juego</h4>
+            <p>Verificar alta censal del vendedor (036/037 de Campos Inmobiliaria SL). Si transmite como empresario: IVA 21% (recuperable) + AJD 1,5% = ~12k neto. Si no: ITP 10% = 75-90k. Gestión con abogado o gestor. Coste: una llamada.</p>
+          </div>
+        </div>
+        <div class="step low">
+          <div class="step-num">9</div>
+          <div class="step-body">
+            <h4>Contratar arquitecto PROPIO — dirección de obra, CFO y licencia de 1ª ocupación (por decidir)</h4>
+            <p>El arquitecto o técnico propio que llevará la obra está <strong>por decidir</strong>. Contratar un arquitecto propio (independiente del Ayuntamiento y del promotor anterior) para: (1) visitar el edificio y validar el estado constructivo real, (2) asumir la <strong>dirección de obra</strong> de la terminación, (3) emitir el <strong>certificado final de obra (CFO)</strong>, (4) gestionar la <strong>licencia de primera ocupación</strong>. Este paso es previo a los presupuestos de constructoras y condición necesaria para poder escriturar y vender.</p>
+          </div>
+        </div>
+        <div class="step low">
+          <div class="step-num">10</div>
+          <div class="step-body">
+            <h4>Inspección técnica de patologías — origen humedades + estado sótano</h4>
+            <p>Técnico geotécnico o aparejador · 1.500-3.000 €. Si el agua es freático alto sin solución viable → NO GO (descarte Grado IN nº3). Este dato condiciona el precio de compra más que cualquier factor técnico. Hacerlo antes de la oferta vinculante para fijar el coste real.</p>
+          </div>
+        </div>
+        <div class="step low">
+          <div class="step-num">11</div>
+          <div class="step-body">
+            <h4>Presupuesto cerrado de 3 constructoras — condición de GO</h4>
+            <p>Requiere acceso al edificio y al proyecto. Por capítulos, precio fijo (no por administración). Mínimo 3 constructoras. Condición de GO método IN M6A. Sin esta cifra no se puede fijar precio de compra con precisión. Hacerlo antes de la oferta vinculante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFERTA VINCULANTE -->
+    <div class="steps-group">
+      <div class="steps-group-label">OFERTA VINCULANTE — cuando ya está todo claro</div>
+      <div class="steps-grid">
+        <div class="step low">
+          <div class="step-num">A</div>
+          <div class="step-body">
+            <h4>Ensayos de hormigón — carbonatación + corrosión</h4>
+            <p>Fenolftaleína, esclerometría, pachómetro · 800-1.500 €. Si hay corrosión avanzada → NO GO o recálculo de coste de terminación. Descarte Grado IN nº1. Solo tiene sentido si el sótano no descarta y la Cédula confirma el encaje urbanístico.</p>
+          </div>
+        </div>
+        <div class="step low">
+          <div class="step-num">B</div>
+          <div class="step-body">
+            <h4>Encaje CTE preliminar + pre-consulta OCT y decenal</h4>
+            <p>Arquitecto con experiencia en rehabilitación (encaje CTE: 1-3k). Pre-consulta gratuita a Bureau Veritas, Gloval, OCA Global y MUSAAT (bloquea la escritura de obra nueva sin decenal). Hacer TRAS confirmar viabilidad urbanística con la Cédula.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAS COMPRA -->
+    <div class="steps-group">
+      <div class="steps-group-label">TRAS LA COMPRA — no antes</div>
+      <div class="steps-grid">
+        <div class="step later">
+          <div class="step-num">I</div>
+          <div class="step-body">
+            <h4>Levantamiento topográfico + arquitectónico as-built (lo confirmará el arquitecto si hace falta)</h4>
+            <p>El levantamiento (3.000-6.000 €) es obligatorio para la declaración de obra nueva (art. 199 LH) y la División Horizontal, pero eso ocurre DESPUÉS de comprar, no antes. El arquitecto propio confirmará si es necesario un levantamiento formal o basta con los planos del proyecto existente.</p>
+          </div>
+        </div>
+        <div class="step later">
+          <div class="step-num">II</div>
+          <div class="step-body">
+            <h4>DON (Declaración de Obra Nueva) + DH (División Horizontal) + alta catastral</h4>
+            <p>Notaría + Registro + sincronización catastral. La DON inscribe el edificio; la DH constituye cada vivienda como finca registral independiente. Necesita levantamiento as-built, OCT favorable y seguro decenal contratado. Coste: DON + DH + AJD (Actos Jurídicos Documentados) — variable según PEM real.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECCIÓN 8 — NOTAS APARTE
+══════════════════════════════════════════════ -->
+<section class="sec" id="notas">
+  <div class="wrap">
+    <div class="sec-label">Sección 8 · Notas sin validar</div>
+    <h2 class="sec-h">Notas aparte</h2>
+    <p class="sec-sub">Información aportada por terceros, sin validar por nosotros. Se registra aquí para no mezclarla con el análisis propio — puede ser útil o puede estar desactualizada.</p>
+
+    <h3 class="sub-h">Área Económica — Nota 1: Datos del comercializador (API) · 17-jun-2026</h3>
+    <div class="notas-card">
+      <div class="notas-label">Fuente: mensaje de Rus reenviando lo aportado por el API · WhatsApp 10:10, 17/6/2026 · <strong style="color:var(--accent)">SIN VALIDAR — facilitado por el API, no es nuestro análisis</strong></div>
+
+      <p style="margin-bottom:.75rem"><strong>Coste total estimado por el API:</strong></p>
+      <div class="table-wrap" style="margin-bottom:1rem">
+        <table>
+          <thead><tr><th>Concepto</th><th>Detalle</th><th>Importe</th></tr></thead>
+          <tbody>
+            <tr><td>Compra</td><td>Precio negociado</td><td>750.000 €</td></tr>
+            <tr><td>Reforma — apartamentos</td><td>33.355 € × 13 uds. (SIN medidas reales)</td><td>433.617 €</td></tr>
+            <tr><td>Reforma — áticos</td><td>~80.000 € × 7 uds. (SIN medidas reales)</td><td>560.000 €</td></tr>
+            <tr><td>Extras no incluidos en reforma</td><td>Fachada (65 €/m²), patio luz (18 €/m²), acometida eléctrica, andamios…</td><td>No cuantificados</td></tr>
+            <tr class="total-row"><td colspan="2"><strong>Total aproximado (según API)</strong></td><td><strong>≈ 2.100.000 €</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-bottom:.75rem"><strong>Ventas estimadas por el API:</strong></p>
+      <div class="table-wrap" style="margin-bottom:1rem">
+        <table>
+          <thead><tr><th>Tipología</th><th>Uds.</th><th>Precio/ud.</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Apartamentos</td><td>13</td><td>135.000 €</td><td>1.755.000 €</td></tr>
+            <tr><td>Áticos</td><td>7</td><td>165.000 €</td><td>1.155.000 €</td></tr>
+            <tr class="total-row"><td colspan="3"><strong>Total ventas brutas</strong></td><td><strong>2.910.000 €</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="alert alert-warn" style="margin:0">
+        <strong>Beneficio bruto según API: ≈ 810.000 €</strong> (2.910.000 − 2.100.000). IMPORTANTE: este "gasto 2,1M" NO incluye los costes blandos de la operación: OCT/decenal (32-80k), honorarios técnicos (~50-70k), permisos, comercialización (~5% ventas), impuestos sobre beneficio. El beneficio neto real será sensiblemente inferior. Los precios de venta definitivos los determina el estudio IM·PULSO — estos son solo orientativos del API.
+      </div>
+    </div>
+
+    <h3 class="sub-h">Área Técnica / Urbanística — Nota 2: Quike (técnico de Urbanismo) · vía Rus · SIN VALIDAR</h3>
+    <div class="notas-card">
+      <div class="notas-label">Fuente: conversación verbal de Rus con Quike en oficina municipal · SIN VALIDAR · pendiente de confirmar por escrito</div>
+      <div class="table-wrap" style="margin:.6rem 0 1rem">
+        <table>
+          <thead><tr><th>Punto</th><th>Qué dijo Quike (verbal, sin validar)</th></tr></thead>
+          <tbody>
+            <tr><td>Estado del edificio</td><td>Al edificio le falta terminar</td></tr>
+            <tr><td>Licencia</td><td>Estaría activa en principio</td></tr>
+            <tr><td>Ejecución de obra</td><td>No vería problema para ejecutar</td></tr>
+            <tr><td>Anomalías</td><td>No conoce anomalías</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Quike es el técnico del Ayuntamiento</strong>, NO un arquitecto contratado por nosotros. No ha visitado el edificio — fue Rus quien fue a su oficina. Esta información es positiva pero debe confirmarse por escrito. No sustituye los ensayos de carbonatación/corrosión ni la consulta al Registro para verificar expedientes de disciplina urbanística.</p>
+    </div>
+
+    <h3 class="sub-h">Área Administrativa / Urbanística — Nota 3: Licencia 2068/2023 · Resumen del texto oficial</h3>
+    <div class="notas-card">
+      <div class="notas-label">Fuente: transcripción OCR de la Resolución de Alcaldía 2023-0622 · 20/12/2023 · Ayuntament de Beniarbeig</div>
+      <div class="table-wrap" style="margin:.6rem 0 1rem">
+        <table>
+          <thead><tr><th>Elemento</th><th>Contenido</th></tr></thead>
+          <tbody>
+            <tr><td>Objeto literal</td><td>"Legalización y proyecto básico y de ejecución edificio de 20 viviendas y garaje"</td></tr>
+            <tr><td>Parte dispositiva</td><td>"RESUELVO: conceder licencia urbanística al solicitante para la ejecución del acto descrito"</td></tr>
+            <tr><td>Plazo de iniciación</td><td>6 meses desde notificación (21/12/2023 → vence ~06/2024)</td></tr>
+            <tr><td>Plazo de ejecución</td><td>15 meses (~09/2025). A jun-2026 <strong>ambos plazos vencidos</strong> — verificar si hay expediente de caducidad incoado</td></tr>
+            <tr><td>Paralización máxima</td><td>6 meses</td></tr>
+            <tr><td>Condición suspensiva 1</td><td>Estudio de Seguridad y Salud (ESS) — presentar antes de iniciar obras</td></tr>
+            <tr><td>Condición suspensiva 2</td><td>Proyecto de Telecomunicaciones (ICT) — presentar antes de iniciar obras</td></tr>
+            <tr><td>Informe técnico (Arq. Mpal. Francisco Forgu · 26/09/2023)</td><td>Concluye cumplimiento del planeamiento vigente en parcela, edificabilidad, ocupación, alturas y aparcamientos. "PROCEDE conceder la licencia solicitada."</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">Edificio Beniarbeig · Estudio interno · RUS&amp;XAVI - INMO PROJECTS</div>
+      <div class="footer-meta">CONFIDENCIAL — Uso exclusivo Rus y Xavi · Prohibida su difusión · Junio 2026</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── LIGHTBOX JS ─── -->
+<script>
+(function(){
+  var photos = [
+    {src:'assets/01-fachada.jpg', cap:'Foto 1 · Estado actual 2026 · Identificación y estado SIN confirmar — pendiente visita in situ'},
+    {src:'assets/02-interior-bruto.jpg', cap:'Foto 2 · Estado actual 2026 · Identificación y estado SIN confirmar — pendiente visita in situ'},
+    {src:'assets/03-humedades-paredes.jpg', cap:'Foto 3 · Estado actual 2026 · Identificación y estado SIN confirmar — pendiente visita in situ'},
+    {src:'assets/04-interior-puerta.jpg', cap:'Foto 4 · Estado actual 2026 · Identificación y estado SIN confirmar — pendiente visita in situ'},
+    {src:'assets/05-sotano-boveda.jpg', cap:'Foto 5 · Estado actual 2026 · Podría ser el hueco del montacoches u otro espacio — a revisar in situ · Identificación SIN confirmar'},
+    {src:'assets/06-estructura-chimenea.jpg', cap:'Foto 6 · Estado actual 2026 · Identificación y estado SIN confirmar — pendiente visita in situ'},
+    {src:'assets/07-interior-corredor.jpg', cap:'Foto 7 · Estado actual 2026 · Identificación y estado SIN confirmar — pendiente visita in situ'}
+  ];
+  var current = 0;
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-caption');
+
+  function open(idx){
+    current = (idx + photos.length) % photos.length;
+    lbImg.src = photos[current].src;
+    lbImg.alt = photos[current].cap;
+    lbCap.textContent = photos[current].cap;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(function(el){
+    el.addEventListener('click', function(){ open(parseInt(el.dataset.idx)); });
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(parseInt(el.dataset.idx)); }
+    });
+  });
+
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', function(){ open(current - 1); });
+  document.getElementById('lb-next').addEventListener('click', function(){ open(current + 1); });
+
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') open(current - 1);
+    if(e.key === 'ArrowRight') open(current + 1);
+  });
+})();
+</script>
+
+</body>
+</html>
