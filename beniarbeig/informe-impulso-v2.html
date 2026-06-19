@@ -713,6 +713,131 @@
     margin-top: 4px;
   }
   .step-price .sp-note { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+  /* ---- CONCLUSION LIST / VERDICT ---- */
+  .conclusion-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .conclusion-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .conclusion-list li:last-child { border-bottom: none; }
+  .conclusion-list .cl-icon {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    background: #141B36;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .conclusion-list .cl-icon svg { width: 16px; height: 16px; }
+  .verdict-navy {
+    background: linear-gradient(135deg, #141B36 0%, #1e2a4a 100%);
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .verdict-navy .verdict-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: rgba(255,77,46,0.15);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .verdict-navy .verdict-icon svg { width: 22px; height: 22px; }
+
+  /* ---- FOOTER RICO (TdC style) ---- */
+  .footer {
+    background: #141B36;
+    color: rgba(255,255,255,0.7);
+    padding: 48px 0 40px;
+    margin-top: 56px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .footer .footer-cta-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .footer .footer-cta-sub {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .wa-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+  }
+  .wa-button svg { width: 24px; height: 24px; }
+  .footer-logo {
+    height: 70px;
+    margin: 32px auto 12px;
+    display: block;
+  }
+  .footer-links { font-size: 13px; margin-top: 8px; }
+  .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  .footer-cobrand {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+  .footer-cobrand .fc-label {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    opacity: 0.55;
+  }
+  .footer-cobrand .fc-cdu {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #E29F34;
+  }
+  .footer-cobrand .fc-cdu svg { width: 26px; height: 26px; }
+  .footer-cobrand a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .footer-fine { margin-top: 24px; font-size: 11px; opacity: 0.45; }
+
+  @media (max-width: 480px) {
+    .footer .footer-cta-title { font-size: 18px; }
+    .wa-button { font-size: 14px; padding: 12px 20px; }
+  }
 </style>
 </head>
 <body>
@@ -2247,14 +2372,127 @@
   <div style="background:#fffbeb;border:2px solid #f59e0b;border-radius:12px;padding:16px 20px;margin-top:20px;font-size:13px;color:#78350f;line-height:1.6;">
     <strong style="color:#b45309;">&#9888; Convergencia provisional.</strong> Falta validar con el Paso 4 del Método Total (anuncio real publicado en Idealista/Fotocasa y medición de respuesta del mercado). Hasta completar el Paso 4, la convergencia se apoya en la hipótesis del Paso 3, no en datos de demanda real.
   </div>
+
+  <!-- DISCLAIMER tipologías sin convergencia -->
+  <div style="background:#f0f9ff;border:2px solid #0ea5e9;border-radius:12px;padding:16px 20px;margin-top:16px;font-size:13px;color:#0c4a6e;line-height:1.6;">
+    <strong style="color:#0369a1;">&#9432; Sobre las demás tipologías.</strong> La única convergencia fiable con los datos actuales es el <strong>piso de 2 dormitorios</strong> (~154.000 €). Para el resto de tipologías no hay muestra suficiente para converger; se ofrecen sus lecturas individuales del motor IMPULSO como referencia orientativa, no como valoración consolidada.
+  </div>
 </div>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <p><strong style="color:rgba(255,255,255,0.8);">IM·PULSO</strong> · Inteligencia de mercado inmobiliario · Informe V2 · Beniarbeig · Av. del Vergel 5</p>
-  <p style="margin-top:6px;">Datos generados: 19/06/2026 · Periodo analizado: 06/05/2025 – 10/06/2026</p>
-  <p style="margin-top:6px;opacity:0.5;">Este informe se basa en anuncios publicados y escrituras notariales. No constituye asesoramiento financiero ni valoración oficial. Verificar siempre con un profesional antes de tomar decisiones de inversión.</p>
-</footer>
+<hr class="section-divider">
+
+<!-- ============================================ -->
+<!-- SECCIÓN 7: LECTURA PARA EL INVERSOR -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: #141B36; color: #FF4D2E;">&#9878;&#65039;</div>
+    <div>
+      <div class="section-title">7 · Lectura para el inversor</div>
+      <div class="section-subtitle">Síntesis de valoración y mercado · Av. del Vergel 5, Beniarbeig</div>
+    </div>
+  </div>
+
+  <div class="card" style="background: linear-gradient(135deg, #fafbfc 0%, #f3f4f6 100%); border: 2px solid #e5e7eb;">
+    <ul class="conclusion-list">
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+        <span><strong>Piso 2 dormitorios — valoración convergida: ~154.000 €</strong> (IMPULSO 154.500 € · MTVV 154.000 €, diferencia &lt;0,4%). El único producto con dos fuentes independientes alineadas. Producto líquido con mercado real.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span>
+        <span><strong>Piso 1 dormitorio — valoración orientativa: ~109.250 €</strong> (motor IMPULSO, muestra baja). Sin muestra suficiente para converger. Dato provisional, requiere validación con Paso 4 del MTVV.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+        <span><strong>Ático 3 dormitorios — valoración orientativa: ~196.000 €</strong> (motor IMPULSO, muestra baja). No hay testigos de ático en Beniarbeig; los comparables se han tomado de municipios limítrofes. Dato de referencia, no consolidado.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span>
+        <span><strong>Ático 4 dormitorios — sin valoración.</strong> No hay muestra comparable disponible para esta tipología. No se puede ofrecer referencia de precio en este informe.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>
+        <span><strong>Valoración del conjunto (17 uds valoradas de 20):</strong> ~2.702.000 € sumando las tipologías valoradas (2 pisos 1 dorm + 11 pisos 2 dorm + 4 áticos 3 dorm). Los 3 áticos de 4 dormitorios quedan sin valorar por falta de muestra.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span>
+        <span><strong>Riesgos a considerar:</strong> muestra baja en todas las tipologías excepto el piso de 2 dorm · riesgo de saturación (11 pisos de 2 dorm en el edificio vs. ~2 operaciones/mes en la zona) · áticos sin testigos directos en Beniarbeig · coste de terminación de obra no valorado en este informe.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ============================================ -->
+<!-- SECCIÓN 8: CONCLUSIÓN DEL ESTUDIO -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: #f3f4f6; color: #141B36;">&#128203;</div>
+    <div>
+      <div class="section-title">8 · Conclusión del estudio</div>
+      <div class="section-subtitle">Resumen ejecutivo · Av. del Vergel 5, Beniarbeig (Alicante)</div>
+    </div>
+  </div>
+
+  <div class="card" style="background: linear-gradient(135deg, #fafbfc 0%, #f3f4f6 100%); border: 2px solid #e5e7eb;">
+    <ul class="conclusion-list">
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 7 12 10 4 14 20 17 12 21 12"></polyline></svg></span>
+        <span><strong>Mercado pequeño, liquidez real en pisos de 2 dormitorios.</strong> El dato notarial confirma actividad constante (~28 operaciones/año en la zona). La única tipología con valoración convergida y mercado activo es el piso de 2 dorm a ~154.000 €.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h6l2-9 4 18 2-9h6"></path></svg></span>
+        <span><strong>Motor IMPULSO — coherente con el MTVV para el piso de 2 dorm.</strong> Convergencia al 99,7%. Para el resto de tipologías el motor arroja cifras orientativas sin respaldo de muestra suficiente.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-5 0V4.5A2.5 2.5 0 0 1 9.5 2z"></path><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5v8a2.5 2.5 0 0 1-5 0"></path></svg></span>
+        <span><strong>Áticos — a validar.</strong> No hay testigos de áticos en Beniarbeig. La valoración orientativa de los áticos de 3 dorm (~196.000 €) se basa en comparables externos. Los de 4 dorm no tienen muestra. Imprescindible publicar anuncio real (Paso 4) antes de decidir precio de salida.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+        <span><strong>Concentración de riesgo en los 11 pisos de 2 dorm.</strong> Con ~2 operaciones/mes en la zona, absorber 11 unidades similares requiere un plan de salida escalonado y una estrategia de precio diferenciada. La liquidez existe, pero el volumen del edificio supera la velocidad habitual del mercado.</span>
+      </li>
+      <li>
+        <span class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path></svg></span>
+        <span><strong>Falta Paso 4 del MTVV para el conjunto.</strong> El presente informe cubre PULSO (mercado), IMPULSO (valoración automática) y MTVV Paso 3 (hipótesis de precio). La validación definitiva requiere publicar anuncios reales y medir la respuesta del mercado.</span>
+      </li>
+    </ul>
+    <div class="verdict-navy" style="margin-bottom:0;">
+      <div class="verdict-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#FF4D2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 7 12 10 4 14 20 17 12 21 12"></polyline></svg></div>
+      <div>No opinamos del mercado: lo medimos. El piso de 2 dormitorios tiene precio validado y mercado real. Para el resto del edificio, los datos apuntan a una dirección —pero son orientativos. La siguiente decisión la da el mercado, no el modelo.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-cta-title">¿Quieres un estudio como este para tu operación?</div>
+    <div class="footer-cta-sub">Habla con nosotros y te lo preparamos.</div>
+    <a class="wa-button" href="https://wa.me/34611031611?text=Hola%2C%20he%20visto%20el%20informe%20de%20Beniarbeig%20de%20CdU%20de%200%20a%20%C3%89xito%20y%20me%20interesar%C3%ADa%20uno%20para%20mi%20operaci%C3%B3n." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Habla con nosotros
+    </a>
+
+    <img class="footer-logo" src="https://assets.cdn.filesafe.space/9FLX4fUFluqRQ8w19kzs/media/698227e0b7e498bfd5ff8b45.png" alt="IM·PULSO">
+    <div style="font-size:14px; font-weight:700; color:white;"><a href="https://im-pulso.app" target="_blank" rel="noopener" style="color:white; text-decoration:none;">IM·PULSO — Inteligencia de Mercado Inmobiliario</a></div>
+    <div class="footer-links"><a href="https://im-pulso.app" target="_blank" rel="noopener">im-pulso.app</a></div>
+
+    <div class="footer-cobrand">
+      <span class="fc-label">En colaboración especial con</span>
+      <span class="fc-cdu">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#E29F34" d="M 520.64 70.62 C 531.64 65.17 545.37 68.71 553.78 77.24 C 593.60 114.04 632.54 151.83 672.00 189.03 C 750.63 263.05 829.03 337.31 907.64 411.35 C 917.07 419.76 922.65 432.33 922.16 444.99 C 922.12 463.82 908.44 481.68 889.99 486.00 C 888.30 486.61 885.31 486.77 885.18 489.06 C 885.08 596.37 885.29 703.68 885.12 810.99 C 885.51 822.43 882.21 834.61 873.52 842.52 C 860.72 855.24 839.36 856.90 823.98 848.04 C 812.14 841.13 804.50 827.70 804.75 813.98 C 804.60 689.64 804.74 565.29 804.65 440.94 C 804.66 438.14 804.10 435.09 801.79 433.24 C 750.65 386.07 700.58 337.77 649.81 290.20 C 613.95 256.75 578.47 222.86 542.80 189.20 C 539.57 186.06 536.12 181.84 531.15 182.18 C 526.15 182.93 522.76 186.99 519.29 190.28 C 424.84 280.50 330.46 370.79 236.05 461.06 C 230.93 464.44 232.61 470.82 232.34 476.00 C 232.41 572.30 232.22 668.61 232.56 764.91 C 267.02 765.33 301.52 765.00 335.99 765.07 C 339.31 764.96 343.35 765.70 345.74 762.78 C 370.32 737.67 394.05 711.74 418.29 686.31 C 471.09 630.83 523.93 575.37 576.53 519.73 C 561.40 521.09 546.17 520.68 530.99 520.83 C 521.26 521.00 511.19 518.68 503.44 512.55 C 484.60 498.05 482.10 467.31 497.32 449.37 C 504.72 441.02 515.84 436.36 526.95 436.38 C 576.30 436.33 625.65 436.36 675.00 436.39 C 680.33 436.39 685.69 436.24 691.00 436.92 C 703.99 438.36 715.44 447.63 720.20 459.70 C 722.78 466.13 722.84 473.19 722.77 480.01 C 722.81 532.01 722.85 584.02 722.81 636.03 C 722.76 647.80 717.39 659.69 707.91 666.83 C 690.86 681.20 662.35 679.17 647.85 662.10 C 641.83 655.17 638.57 646.14 638.04 637.05 C 638.04 618.88 637.99 600.71 638.08 582.54 C 558.33 665.58 479.14 749.27 397.30 830.30 C 384.63 841.57 369.68 852.92 351.96 853.14 C 291.98 853.40 231.99 853.22 172.01 853.22 C 155.98 853.61 140.50 842.97 135.07 827.90 C 131.82 820.01 132.35 811.33 132.35 803.00 C 132.34 687.66 132.32 572.32 132.32 456.98 C 132.28 445.23 136.86 433.56 145.27 425.29 C 190.46 381.80 236.48 339.19 281.53 295.55 C 355.88 223.87 431.24 153.26 505.80 81.78 C 510.62 77.90 514.74 72.93 520.64 70.62 Z"/></svg>
+        CdU de 0 a ÉXITO
+      </span>
+      <a href="https://tucambiodeuso.com" target="_blank" rel="noopener">tucambiodeuso.com</a>
+    </div>
+
+    <div class="footer-fine">IM·PULSO v2 · Prototipo · Caso real · Beniarbeig (Alicante)</div>
+  </div>
+</div>
 
 </body>
 </html>
