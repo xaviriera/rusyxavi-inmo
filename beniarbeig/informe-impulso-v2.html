@@ -657,7 +657,15 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .op-ficha { grid-template-columns: 1fr 1fr; }
+    .hero h1 { font-size: 26px; }
+    .hero h1 .h1-location { font-size: 17px; }
+    .hero-meta { flex-direction: column; gap: 8px; }
+    .hero-meta .hm-sep { display: none; }
+    .op-ficha { grid-template-columns: 1fr; padding: 0 16px; }
+    .hero-sources { flex-direction: column; padding: 0 16px; }
+    .source-pill { min-width: unset; }
+    .hero-cita { flex-direction: column; gap: 8px; }
+    .hero-cita .hc-dot[style*="rgba(255,255,255"] { display: none; }
     .kpi-row { grid-template-columns: 1fr 1fr; }
     .price-widget { grid-template-columns: 1fr; }
     .price-box.main { transform: none; }
@@ -666,8 +674,6 @@
     .scenario-box.main-scenario { transform: none; }
     .units-grid { grid-template-columns: 1fr 1fr; }
     table { overflow-x: auto; display: block; }
-    .hero h1 { font-size: 24px; }
-    .hero-sources { flex-direction: column; }
   }
   .step-header {
     display: flex;
