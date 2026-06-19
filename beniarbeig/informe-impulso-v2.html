@@ -570,6 +570,44 @@
     .hero h1 { font-size: 24px; }
     .hero-sources { flex-direction: column; }
   }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step-number {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: #141B36;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 800;
+    flex-shrink: 0;
+  }
+  .step-number.done { background: #10B981; }
+  .step-number.pending { background: #d1d5db; color: #6b7280; }
+  .step-title { font-weight: 700; color: #141B36; font-size: 15px; }
+  .step-price {
+    margin-top: 16px;
+    background: #141B36;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  .step-price .sp-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .step-price .sp-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #FF4D2E;
+    margin-top: 4px;
+  }
+  .step-price .sp-note { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -586,7 +624,7 @@
 <section class="hero">
   <h1>Informe IM·PULSO · V2</h1>
   <p class="subtitle">Av. del Vergel 5, Beniarbeig (CP 03778) · Edificio 20 viviendas + 20 plazas · obra parada</p>
-  <p class="subtitle-2">Asking 750.000 € · Datos generados 19/06/2026 · PULSO_1660 + IMPULSO_1662</p>
+  <p class="subtitle-2">Asking 750.000 € · Datos generados 19/06/2026</p>
 
   <div class="op-ficha">
     <div class="op-cell">
@@ -615,29 +653,37 @@
     </div>
   </div>
 
-  <div class="hero-sources">
-    <div class="source-pill">
+  <div class="hero-sources" style="align-items:stretch;">
+    <div class="source-pill" style="border:2px solid rgba(16,185,129,0.3);">
       <div class="sp-icon">📡</div>
-      <div class="sp-title">PULSO — Latido del mercado</div>
-      <div class="sp-desc">Anuncios reales · Rotación · Demanda por tipología</div>
+      <div class="sp-title" style="color:#10B981;">PULSO</div>
+      <div style="font-size:12px;font-weight:700;color:white;margin:4px 0 2px;">Latido del Mercado</div>
+      <div class="sp-desc">el pulso del mercado, DÓNDE comprar</div>
     </div>
-    <div class="source-pill">
+    <div class="source-pill" style="border:2px solid rgba(255,77,46,0.3);">
       <div class="sp-icon">🎯</div>
-      <div class="sp-title">IMPULSO — Valoración de mercado</div>
-      <div class="sp-desc">P25 / P50 / P75 por tipología resultante</div>
+      <div class="sp-title" style="color:#FF4D2E;">IMPULSO</div>
+      <div style="font-size:12px;font-weight:700;color:white;margin:4px 0 2px;">Valoración del ACTIVO</div>
+      <div class="sp-desc">hacia la decisión correcta, CUÁNTO pagar</div>
     </div>
-    <div class="source-pill">
-      <div class="sp-icon">📋</div>
-      <div class="sp-title">NOTARIADO — Contexto oficial</div>
-      <div class="sp-desc">Escrituras reales · Compradores · Evolución</div>
+    <div class="source-pill" style="border:2px solid rgba(107,114,128,0.3);opacity:0.7;">
+      <div class="sp-icon">🔗</div>
+      <div class="sp-title" style="color:rgba(255,255,255,0.7);">MÉTODO TOTAL</div>
+      <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.5);margin:4px 0 2px;">Integración pendiente de hacer</div>
+      <div class="sp-desc">PULSO + IMPULSO + MTVV unificados</div>
     </div>
   </div>
 
-  <p class="hero-cita">"PULSO te dice DÓNDE invertir. IMPULSO te dice CUÁNTO pagar."</p>
+  <p class="hero-cita">"PULSO te dice DÓNDE comprar. IMPULSO te dice CUÁNTO pagar."</p>
 </section>
 
 <!-- ==================== MAIN CONTENT ==================== -->
 <div class="container">
+
+<!-- DISCLAIMER PULSO -->
+<div style="background:#fffbeb;border:2px solid #f59e0b;border-radius:12px;padding:16px 20px;margin:0 0 20px;font-size:13px;color:#78350f;line-height:1.6;">
+  <strong style="color:#b45309;">⚠ Aviso de muestra:</strong> Beniarbeig es una población pequeña: la lectura del mercado tiene fiabilidad limitada por falta de liquidez/muestra. Los datos se ofrecen como orientación.
+</div>
 
 <!-- ==================== SECCIÓN 1: PULSO ==================== -->
 <div class="section">
@@ -645,7 +691,7 @@
     <div class="section-icon" style="background:#fff3f0;">📡</div>
     <div>
       <div class="section-title">1 · PULSO — Latido del mercado</div>
-      <div class="section-subtitle">Fuente: PULSO_1660 · Periodo 06/05/2025 – 10/06/2026 · 324 anuncios · rotación 76%</div>
+      <div class="section-subtitle">Periodo 06/05/2025 – 10/06/2026 · 324 anuncios · rotación 76%</div>
     </div>
     <span class="zone-badge pulso">PULSO</span>
   </div>
@@ -676,7 +722,7 @@
     <div class="card-subtitle">202 publicados · 157 retirados (78%) · 45 activos</div>
     <div class="legend">
       <span class="lg-item"><span class="lg-dot" style="background:#FF4D2E;"></span> Fila PULSO (tipología dominante en volumen)</span>
-      <span class="lg-item"><span class="lg-dot" style="background:#3B82F6;"></span> Tipología de la operación (Piso)</span>
+      <span class="lg-item"><span class="lg-dot" style="background:#3B82F6;"></span> Tipología de la operación (Piso y Ático)</span>
     </div>
     <table>
       <thead>
@@ -718,7 +764,7 @@
           <td>2</td>
         </tr>
         <tr>
-          <td>Ático</td>
+          <td>Ático <span class="mark mark-tipo">Tipología operación</span></td>
           <td>4 (2%)</td>
           <td>3</td>
           <td>75%</td>
@@ -860,7 +906,7 @@
           <td>2</td>
         </tr>
         <tr>
-          <td>2 dorm / 2 baños <span class="mark mark-tipo">Tipología operación</span></td>
+          <td>2 dorm / 2 baños</td>
           <td>12 (7%)</td>
           <td>11</td>
           <td>92%</td>
@@ -1187,7 +1233,7 @@
     <div class="section-icon" style="background:#fff3f0;">🎯</div>
     <div>
       <div class="section-title">2 · IMPULSO — Valoración de las viviendas resultantes</div>
-      <div class="section-subtitle">Fuente: IMPULSO_1662 · 20 unidades · 4 tipologías · datos a 19/06/2026</div>
+      <div class="section-subtitle">20 unidades · 4 tipologías · datos a 19/06/2026</div>
     </div>
     <span class="zone-badge impulso">IMPULSO</span>
   </div>
@@ -1385,7 +1431,7 @@
   <!-- Tabla resumen tipologías -->
   <div class="card">
     <div class="card-title">Resumen valoración por tipología</div>
-    <div class="card-subtitle">IMPULSO_1662 · 4 tipologías · 20 unidades totales</div>
+    <div class="card-subtitle">4 tipologías · 20 unidades totales</div>
     <table>
       <thead>
         <tr>
@@ -1482,7 +1528,7 @@
 
   <!-- Nota rentabilidad -->
   <div class="callout" style="border-left-color:#FF4D2E;">
-    <strong>Rentabilidad no calculada en este informe:</strong> El motor calcula un margen bruto del 227% sobre la inversión real (826.350 € con ITP y gastos). Sin embargo, ese cálculo asume coste de obra = 0 €, lo que no refleja la realidad — el edificio está en obra parada y hay que terminar la construcción. <strong>El coste real de terminar la obra no se valora en este informe por su complejidad técnica; se analiza por separado en el estudio de viabilidad.</strong> La rentabilidad real será sensiblemente inferior al 227% nominal.
+    <strong>Rentabilidad:</strong> La rentabilidad de la operación no se calcula en este informe porque faltan datos concretos para poder calcularla.
   </div>
 
   <!-- Cuadrícula 20 viviendas -->
@@ -1589,7 +1635,7 @@
             <tr><td>Nacionales</td><td>48,48%</td></tr>
             <tr class="highlight"><td>🇳🇱 Países Bajos</td><td><strong>13,14%</strong></td></tr>
             <tr><td>🇬🇧 Reino Unido</td><td>10,49%</td></tr>
-            <tr><td>🌍 Polonia</td><td>8,46%</td></tr>
+            <tr><td>🇵🇱 Polonia</td><td>8,46%</td></tr>
             <tr><td>Resto extranjeros</td><td>19,41%</td></tr>
           </tbody>
         </table>
@@ -1694,7 +1740,7 @@
     <div class="section-icon" style="background:#ecfdf5;">📞</div>
     <div>
       <div class="section-title">4 · CONTACTOS — Inmobiliarias con operaciones reales</div>
-      <div class="section-subtitle">Fuente: IMPULSO_1662 · Inmobiliarias con ventas retiradas en la misma tipología</div>
+      <div class="section-subtitle">Inmobiliarias con ventas retiradas en la misma tipología</div>
     </div>
   </div>
 
@@ -1827,13 +1873,18 @@
   </div>
 
   <!-- Guión de llamada -->
-  <div class="card">
-    <div class="card-title">Guión de llamada para inmobiliarias</div>
-    <div class="script-box">
-      <p>"Hola, buenos días. Me llamo [NOMBRE]. Estoy estudiando la viabilidad de una operación en Beniarbeig — un edificio en Av. del Vergel 5 con 20 unidades resultantes de una segregación: pisos de 1 y 2 dormitorios y áticos de 3 y 4 dormitorios.</p>
-      <p style="margin-top:10px;">Os identifico como inmobiliaria activa en la zona con operaciones recientes en [TIPOLOGÍA CONCRETA]. ¿Tenéis experiencia comercializando activos similares en Beniarbeig o en la Marina Alta?</p>
-      <p style="margin-top:10px;">Mis dudas concretas son: <strong>(1)</strong> ¿A qué precio por m² estáis cerrando pisos de 2 dormitorios en la zona? <strong>(2)</strong> ¿Qué tiempo real de venta estáis viendo? <strong>(3)</strong> ¿Tenéis cartera de compradores extranjeros (neerlandeses, británicos)?</p>
-      <p style="margin-top:10px;">Gracias, ¿tendríais 10 minutos esta semana para una llamada más detallada?"</p>
+  <div class="card" style="border-left:4px solid #4f46e5;">
+    <div class="card-title">Guión oficial IM·PULSO — Llamada a inmobiliarias</div>
+    <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:18px 22px;margin-top:14px;font-size:13px;color:#1e1b4b;line-height:1.8;">
+      <p style="font-weight:700;color:#4f46e5;font-size:14px;margin-bottom:10px;">🗣 Apertura:</p>
+      <p style="background:white;padding:12px 16px;border-radius:8px;border-left:3px solid #4f46e5;font-style:italic;">"Hola, estaba siguiendo un piso en Beniarbeig que teníais publicado y he visto que habéis retirado el anuncio. ¿Ya lo habéis vendido?"</p>
+      <p style="font-weight:700;color:#4f46e5;font-size:13px;margin-top:16px;margin-bottom:8px;">📋 Preguntas de seguimiento:</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+        <li style="background:white;padding:10px 14px;border-radius:8px;border-left:3px solid #818cf8;">💬 "¿Podría saber a qué precio se cerró finalmente?"</li>
+        <li style="background:white;padding:10px 14px;border-radius:8px;border-left:3px solid #818cf8;">💬 "¿Os va a entrar alguno similar próximamente?"</li>
+        <li style="background:white;padding:10px 14px;border-radius:8px;border-left:3px solid #818cf8;">💬 "¿Hay mucha demanda de este tipo de piso en la zona?"</li>
+        <li style="background:white;padding:10px 14px;border-radius:8px;border-left:3px solid #818cf8;">💬 "¿Creéis que el mercado puede absorber varias unidades similares a la vez?"</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -1846,73 +1897,114 @@
     <div class="section-icon" style="background:#ecfdf5;">✅</div>
     <div>
       <div class="section-title">5 · Método Total de Validación de Valor (MTVV)</div>
-      <div class="section-subtitle">Validación humana complementaria al análisis automatizado</div>
+      <div class="section-subtitle">Validación humana complementaria al análisis automatizado · precio de referencia: 154.000 €</div>
     </div>
     <span class="zone-badge mtvv">MTVV</span>
   </div>
 
+  <!-- Paso 0 -->
   <div class="card">
-    <div class="mtvv-step">
-      <div class="step-num done">1</div>
-      <div class="step-body">
-        <div class="step-title-txt">IMPULSO — Valoración automatizada por tipología</div>
-        <div class="step-desc">P25/P50/P75 para las 4 tipologías resultantes. Completado: 17 de 20 unidades valoradas (3 sin muestra).</div>
+    <div class="step-header">
+      <div class="step-number done">0</div>
+      <div class="step-title">Paso 0 — Contexto del micromercado <span style="display:inline-block;background:#d1fae5;color:#065f46;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-left:8px;">✓ HECHO</span></div>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="kpi-value">1.983</div><div class="kpi-label">Habitantes</div></div>
+      <div class="kpi"><div class="kpi-value">+2,91%</div><div class="kpi-label">Crecimiento</div></div>
+      <div class="kpi"><div class="kpi-value">1.931 €/m²</div><div class="kpi-label">Precio zona</div></div>
+      <div class="kpi"><div class="kpi-value">+7,52%</div><div class="kpi-label">Mercado anual</div></div>
+    </div>
+    <table style="margin-top:8px;">
+      <thead><tr><th>Parámetro</th><th>Dato</th></tr></thead>
+      <tbody>
+        <tr><td>Renta media</td><td>12.333 €/persona</td></tr>
+        <tr><td>Precio colindantes / ciudad</td><td>1.708 €/m² / 2.279 €/m²</td></tr>
+        <tr><td>Oferta actual en venta</td><td>13 viviendas (7 casas/chalets, 5 pisos, 1 ático)</td></tr>
+        <tr><td>Target</td><td>Familias nacionales con hijos</td></tr>
+        <tr><td>Comprador</td><td>80,33% nacional / 19,67% extranjero (RU, Marruecos, Italia, Alemania, Rumanía)</td></tr>
+        <tr><td>Edad mediana comprador</td><td>48 años · franja 41-50: 26,44%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Paso 1 -->
+  <div class="card">
+    <div class="step-header">
+      <div class="step-number done">1</div>
+      <div class="step-title">Paso 1 — Sondeo de inmobiliarias <span style="display:inline-block;background:#d1fae5;color:#065f46;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-left:8px;">✓ HECHO</span></div>
+    </div>
+    <div class="insight insight-green">
+      10 inmobiliarias consultadas · rango 134.543 – 154.333 €
+    </div>
+    <div class="step-price">
+      <div class="sp-label">Conclusión Paso 1 (inmobiliarias)</div>
+      <div class="sp-value">150.000 €</div>
+    </div>
+  </div>
+
+  <!-- Paso 2 -->
+  <div class="card">
+    <div class="step-header">
+      <div class="step-number done">2</div>
+      <div class="step-title">Paso 2 — Testigos de anuncios <span style="display:inline-block;background:#d1fae5;color:#065f46;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-left:8px;">✓ HECHO</span></div>
+    </div>
+    <div class="insight insight-green">
+      7 testigos analizados · rango 142.000 – 154.000 €
+    </div>
+    <div class="step-price">
+      <div class="sp-label">Conclusión Paso 2 (testigos)</div>
+      <div class="sp-value">145.000 €</div>
+    </div>
+  </div>
+
+  <!-- Paso 3 -->
+  <div class="card">
+    <div class="step-header">
+      <div class="step-number done">3</div>
+      <div class="step-title">Paso 3 — Hipótesis de precio <span style="display:inline-block;background:#d1fae5;color:#065f46;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-left:8px;">✓ HECHO</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;margin:12px 0;">
+      <div style="background:#ecfdf5;padding:16px;border-radius:12px;">
+        <div style="font-size:11px;color:#10B981;text-transform:uppercase;letter-spacing:1px;font-weight:700;">Paso 1 dice</div>
+        <div style="font-size:22px;font-weight:800;color:#141B36;margin-top:4px;">150.000 €</div>
+      </div>
+      <div style="background:#ecfdf5;padding:16px;border-radius:12px;">
+        <div style="font-size:11px;color:#10B981;text-transform:uppercase;letter-spacing:1px;font-weight:700;">Paso 2 dice</div>
+        <div style="font-size:22px;font-weight:800;color:#141B36;margin-top:4px;">145.000 €</div>
+      </div>
+      <div style="background:#fff3f0;padding:16px;border-radius:12px;border:2px solid #FF4D2E;">
+        <div style="font-size:11px;color:#FF4D2E;text-transform:uppercase;letter-spacing:1px;font-weight:700;">Hipótesis</div>
+        <div style="font-size:22px;font-weight:800;color:#FF4D2E;margin-top:4px;">154.000 €</div>
       </div>
     </div>
-    <div class="mtvv-step">
-      <div class="step-num done">2</div>
-      <div class="step-body">
-        <div class="step-title-txt">PULSO — Análisis del mercado local</div>
-        <div class="step-desc">324 anuncios analizados. Rotación 76%. Tipologías de la operación con rotación 82–92%. Completado.</div>
-      </div>
+    <div class="step-price">
+      <div class="sp-label">Conclusión Paso 3 (hipótesis)</div>
+      <div class="sp-value">154.000 €</div>
     </div>
-    <div class="mtvv-step">
-      <div class="step-num done">3</div>
-      <div class="step-body">
-        <div class="step-title-txt">NOTARIADO — Contexto oficial de escrituras</div>
-        <div class="step-desc">1.636 €/m² escriturado · 28 ops/año · +9,3% · perfil comprador 51,5% extranjero. Completado.</div>
-      </div>
+  </div>
+
+  <!-- Paso 4 -->
+  <div class="card" style="border-color:#fde68a;background:#fffbeb;">
+    <div class="step-header">
+      <div class="step-number pending">4</div>
+      <div class="step-title" style="color:#92400e;">Paso 4 — Anuncio real publicado <span style="display:inline-block;background:#fde68a;color:#92400e;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-left:8px;">FALTA POR HACER</span></div>
     </div>
-    <div class="mtvv-step">
-      <div class="step-num pending">4</div>
-      <div class="step-body">
-        <div class="step-title-txt">Llamadas a inmobiliarias locales</div>
-        <div class="step-desc">Contactar TR Interinmo (965020479) y Plá Inmobiliaria (965021749) para validar precios reales y tiempo de venta.</div>
-        <div class="step-falta">FALTA HACER</div>
-      </div>
+    <div class="insight insight-yellow">
+      Pendiente de publicar un anuncio real para verificar la respuesta del mercado al precio hipótesis de 154.000 €.
     </div>
-    <div class="mtvv-step">
-      <div class="step-num pending">5</div>
-      <div class="step-body">
-        <div class="step-title-txt">Testigos manuales — ampliación Ático 4 dorm</div>
-        <div class="step-desc">Buscar manualmente en Idealista / Fotocasa activos similares (Ático 4 dorm / 3 baños) en Dénia, Jávea, Ondara para estimar precio de las 3 unidades sin valorar.</div>
-        <div class="step-falta">FALTA HACER</div>
-      </div>
+    <div class="step-price" style="background:#92400e;">
+      <div class="sp-label">Precio verificado con anuncio real</div>
+      <div class="sp-value" style="color:#fde68a;">Pendiente</div>
+      <div class="sp-note">Publicar anuncio y medir interés a 154.000 €</div>
     </div>
-    <div class="mtvv-step">
-      <div class="step-num pending">6</div>
-      <div class="step-body">
-        <div class="step-title-txt">Visita física + valoración de obra pendiente</div>
-        <div class="step-desc">Visitar el edificio. Obtener presupuesto de obra para terminar la construcción. Este dato es el más crítico y no está en este informe — sin él, el margen real es incalculable.</div>
-        <div class="step-falta">FALTA HACER</div>
-      </div>
-    </div>
-    <div class="mtvv-step">
-      <div class="step-num pending">7</div>
-      <div class="step-body">
-        <div class="step-title-txt">Estudio de viabilidad completo</div>
-        <div class="step-desc">Integrar coste real de obra + ITP (60.000 €) + notaría/registro (11.250 €) + licencias (~3.000 €) + gastos durante obra (~2.100 €) + marketing + honorarios. Calcular TIR y plazo real de salida.</div>
-        <div class="step-falta">FALTA HACER</div>
-      </div>
-    </div>
-    <div class="mtvv-step">
-      <div class="step-num pending">8</div>
-      <div class="step-body">
-        <div class="step-title-txt">Due diligence jurídica y urbanística</div>
-        <div class="step-desc">Verificar licencias de obra existentes, estado de la división registral, deuda de comunidad, IBI pendiente, posibles cargas. Consultar con Lexia / abogado especialista en urbanismo valenciano.</div>
-        <div class="step-falta">FALTA HACER</div>
-      </div>
-    </div>
+  </div>
+
+  <!-- Precio MTVV referencia -->
+  <div class="convergence">
+    <div class="conv-label">Precio MTVV de referencia (Paso 4 pendiente)</div>
+    <div class="conv-total">154.000 €</div>
+    <div class="conv-note">Hipótesis basada en Paso 1 (inmobiliarias) + Paso 2 (testigos). Pendiente confirmación con anuncio real.</div>
+    <div class="conv-warn">⚠️ Precio no confirmado hasta completar el Paso 4 — publicar anuncio real y medir respuesta del mercado.</div>
   </div>
 </div>
 
@@ -1921,7 +2013,7 @@
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer">
   <p><strong style="color:rgba(255,255,255,0.8);">IM·PULSO</strong> · Inteligencia de mercado inmobiliario · Informe V2 · Beniarbeig · Av. del Vergel 5</p>
-  <p style="margin-top:6px;">Datos generados: PULSO_1660 + IMPULSO_1662 · 19/06/2026 · Periodo analizado: 06/05/2025 – 10/06/2026</p>
+  <p style="margin-top:6px;">Datos generados: 19/06/2026 · Periodo analizado: 06/05/2025 – 10/06/2026</p>
   <p style="margin-top:6px;opacity:0.5;">Este informe se basa en anuncios publicados y escrituras notariales. No constituye asesoramiento financiero ni valoración oficial. Verificar siempre con un profesional antes de tomar decisiones de inversión.</p>
 </footer>
 
